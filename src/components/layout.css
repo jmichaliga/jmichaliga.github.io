@@ -620,3 +620,8 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+canvas{
+	display: flex;
+	vertical-align: bottom;
+}
