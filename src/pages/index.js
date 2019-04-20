@@ -11,16 +11,16 @@ const IndexPage = () => (
     <div id="vignette"></div>
     <div id="content">
       
-      <figure id="logo">
-        <div id="notepad"></div>
-      </figure>
-      
       <article>
-        <p>Several years of professional experience in agency, direct service, and in-house brand capacities &ndash; specializing in Interactive Design, Mobile/Web Development, HTML5 Adoption <abbr title="and" class="amp">&amp;</abbr> User Experiences.
+        <p>
+          Several years of professional experience in agency, 
+          direct service, and in-house brand capacities &mdash; 
+          specializing in Interactive Design, Mobile/Web Development, 
+          HTML5 Adoption <abbr title="and" className="amp">&amp;</abbr> User Experiences.
         </p>
         <p>		
-          <a href="http://www.twitter.com/jmichaliga" rel="external" class="twitter">
-            <img src="images/twitter.png" height="20" width="20" /> Follow @jmichaliga on twitter.
+          <a href="http://www.twitter.com/jmichaliga" rel="external" className="twitter">
+            <img src="./images/twitter.svg" height="24" width="24" alt="@jmichaliga"/> Follow @jmichaliga on twitter.
           </a>
         </p>
       </article>
