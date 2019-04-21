@@ -50,6 +50,12 @@ a:active,
 a:hover {
   outline-width: 0;
   border-bottom: 2px solid #0AC;
+  width: calc(100%);
+  background-image: linear-gradient(transparent calc(100% - 3px),black 3px);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  -webkit-transition: background-size 1s;
+  transition: background-size 1s;
 }
 abbr[title] {
   border-bottom: none;
