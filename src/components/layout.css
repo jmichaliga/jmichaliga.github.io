@@ -1,5 +1,5 @@
 html {
-  font-family: 'helvetica neue', 'helvetica', 'arial', sans-serif;
+  font-family: 'IBM Plex Sans', 'helvetica neue', 'helvetica', 'arial', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -7,6 +7,9 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: radial-gradient(ellipse farthest-side at 100% 100%,#0AC 10%,#035 109%);
+}
+etc{
   background-image: radial-gradient(ellipse farthest-side at 100% 100%,#ffb29b 10%,#e56699 30%,#341e7e 109%);
 }
 article,
@@ -41,18 +44,20 @@ template {
   display: none;
 }
 a {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.7);
   border-radius: 4px;  
   padding: 4px;
   -webkit-text-decoration-skip: objects;
   color: #0AC;
   text-decoration: none;
   transition-duration: 400ms;
+  line-height: 1.75em;
 }
 a:active,
 a:hover {
   outline-width: 0;
   border-bottom: 3px solid #0AC;
+  background-color: rgba(0, 50, 80, 0.8);
 }
 abbr[title] {
   border-bottom: none;
@@ -69,6 +74,7 @@ dfn {
 }
 h1 {
   font-size: 2em;
+  font-family: 'IBM Plex Mono', sans-serif;
   margin: 0.67em 0;
 }
 mark {
@@ -197,7 +203,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em 'helvetica neue', 'helvetica', 'arial', sans-serif;
+  font: 112.5%/1.45em 'IBM Plex Sans', 'helvetica neue', 'helvetica', 'arial', sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -212,8 +218,8 @@ html {
 }
 body {
   color: hsla(0, 0%, 100%, 0.8);
-  font: 112.5%/1.45em 'helvetica neue', 'helvetica', 'arial', sans-serif;
-  font-weight: normal;
+  font: 112.5%/1.45em 'IBM Plex Sans', 'helvetica neue', 'helvetica', 'arial', sans-serif;
+  font-weight: 400;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -230,21 +236,14 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 h1 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 0;
+  padding: 0;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
@@ -259,9 +258,8 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
   line-height: 1.1;
@@ -276,9 +274,8 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
   line-height: 1.1;
@@ -293,9 +290,8 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   line-height: 1.1;
@@ -310,9 +306,8 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
   line-height: 1.1;
@@ -325,11 +320,8 @@ h6 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
   line-height: 1.1;
@@ -604,8 +596,8 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: 400;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;

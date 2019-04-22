@@ -15,8 +15,9 @@ const Box = styled.div`
   ${fontSize}
   ${color}
 `
-const Flex = styled(Box)`
 
+const Flex = styled(Box)`
+  display: flex;
 `
 
 const Center = styled(Box)`
@@ -46,22 +47,28 @@ const IndexPage = () => (
       </Box>
 
       <Box width={[1, 1 / 2]}>
-        <Center>
+        <Center mt={5}>
           <p>
             Several years of professional experience in agency, 
             direct service, and in-house brand capacities &mdash; 
             specializing in Interactive Design, Mobile/Web Development, 
             HTML5 Adoption <abbr title="and" className="amp">&amp;</abbr> User Experiences.
           </p>
-          <p>		
-            <IconLink href="https://twitter.com/jmichaliga" icon="twitter" text="Follow @jmichaliga on twitter." />
-          </p>
-          <p>
-            <IconLink href="https://github.com/jmichaliga" icon="github" text="Follow @jmichaliga on github." />
-          </p>
+
+          <Box mb={1}>		
+            <IconLink href="https://twitter.com/jmichaliga" icon="twitter" text="Follow @jmichaliga on twitter."/>
+          </Box>
+          <Box>
+            <IconLink href="https://github.com/jmichaliga" icon="github" text="Check out @jmichaliga on Github."/>
+          </Box>
+          <Box>
+            <IconLink href="mailto://justin.michaliga@gmail.com" icon="email" />
+          </Box>
+
         </Center>
       </Box>
     </Flex>
+
   </Layout>
 )
 

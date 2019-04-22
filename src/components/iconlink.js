@@ -20,17 +20,17 @@ const IconLink = ({ href, icon, text, inverted }) => {
   `)
 
   return (
-    <>
+    <div style={{marginRight: '4px'}}>
       {data.allFile.edges.filter((file) => {
         return file.node.name === icon
       }).map((file,index) => {
         return (
-          <a href={href} key={`icon-${index}`} rel="external">
+          <a href={href} key={`icon-${index}`} rel="external noopener noreferrer" target="_blank">
             <img src={file.node.publicURL} height="24" width="24" alt={icon} className={inverted ? 'invert': ''} /> {text}
           </a>
         )
       })}
-    </>
+    </div>
   )
 }
 IconLink.propTypes = {
