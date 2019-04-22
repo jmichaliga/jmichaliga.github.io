@@ -28,7 +28,8 @@ const IndexPage = () => (
           HTML5 Adoption <abbr title="and" className="amp">&amp;</abbr> User Experiences.
         </p>
         <p>		
-          <IconLink href="https://twitter.com/jmichaliga" icon="icon" text="Follow @jmichaliga on twitter." />
+          <IconLink href="https://twitter.com/jmichaliga" icon="twitter" text="Follow @jmichaliga on twitter." />
+          <IconLink href="https://github.com/jmichaliga" icon="github" text="Follow @jmichaliga on github." />
         </p>
       </article>
     </Box>

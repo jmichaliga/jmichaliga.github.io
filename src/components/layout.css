@@ -100,6 +100,9 @@ img {
 svg:not(:root) {
   overflow: hidden;
 }
+img.invert{
+  filter: invert(100%)
+}
 code,
 kbd,
 pre,
