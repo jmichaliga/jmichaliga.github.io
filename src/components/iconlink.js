@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const IconLink = ({ href, icon, text, inverted }) => {
   
+  // , name: { eq: ${icon} }
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { extension: { eq: "svg" } }) {

@@ -41,21 +41,18 @@ template {
   display: none;
 }
 a {
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;  
+  padding: 4px;
   -webkit-text-decoration-skip: objects;
   color: #0AC;
   text-decoration: none;
+  transition-duration: 400ms;
 }
 a:active,
 a:hover {
   outline-width: 0;
-  border-bottom: 2px solid #0AC;
-  width: calc(100%);
-  background-image: linear-gradient(transparent calc(100% - 3px),black 3px);
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  -webkit-transition: background-size 1s;
-  transition: background-size 1s;
+  border-bottom: 3px solid #0AC;
 }
 abbr[title] {
   border-bottom: none;
@@ -101,7 +98,9 @@ svg:not(:root) {
   overflow: hidden;
 }
 img.invert{
-  filter: invert(100%)
+  filter: invert(100%);
+  position: relative; 
+  top: 4px;
 }
 code,
 kbd,
