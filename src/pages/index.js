@@ -9,6 +9,8 @@ import Svg from '../components/svg'
 import styled from 'styled-components'
 import { space, width, fontSize, color } from 'styled-system'
 
+import theme from '../theme'
+
 const Box = styled.div`
   ${space}
   ${width}
@@ -25,7 +27,7 @@ const Center = styled(Box)`
 `
 
 const HoverBulge = styled(Box)`
-  transition-duration: 400ms;
+  transition-duration: ${theme.duration.normal};
   tranform: scale(1);
   &:hover{
     transform: scale(0.9);
@@ -36,7 +38,7 @@ const HoverBulge = styled(Box)`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`creative`, `web design`, `mobile web designer`, `baltimore`, `justin michaliga`, `jmichaliga`, `logo design`, `mobile web`, `mobile apps`, `web developer`, `front-end`, `front end`, `maryland`, `new york`, `nyc`, `html5`, `javascript`, `east village`]} />
-    <Flex wrap>
+    <Flex>
       <Box width={[1, 1 / 2]}>
         <Center>
           <HoverBulge>
