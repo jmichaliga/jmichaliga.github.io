@@ -41,7 +41,7 @@ template {
   display: none;
 }
 a {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.75);
   border-radius: 4px;  
   padding: 4px;
   -webkit-text-decoration-skip: objects;
