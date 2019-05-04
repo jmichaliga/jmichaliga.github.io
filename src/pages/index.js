@@ -16,7 +16,7 @@ const Box = styled.div`
   ${color}
 `
 const Flex = styled(Box)`
-
+  display: flex;
 `
 
 const Center = styled(Box)`
@@ -37,7 +37,7 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`creative`, `web design`, `mobile web designer`, `baltimore`, `justin michaliga`, `jmichaliga`, `logo design`, `mobile web`, `mobile apps`, `web developer`, `front-end`, `front end`, `maryland`, `new york`, `nyc`, `html5`, `javascript`, `east village`]} />
     
     <Flex>
-      <Box width={[1, 1 / 2]}>
+      <Box width={[1, 1 / 2]} mt={4}>
         <Center>
           <HoverBulge>
             <Svg name="jm" />
@@ -58,6 +58,9 @@ const IndexPage = () => (
           </p>
           <p>
             <IconLink href="https://github.com/jmichaliga" icon="github" text="Follow @jmichaliga on github." />
+          </p>
+          <p>
+            <IconLink href="https://dribbble.com/jmichaliga" icon="dribbble" text="Follow @jmichaliga on dribble." />
           </p>
         </Center>
       </Box>
