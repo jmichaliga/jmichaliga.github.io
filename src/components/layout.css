@@ -1,5 +1,5 @@
 html {
-  font-family: 'helvetica neue', 'helvetica', 'arial', sans-serif;
+  font-family: 'IBM Plex Sans', 'helvetica neue', 'helvetica', 'arial', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -7,7 +7,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: radial-gradient(ellipse farthest-side at 100% 100%,#ffb29b 10%,#e56699 30%,#341e7e 109%);
+  background-image: radial-gradient(ellipse farthest-side at 100% 100%,#FB9 10%,#FA1937 30%,#137 109%);
 }
 article,
 aside,
@@ -106,7 +106,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: 'IBM Plex Mono', monospace, monospace;
   font-size: 1em;
 }
 figure {
@@ -197,7 +197,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em 'helvetica neue', 'helvetica', 'arial', sans-serif;
+  font: 112.5%/1.45em 'IBM Plex Sans', 'helvetica neue', 'helvetica', 'arial', sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -212,7 +212,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 100%, 0.8);
-  font: 112.5%/1.45em 'helvetica neue', 'helvetica', 'arial', sans-serif;
+  font: 112.5%/1.45em 'IBM Plex Sans', 'helvetica neue', 'helvetica', 'arial', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -241,7 +241,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -603,7 +603,7 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+  font-family: 'IBM Plex Mono', "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;

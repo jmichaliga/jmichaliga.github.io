@@ -57,10 +57,10 @@ const IndexPage = () => (
             <IconLink href="https://twitter.com/jmichaliga" icon="twitter" text="Follow @jmichaliga on twitter." />
           </p>
           <p>
-            <IconLink href="https://github.com/jmichaliga" icon="github" text="Follow @jmichaliga on github." />
+            <IconLink href="https://github.com/jmichaliga" icon="github" text="Follow @jmichaliga on Github." />
           </p>
           <p>
-            <IconLink href="https://dribbble.com/jmichaliga" icon="dribbble" text="Follow @jmichaliga on dribble." />
+            <IconLink href="https://dribbble.com/jmichaliga" target="_blank" icon="dribbble" text="Follow @jmichaliga on Dribbble." />
           </p>
         </Center>
       </Box>

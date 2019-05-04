@@ -25,7 +25,7 @@ const IconLink = ({ href, icon, text, inverted }) => {
         return file.node.name === icon
       }).map((file,index) => {
         return (
-          <a href={href} key={`icon-${index}`} rel="external">
+          <a href={href} key={`icon-${index}`} rel="external" target="_blank">
             <img src={file.node.publicURL} height="24" width="24" alt={icon} className={inverted ? 'invert': ''} /> {text}
           </a>
         )
