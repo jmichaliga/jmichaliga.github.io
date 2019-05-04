@@ -38,7 +38,7 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`creative`, `web design`, `mobile web designer`, `baltimore`, `justin michaliga`, `jmichaliga`, `logo design`, `mobile web`, `mobile apps`, `web developer`, `front-end`, `front end`, `maryland`, `new york`, `nyc`, `html5`, `javascript`, `east village`]} />
     
     <Flex>
-      <Box width={[1, 1 / 2]}>
+      <Box width={[1, 1 / 2]} mt={4}>
         <Center>
           <HoverBulge>
             <Svg name="jm" />
@@ -54,17 +54,18 @@ const IndexPage = () => (
             specializing in Interactive Design, Mobile/Web Development, 
             HTML5 Adoption <abbr title="and" className="amp">&amp;</abbr> User Experiences.
           </p>
-
-          <Box mb={1}>		
-            <IconLink href="https://twitter.com/jmichaliga" icon="twitter" text="Follow @jmichaliga on twitter."/>
-          </Box>
-          <Box>
-            <IconLink href="https://github.com/jmichaliga" icon="github" text="Check out @jmichaliga on Github."/>
-          </Box>
+          <p>		
+            <IconLink href="https://twitter.com/jmichaliga" icon="twitter" text="Follow @jmichaliga on twitter." />
+          </p>
+          <p>
+            <IconLink href="https://github.com/jmichaliga" icon="github" text="Follow @jmichaliga on Github." />
+          </p>
+          <p>
+            <IconLink href="https://dribbble.com/jmichaliga" icon="dribbble" text="Follow @jmichaliga on Dribbble." />
+          </p>
           <Box>
             <IconLink href="mailto://justin.michaliga@gmail.com" icon="email" />
           </Box>
-
         </Center>
       </Box>
     </Flex>

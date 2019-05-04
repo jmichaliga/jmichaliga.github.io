@@ -7,10 +7,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: radial-gradient(ellipse farthest-side at 100% 100%,#0AC 10%,#035 109%);
-}
-etc{
-  background-image: radial-gradient(ellipse farthest-side at 100% 100%,#ffb29b 10%,#e56699 30%,#341e7e 109%);
+  background-image: radial-gradient(ellipse farthest-side at 100% 100%,#FB9 10%,#FA1937 30%,#137 109%);
 }
 article,
 aside,
@@ -112,7 +109,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: 'IBM Plex Mono', monospace, monospace;
   font-size: 1em;
 }
 figure {
@@ -219,7 +216,7 @@ html {
 body {
   color: hsla(0, 0%, 100%, 0.8);
   font: 112.5%/1.45em 'IBM Plex Sans', 'helvetica neue', 'helvetica', 'arial', sans-serif;
-  font-weight: 400;
+  font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -231,7 +228,6 @@ img {
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
-  margin-top: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
