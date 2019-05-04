@@ -17,6 +17,7 @@ const Box = styled.div`
 `
 const Flex = styled(Box)`
   display: flex;
+  flex-wrap: wrap;
 `
 
 const Center = styled(Box)`
@@ -35,9 +36,8 @@ const HoverBulge = styled(Box)`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`creative`, `web design`, `mobile web designer`, `baltimore`, `justin michaliga`, `jmichaliga`, `logo design`, `mobile web`, `mobile apps`, `web developer`, `front-end`, `front end`, `maryland`, `new york`, `nyc`, `html5`, `javascript`, `east village`]} />
-    
-    <Flex>
-      <Box width={[1, 1 / 2]} mt={4}>
+    <Flex wrap>
+      <Box width={[1, 1 / 2]}>
         <Center>
           <HoverBulge>
             <Svg name="jm" />
@@ -46,7 +46,7 @@ const IndexPage = () => (
       </Box>
 
       <Box width={[1, 1 / 2]}>
-        <Center>
+        <Center mt={3}>
           <p>
             Several years of professional experience in agency, 
             direct service, and in-house brand capacities &mdash; 
@@ -65,6 +65,7 @@ const IndexPage = () => (
         </Center>
       </Box>
     </Flex>
+
   </Layout>
 )
 
