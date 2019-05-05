@@ -30,9 +30,9 @@ const Footer = styled('footer')`
   position: fixed;
   bottom: 0;
   left: 0;
-  font-size: 0.8em;
+  font-size: ${theme.fontSizes[0]}px;
   font-family: 'IBM Plex Mono';
-  padding: ${theme.space[3]}px;
+  padding-left: ${theme.space[2]}px;
 `
 
 const Layout = ({ children }) => (

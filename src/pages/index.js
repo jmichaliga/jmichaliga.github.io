@@ -22,8 +22,11 @@ const Flex = styled(Box)`
   flex-wrap: wrap;
 `
 
-const Center = styled(Box)`
+const Center = styled(Flex)`
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 `
 
 const HoverBulge = styled(Box)`

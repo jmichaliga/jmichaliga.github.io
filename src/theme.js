@@ -36,6 +36,9 @@ const green = '#0A0'
 const blue = '#03F'
 const violet = '#70B'
 
+const jmRed = '#FA1967'
+const jmBlue = '#0AC'
+
 const error = red
 const danger = orange
 const success = green
@@ -54,6 +57,9 @@ const colors = {
   green,
   blue,
   violet,
+
+  jmRed,
+  jmBlue,
 
   // contextual
   error,
@@ -111,6 +117,7 @@ const theme = {
   breakpoints,
   colors,
   duration,
+  fontSizes,
   maxContainerWidth,
   mediaQueries,
   radii,
