@@ -9,23 +9,26 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
+// import { Flex } from '@smartnode/masonry'
 import theme from '../theme'
 
 import Header from "./header"
 import "./layout.css"
 
 const Container = styled('div')`
+  display: flex;
   margin: 0 auto;
   padding: 0px 1.0875rem 1.45rem;
   paddingTop: 0;
   height: 100vh;
   max-width: 960px;
+  align-items: center;
 `
 
 const Main = styled('main')`
-  font-size: 1em;
-  width: 100%;
+ width: 100%;
 `
+
 const Footer = styled('footer')`
   position: fixed;
   bottom: 0;

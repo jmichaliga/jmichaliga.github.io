@@ -3,8 +3,9 @@
   "private": true,
   "description": "jmichaliga.com",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Justin Michaliga <justin.michaliga@gmail.com>",
   "dependencies": {
+    "@smartnode/masonry": "^0.0.9",
     "gatsby": "^2.3.5",
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-google-analytics": "^2.0.18",

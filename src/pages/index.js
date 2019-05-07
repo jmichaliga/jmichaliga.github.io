@@ -20,6 +20,7 @@ const Box = styled.div`
 const Flex = styled(Box)`
   display: flex;
   flex-wrap: wrap;
+  margin-top: -1.45rem;
 `
 
 const Center = styled(Flex)`

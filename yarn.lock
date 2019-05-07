@@ -832,6 +832,11 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
   integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
 
+"@smartnode/masonry@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@smartnode/masonry/-/masonry-0.0.9.tgz#ec5091e1484812c495a5e7a766753272000c43e8"
+  integrity sha512-VTur2GzMr+ASZGxcUeTng8iI3t6GmoNV58jOKtpbsggmBWevqnIHilo9m4RDSrCk++GeMEBGdYQ+fEZz9DpzIQ==
+
 "@types/configstore@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@types/configstore/-/configstore-2.1.1.tgz#cd1e8553633ad3185c3f2f239ecff5d2643e92b6"
