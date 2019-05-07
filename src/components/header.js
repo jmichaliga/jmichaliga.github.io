@@ -18,7 +18,6 @@ const H1 = styled('h1')`
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: theme.colors.jmRed,
       marginBottom: `1.45rem`,
     }}
   >
