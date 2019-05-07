@@ -9,9 +9,9 @@ const H1 = styled('h1')`
   text-shadow: ${theme.colors.black} 1px 1px 2px;
   letter-spacing: -0.05em;
   text-transform: uppercase;
-  font-size: ${theme.fontSizes[5]}px;
+  font-size: ${theme.fontSizes[6]}px;
   padding: 1.45rem 1.0875rem;
-  text-align: right;
+  text-align: center;
 
 `
 
