@@ -41,7 +41,7 @@ const HoverBulge = styled(Box)`
   }
 `
 
-const skills = ['adobeillustator', 'figma', 'firebase', 'gatsby', 'html5', 'javascript', 'node-dot-js', 'nuxt-dot-js', 'react', 'vue-dot-js']
+const skills = ['adobeillustrator', 'figma', 'firebase', 'gatsby', 'html5', 'javascript', 'node-dot-js', 'nuxt-dot-js', 'react', 'vue-dot-js']
 
 const IndexPage = () => (
   <Layout>
