@@ -557,6 +557,9 @@ abbr[title] {
   cursor: help;
   text-decoration: none;
 }
+abbr[title].hidden {
+  border-bottom: none;
+}
 thead {
   text-align: left;
 }

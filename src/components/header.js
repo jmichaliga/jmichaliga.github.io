@@ -12,7 +12,6 @@ const H1 = styled('h1')`
   font-size: ${theme.fontSizes[6]}px;
   padding: 1.45rem 1.0875rem;
   text-align: center;
-
 `
 
 const Header = ({ siteTitle }) => (

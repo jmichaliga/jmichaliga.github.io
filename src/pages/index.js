@@ -3,11 +3,13 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Icon from '../components/icon'
 import IconLink from '../components/iconlink'
 import Svg from '../components/svg'
 
 import styled from 'styled-components'
 import { space, width, fontSize, color } from 'styled-system'
+// import { Box as Boxy, Flex } from '@smartnode/masonry'
 
 import theme from '../theme'
 
@@ -23,7 +25,7 @@ const Flex = styled(Box)`
   margin-top: -1.45rem;
 `
 
-const Center = styled(Flex)`
+const Center = styled(Box)`
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -38,6 +40,8 @@ const HoverBulge = styled(Box)`
     filter: invert(100%);
   }
 `
+
+const skills = ['adobeillustator', 'figma', 'firebase', 'gatsby', 'html5', 'javascript', 'node-dot-js', 'nuxt-dot-js', 'react', 'vue-dot-js']
 
 const IndexPage = () => (
   <Layout>
@@ -54,11 +58,18 @@ const IndexPage = () => (
       <Box width={[1, 1 / 2]}>
         <Center mt={3}>
           <p>
-            Several years of professional experience in agency, 
+            Over a decade of professional experience in agency, 
             direct service, and in-house brand capacities &mdash; 
             specializing in Interactive Design, Mobile/Web Development, 
-            HTML5 Adoption <abbr title="and" className="amp">&amp;</abbr> User Experiences.
+            Full-Stack Engineering, <abbr title="and" className="amp">&amp;</abbr> User Experiences.
           </p>
+          <section style={{ position: 'fixed', right: '8px', bottom: '0px' }}>
+            {skills.map(skill => (
+              <Box ml={2}>
+                <Icon icon={skill} inverted={false} ml={1}/>
+              </Box>
+            ))}
+          </section>
           <p>		
             <IconLink href="https://twitter.com/jmichaliga" icon="twitter" text="Follow @jmichaliga on twitter." />
           </p>
@@ -66,7 +77,10 @@ const IndexPage = () => (
             <IconLink href="https://github.com/jmichaliga" icon="github" text="Follow @jmichaliga on Github." />
           </p>
           <p>
-            <IconLink href="https://dribbble.com/jmichaliga" target="_blank" icon="dribbble" text="Follow @jmichaliga on Dribbble." />
+            <IconLink href="https://dribbble.com/jmichaliga" icon="dribbble" text="Follow @jmichaliga on Dribbble." />
+          </p>
+          <p>
+            <IconLink href="https://codepen.com/jmichaliga" icon="codepen" text="Follow @jmichaliga on Codepen." />
           </p>
         </Center>
       </Box>

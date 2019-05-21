@@ -16,13 +16,11 @@ import Header from "./header"
 import "./layout.css"
 
 const Container = styled('div')`
-  display: flex;
   margin: 0 auto;
   padding: 0px 1.0875rem 1.45rem;
   paddingTop: 0;
   height: 100vh;
   max-width: 960px;
-  align-items: center;
 `
 
 const Main = styled('main')`
@@ -55,7 +53,7 @@ const Layout = ({ children }) => (
         <Container>
           <Main>{children}</Main>
           <Footer>
-            © {new Date().getFullYear()}
+            © {new Date().getFullYear()} ⚡️
           </Footer>
         </Container>
       </>
