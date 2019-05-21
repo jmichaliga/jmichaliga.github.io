@@ -55,7 +55,7 @@ const IndexPage = () => (
         </Center>
       </Box>
 
-      <Box width={[1, 1 / 2]}>
+      <Box width={[1, 1 / 2]} p={3}>
         <Center mt={3}>
           <p>
             Over a decade of professional experience in agency, 
