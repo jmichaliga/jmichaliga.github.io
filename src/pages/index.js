@@ -33,14 +33,14 @@ const Center = styled(Box)`
 
 const HoverBulge = styled(Box)`
   transition-duration: ${theme.duration.normal};
-  tranform: scale(1);
+  transform: scale(1);
   &:hover{
     transform: scale(0.9);
     filter: invert(100%);
   }
 `
 
-const skills = ['adobeillustrator', 'figma', 'firebase', 'gatsby', 'html5', 'javascript', 'node-dot-js', 'nuxt-dot-js', 'react', 'vue-dot-js']
+const skills = ['adobeillustrator', 'adobephotoshop', 'css3', 'docker', 'eslint', 'figma', 'firebase', 'gatsby', 'graphql', 'html5', 'javascript', 'jest', 'kubernetes', 'node-dot-js', 'npm', 'nuxt-dot-js', 'postgresql', 'react', 'rollup-dot-js', 'vue-dot-js']
 
 const IndexPage = () => (
   <Layout>
