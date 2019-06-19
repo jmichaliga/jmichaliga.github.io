@@ -40,7 +40,28 @@ const HoverBulge = styled(Box)`
   }
 `
 
-const skills = ['adobeillustrator', 'adobephotoshop', 'css3', 'docker', 'eslint', 'figma', 'firebase', 'gatsby', 'graphql', 'html5', 'javascript', 'jest', 'kubernetes', 'node-dot-js', 'npm', 'nuxt-dot-js', 'postgresql', 'react', 'rollup-dot-js', 'vue-dot-js']
+const skills = [
+  'adobeillustrator', 
+  'adobephotoshop',
+  'css3',
+  'docker',
+  'eslint',
+  'figma',
+  'firebase',
+  'gatsby',
+  'graphql',
+  'html5',
+  'javascript',
+  'jest',
+  'kubernetes',
+  'node-dot-js',
+  'npm',
+  'nuxt-dot-js',
+  'postgresql',
+  'react',
+  'rollup-dot-js',
+  'vue-dot-js'
+]
 
 const IndexPage = () => (
   <Layout>
