@@ -1,6 +1,5 @@
 import PropTypes from "prop-types"
 import React from "react"
-
 import { useStaticQuery, graphql } from "gatsby"
 
 const Svg = ({ name, inverted }) => {
@@ -12,7 +11,11 @@ const Svg = ({ name, inverted }) => {
     } 
   `)
   return (
-    <img src={data.file.publicURL} alt={name} className={inverted ? 'invert': ''}/>
+    <img 
+      src={data.file.publicURL}
+      alt={name}
+      className={inverted ? 'invert': ''}
+    />
   )
 }
 Svg.propTypes = {
@@ -21,7 +24,7 @@ Svg.propTypes = {
 }
 
 Svg.defaultProps = {
-  name: "",
+  name: '',
   inverted: false
 }
 

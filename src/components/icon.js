@@ -3,15 +3,6 @@ import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
 
-
-const _startTooltip = (e) => {
-  console.log(e)
-}
-
-const _endTooltip = (e) => {
-  console.log('x')
-}
-
 const Icon = ({ icon, inverted }) => {
   
   // , name: { eq: ${icon} }

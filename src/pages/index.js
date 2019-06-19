@@ -9,7 +9,6 @@ import Svg from '../components/svg'
 
 import styled from 'styled-components'
 import { space, width, fontSize, color } from 'styled-system'
-// import { Box as Boxy, Flex } from '@smartnode/masonry'
 
 import theme from '../theme'
 
@@ -47,7 +46,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`creative`, `web design`, `mobile web designer`, `baltimore`, `justin michaliga`, `jmichaliga`, `logo design`, `mobile web`, `mobile apps`, `web developer`, `front-end`, `front end`, `maryland`, `new york`, `nyc`, `html5`, `javascript`, `east village`]} />
     <Flex>
-      <Box width={[1, 1 / 2]}>
+      <Box mt={5} width={[1, 1 / 2]}>
         <Center>
           <HoverBulge>
             <Svg name="jm" />

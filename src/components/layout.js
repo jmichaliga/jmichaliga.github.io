@@ -18,7 +18,6 @@ import "./layout.css"
 const Container = styled('div')`
   margin: 0 auto;
   padding: 0px 1.0875rem 1.45rem;
-  paddingTop: 0;
   height: 100vh;
   max-width: 960px;
 `
@@ -53,7 +52,7 @@ const Layout = ({ children }) => (
         <Container>
           <Main>{children}</Main>
           <Footer>
-            © {new Date().getFullYear()} ⚡️
+            <span role="img" aria-label="Hi">⚡</span>
           </Footer>
         </Container>
       </>
