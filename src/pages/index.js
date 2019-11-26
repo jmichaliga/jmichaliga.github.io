@@ -90,9 +90,6 @@ const IndexPage = () => (
               </Box>
             ))}
           </section>
-          <p>		
-            <IconLink href="https://twitter.com/jmichaliga" icon="twitter" text="Follow @jmichaliga on twitter." />
-          </p>
           <p>
             <IconLink href="https://github.com/jmichaliga" icon="github" text="Follow @jmichaliga on Github." />
           </p>
@@ -101,6 +98,12 @@ const IndexPage = () => (
           </p>
           <p>
             <IconLink href="https://codepen.com/jmichaliga" icon="codepen" text="Follow @jmichaliga on Codepen." />
+          </p>
+          <p>		
+            <IconLink href="https://twitter.com/jmichaliga" icon="twitter" text="Follow @jmichaliga on twitter." />
+          </p>
+          <p>
+            <IconLink href="https://codepen.io/jmichaliga/full/GBNWXx" icon="vue-dot-js" text="Check out his resume." />
           </p>
         </Center>
       </Box>
