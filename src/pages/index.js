@@ -41,9 +41,10 @@ const HoverBulge = styled(Box)`
 `
 
 const skills = [
-  'adobeillustrator', 
-  'adobephotoshop',
+  'illustrator', 
+  'photoshop',
   'css3',
+  'd3',
   'docker',
   'eslint',
   'figma',
@@ -54,13 +55,17 @@ const skills = [
   'javascript',
   'jest',
   'kubernetes',
-  'node-dot-js',
+  'next',
+  'node',
   'npm',
   'nuxt-dot-js',
   'postgresql',
   'react',
-  'rollup-dot-js',
-  'vue-dot-js'
+  'redux',
+  'rollup',
+  'sass',
+  'vue',
+  'zeit'
 ]
 
 const IndexPage = () => (
@@ -84,7 +89,7 @@ const IndexPage = () => (
             Full-Stack Engineering, <abbr title="and" className="amp">&amp;</abbr> User Experiences.
           </p>
           <section style={{ position: 'fixed', right: '8px', bottom: '0px' }}>
-            {skills.map(skill => (
+            {skills.sort().map(skill => (
               <Box ml={2}>
                 <Icon icon={skill} inverted={false} ml={1}/>
               </Box>
@@ -103,7 +108,7 @@ const IndexPage = () => (
             <IconLink href="https://twitter.com/jmichaliga" icon="twitter" text="Follow @jmichaliga on twitter." />
           </p>
           <p>
-            <IconLink href="https://codepen.io/jmichaliga/full/GBNWXx" icon="vue-dot-js" text="Check out his resume." />
+            <IconLink href="https://codepen.io/jmichaliga/full/GBNWXx" icon="reddit" text="Check out his resume." />
           </p>
         </Center>
       </Box>
