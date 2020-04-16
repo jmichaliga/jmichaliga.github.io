@@ -12,6 +12,7 @@ import styled from 'styled-components'
 // import { Flex } from '@smartnode/masonry'
 import theme from '../theme'
 
+import Sig from "./sig"
 import Header from "./header"
 import "./layout.css"
 
@@ -48,11 +49,17 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title}>
+          <div style={{ margin: 32 }}>
+            <Sig />
+          </div>
+        </Header>
         <Container>
           <Main>{children}</Main>
           <Footer>
-            <span role="img" aria-label="Hi">⚡</span>
+            <a href="https://github.com/jmichaliga/sandbox/blob/master/justin.ttf?raw=true" target="_blank" rel="noreferrer noopener">
+              <span role="img" aria-label="Hi">⚡</span>
+            </a>
           </Footer>
         </Container>
       </>

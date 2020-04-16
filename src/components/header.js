@@ -14,7 +14,7 @@ const H1 = styled('h1')`
   text-align: center;
 `
 
-const Header = ({ siteTitle }) => (
+const Header = ({ children, siteTitle }) => (
   <header
     style={{
       marginBottom: `1.45rem`,
@@ -26,8 +26,8 @@ const Header = ({ siteTitle }) => (
         maxWidth: 960,
       }}
     >
-      <H1 mb={0} style={{marginBottom: 0}}>
-        {siteTitle}
+      <H1>
+        {children ? children : siteTitle}
       </H1>
     </div>
   </header>
