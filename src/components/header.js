@@ -7,19 +7,16 @@ import theme from '../theme'
 const H1 = styled('h1')`
   color: ${theme.colors.white};
   text-shadow: ${theme.colors.black} 1px 1px 2px;
-  letter-spacing: -0.05em;
-  text-transform: uppercase;
-  font-size: ${theme.fontSizes[6]}px;
+  letter-spacing: -0.5px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: ${theme.fontSizes[7]}px;
+  font-weight: 300;
   padding: 1.45rem 1.0875rem;
   text-align: center;
 `
 
 const Header = ({ children, siteTitle }) => (
-  <header
-    style={{
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header>
     <div
       style={{
         margin: `0 auto`,

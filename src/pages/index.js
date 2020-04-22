@@ -162,7 +162,7 @@ const IndexPage = () => {
         className={showSkills ? "open" : "close"}
         onClick={_toggleShowSkills}
       >
-        ⚡️
+        <span role="img" aria-label="skills">⚡️</span>
       </SkillsActivate>
 
       <Flex>
@@ -184,7 +184,7 @@ const IndexPage = () => {
               <abbr title="and" className="amp">
                 &amp;
               </abbr>{" "}
-              Immersive User Experiences.
+              Immersive User Experiences. Based in Brooklyn, NYC 🍎.
             </p>
 
             <Social>
@@ -214,7 +214,7 @@ const IndexPage = () => {
 
               <IconLink
                 href="https://codepen.io/jmichaliga/full/GBNWXx"
-                icon="reddit"
+                icon="serverless"
                 text="Check out his resume."
               />
             </Social>

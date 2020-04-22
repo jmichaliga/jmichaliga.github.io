@@ -11,13 +11,13 @@ const Link = styled('a')`
     padding: ${theme.space[1]}px;
     color: ${theme.colors.white};
     background: ${theme.colors.jmRed};
-    width: 42px; height: 42px;
+    width: 40px; height: 40px;
     transition-duration: ${theme.duration.slow};
-    border-bottom: 3px solid transparent;
+    border-bottom: 2px solid transparent;
   }
   &:hover{
     text-shadow: ${theme.colors.black} 1px 1px 2px;
-    border-bottom: 3px solid ${theme.colors.jmBlue};
+    border-bottom: 2px solid ${theme.colors.jmBlue};
     cursor: pointer;
   }
 `
