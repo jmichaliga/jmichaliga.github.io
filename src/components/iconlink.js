@@ -11,17 +11,20 @@ const Link = styled('a')`
     padding: ${theme.space[1]}px;
     color: ${theme.colors.white};
     background: ${theme.colors.jmRed};
+    width: 42px; height: 42px;
     transition-duration: ${theme.duration.slow};
+    border-bottom: 3px solid transparent;
   }
   &:hover{
     text-shadow: ${theme.colors.black} 1px 1px 2px;
     border-bottom: 3px solid ${theme.colors.jmBlue};
+    cursor: pointer;
   }
 `
 const IconLink = ({ href, icon, text, inverted }) => {
   return (
     <Link href={href} key={`icon-${icon}`} rel="external noopener noreferrer" target="_blank">
-      <Icon icon={icon} inverted={inverted} /> {text}
+      <Icon icon={icon} inverted={inverted} />
     </Link>
   )
 }

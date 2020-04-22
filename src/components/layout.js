@@ -1,18 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
-// import { Flex } from '@smartnode/masonry'
 import theme from '../theme'
 
-import Sig from "./sig"
 import Header from "./header"
 import "./layout.css"
 
@@ -34,6 +25,13 @@ const Footer = styled('footer')`
   font-size: ${theme.fontSizes[0]}px;
   font-family: 'IBM Plex Mono';
   padding-left: ${theme.space[2]}px;
+  a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    &:hover {
+      border-bottom: 
+    }
+  }
 `
 
 const Layout = ({ children }) => (
@@ -50,15 +48,15 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title}>
-          <div style={{ margin: 32 }}>
-            <Sig />
-          </div>
+          <h1 style={{ margin: 32 }}>
+            {data.site.siteMetadata.title}
+          </h1>
         </Header>
         <Container>
           <Main>{children}</Main>
           <Footer>
             <a href="https://github.com/jmichaliga/sandbox/blob/master/justin.ttf?raw=true" target="_blank" rel="noreferrer noopener">
-              <span role="img" aria-label="Hi">⚡</span>
+              <span role="img" aria-label="Hi">2020</span>
             </a>
           </Footer>
         </Container>
