@@ -50,7 +50,7 @@ const Layout = ({ children }) => (
         <Container>
           <Main>{children}</Main>
           <Footer>
-            <a href="https://github.com/jmichaliga/sandbox/blob/master/justin.ttf?raw=true" target="_blank" rel="noreferrer noopener">
+            <a href="https://codepen.io/jmichaliga/full/GBNWXx" target="_blank" rel="noreferrer noopener">
               <span role="img" aria-label="2020">👾</span>
             </a>
           </Footer>

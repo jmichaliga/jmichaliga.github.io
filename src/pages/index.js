@@ -212,11 +212,6 @@ const IndexPage = () => {
                 text="Follow @jmichaliga on twitter."
               />
 
-              <IconLink
-                href="https://codepen.io/jmichaliga/full/GBNWXx"
-                icon="serverless"
-                text="Check out his resume."
-              />
             </Social>
           </Center>
         </Box>
