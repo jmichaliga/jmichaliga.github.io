@@ -8,7 +8,7 @@ import "./layout.css"
 
 const Container = styled('div')`
   margin: 0 auto;
-  padding: 0px 1.0875rem 1.45rem;
+  padding: 1rem 1.5rem;
   height: 100vh;
   max-width: 960px;
 `
@@ -17,11 +17,20 @@ const Main = styled('main')`
  width: 100%;
 `
 
+const Bar = styled.div`
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 3px;
+  width: 100%;
+  background: ${theme.colors.jmRed};
+`
+
 const Footer = styled('footer')`
   position: fixed;
   bottom: 0;
   left: 0;
-  font-size: ${theme.fontSizes[0]}px;
+  font-size: ${theme.fontSizes[2]}px;
   font-family: 'IBM Plex Mono';
   padding-left: ${theme.space[2]}px;
   a {
@@ -47,6 +56,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
+        <Bar />
         <Container>
           <Main>{children}</Main>
           <Footer>

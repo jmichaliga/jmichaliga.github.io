@@ -11,8 +11,9 @@ const H1 = styled('h1')`
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: ${theme.fontSizes[7]}px;
   font-weight: 300;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.5rem 1rem;
   text-align: center;
+  margin-bottom: 0;
 `
 
 const Header = ({ children, siteTitle }) => (
