@@ -13,17 +13,16 @@ const Container = styled('div')`
   max-width: 960px;
 `
 
-const Main = styled('main')`
- width: 100%;
-`
-
-const Bar = styled.div`
-  position: absolute;
-  top: 0px;
-  left: 0px;
+const Bar = styled('div')`
   height: 3px;
   width: 100%;
+  position: absolute;
+  top: 0px;
   background: ${theme.colors.jmRed};
+`
+
+const Main = styled('main')`
+ width: 100%;
 `
 
 const Footer = styled('footer')`
@@ -55,6 +54,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <Bar />
         <Header siteTitle={data.site.siteMetadata.title} />
         <Bar />
         <Container>

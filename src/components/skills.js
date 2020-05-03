@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 
-import Icon from "../components/icon"
-
+import Icon from "./icon"
 import styled from "styled-components"
 import { space, width, fontSize, color } from "styled-system"
 
@@ -40,49 +39,50 @@ const SkillBox = styled(({ showSkills, ...props }) => <Box {...props} />)`
   opacity: 0;
   transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99),
     opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transform: translate3d(50px,0,0);
   transition-delay: ${props => props.index * 20}ms;
   ${({ showSkills }) =>
     showSkills &&
     `
-      transform: scale(1) translateY(0px);
+      transform: scale(1) translate3d(0,0,0);
       opacity: 1;
   `}
 `
-
-const skills = [
-  "illustrator",
-  "photoshop",
-  "css3",
-  "d3",
-  "docker",
-  "eslint",
-  "figma",
-  "firebase",
-  "gatsby",
-  "graphql",
-  "html5",
-  "javascript",
-  "jest",
-  "kubernetes",
-  "next",
-  "node",
-  "npm",
-  "nuxt-dot-js",
-  "postgresql",
-  "react",
-  "redux",
-  "rollup",
-  "sass",
-  "serverless",
-  "vue",
-  "yarn",
-]
 
 const SkillsComponent = () => {
   const [showSkills, setShowSkills] = useState(false)
   const _toggleShowSkills = () => {
     setShowSkills(!showSkills)
   }
+
+  const skills = [
+    "illustrator",
+    "photoshop",
+    "css3",
+    "d3",
+    "docker",
+    "eslint",
+    "figma",
+    "firebase",
+    "gatsby",
+    "graphql",
+    "html5",
+    "javascript",
+    "jest",
+    "kubernetes",
+    "next",
+    "node",
+    "npm",
+    "nuxt-dot-js",
+    "postgresql",
+    "react",
+    "redux",
+    "rollup",
+    "sass",
+    "serverless",
+    "vue",
+    "yarn",
+  ]
 
   return (
     <>
