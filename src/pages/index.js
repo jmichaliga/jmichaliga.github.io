@@ -70,11 +70,12 @@ const SkillBox = styled(({ showSkills, ...props }) => <Box {...props} />)`
   opacity: 0;
   transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99),
     opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transform: scale(0.5) translate3d(50px,0,0);
   transition-delay: ${props => props.index * 20}ms;
   ${({ showSkills }) =>
     showSkills &&
     `
-      transform: scale(1) translateY(0px);
+      transform: scale(1) translate3d(0,0,0);
       opacity: 1;
   `}
 `
