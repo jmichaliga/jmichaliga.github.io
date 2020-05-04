@@ -91,7 +91,7 @@ const SkillsComponent = () => {
         onClick={_toggleShowSkills}
       >
         {skills.sort().map((skill, idx) => (
-          <SkillBox ml={2} showSkills={showSkills} index={skills.length - idx}>
+          <SkillBox ml={2} showSkills={showSkills} index={skills.length - idx} key={skill}>
             <Icon icon={skill} inverted={false} ml={2} />
           </SkillBox>
         ))}

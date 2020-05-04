@@ -8,7 +8,7 @@ import "./layout.css"
 
 const Container = styled('div')`
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.45rem;
   height: 100vh;
   max-width: 960px;
 `
@@ -16,7 +16,7 @@ const Container = styled('div')`
 const Bar = styled('div')`
   height: 3px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0px;
   background: ${theme.colors.jmRed};
 `
@@ -56,7 +56,6 @@ const Layout = ({ children }) => (
       <>
         <Bar />
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Bar />
         <Container>
           <Main>{children}</Main>
           <Footer>
