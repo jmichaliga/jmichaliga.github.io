@@ -23,8 +23,8 @@ const Icon = ({ icon, inverted, text }) => {
         return file.node.name === icon
       }).map(file => {
         return (
-          <abbr title={icon} className="hidden">
-            <img key={icon}
+          <abbr title={icon} className="hidden" key={icon}>
+            <img
               src={file.node.publicURL} 
               height="24" width="24" alt={text}
               className={inverted ? 'invert': ''}
