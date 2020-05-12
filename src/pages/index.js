@@ -181,11 +181,11 @@ const IndexPage = () => {
               Full-Stack Javascript Engineer with over a decade of professional
               experience in agency, direct service, and in-house brand
               capacities &mdash; specializing in Interactive Design, Mobile/Web
-              Development, Design Systems,{" "}
+              Development, GraphQL Adoption, Design Systems,{" "}
               <abbr title="and" className="amp">
                 &amp;
               </abbr>{" "}
-              Immersive User Experiences. Based in Brooklyn, NYC 🍎.
+              Immersive User Experiences.<br/>Based in Brooklyn, NYC 🍎.
             </p>
 
             <Social>
