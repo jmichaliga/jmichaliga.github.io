@@ -9,15 +9,17 @@ import "./layout.css"
 const Container = styled('div')`
   margin: 0 auto;
   padding: 0px 1.0875rem 1.45rem;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 `
 
 const Flex = styled('div')`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100%;
 `
 

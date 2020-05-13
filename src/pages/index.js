@@ -20,7 +20,14 @@ const Box = styled.div`
 const Flex = styled(Box)`
   display: flex;
   flex-wrap: wrap;
-  margin-top: -1.45rem;
+`
+
+const Bar = styled.div`
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 2px;
+  background: ${theme.colors.jmRed};
 `
 
 const Center = styled(Box)`
@@ -61,12 +68,6 @@ const Skills = styled.section`
   bottom: 0px;
 `
 
-/*
-
-
-*/
-
-// transition-duration: ${theme.duration.fast};
 const SkillBox = styled(({ showSkills, ...props }) => <Box {...props} />)`
   opacity: 0;
   transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99),
@@ -122,31 +123,31 @@ const IndexPage = () => {
   }
 
   return (
-    <Layout>
+    <>
+      <Bar />
+      <Layout>
       <SEO
         title="Home"
         keywords={[
-          `brooklyn`,
-          `creative`,
-          `engineer`,
-          `web design`,
-          `justin michaliga`,
-          `jmichaliga`,
-          `logo design`,
-          `design systems`,
-          `mobile apps`,
-          `web developer`,
-          `full-stack`,
-          `front end`,
-          `new york`,
-          `nyc`,
-          `ecmascript6`,
-          `javascript`,
-          `east village`,
-          `greenpoint`,
-          `gatsby`,
-          `nextjs`,
-        ]}
+          "brooklyn",
+          "creative",
+          "engineer",
+          "web design",
+          "justin michaliga",
+          "jmichaliga",
+          "logo design",
+          "design systems",
+          "mobile apps",
+          "web developer",
+          "full-stack",
+          "front end",
+          "new york",
+          "nyc",
+          "ecmascript6",
+          "east village",
+          "greenpoint",
+          "nextjs",
+        ].concat(skills)}
       />
 
       <Skills
@@ -219,6 +220,7 @@ const IndexPage = () => {
         </Box>
       </Flex>
     </Layout>
+    </>
   )
 }
 
