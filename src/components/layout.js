@@ -8,9 +8,19 @@ import "./layout.css"
 
 const Container = styled('div')`
   margin: 0 auto;
-  padding: 1rem 1.45rem;
-  height: 100vh;
+  padding: 0px 1.0875rem 1.45rem;
+  min-height: 100vh;
   max-width: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+`
+
+const Flex = styled('div')`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 `
 
 const Bar = styled('div')`
@@ -22,7 +32,7 @@ const Bar = styled('div')`
 `
 
 const Main = styled('main')`
- width: 100%;
+  width: 100%;
 `
 
 const Footer = styled('footer')`
@@ -32,6 +42,7 @@ const Footer = styled('footer')`
   font-size: ${theme.fontSizes[2]}px;
   font-family: 'IBM Plex Mono';
   padding-left: ${theme.space[2]}px;
+  text-shadow: 0px 0px 4px rgba(0,0,0,0.25);
   a {
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
@@ -53,18 +64,17 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Bar />
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Container>
+      <Container>
+        <Flex>
+          <Header siteTitle={data.site.siteMetadata.title} />
           <Main>{children}</Main>
-          <Footer>
-            <a href="https://codepen.io/jmichaliga/full/GBNWXx" target="_blank" rel="noreferrer noopener">
-              <span role="img" aria-label="2020">👾</span>
-            </a>
-          </Footer>
-        </Container>
-      </>
+        </Flex>
+        <Footer>
+          <a href="https://codepen.io/jmichaliga/full/GBNWXx" target="_blank" rel="noreferrer noopener">
+            <span role="img" aria-label="2020">👾</span>
+          </a>
+        </Footer>
+      </Container>
     )}
   />
 )

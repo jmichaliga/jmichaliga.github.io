@@ -2,6 +2,7 @@ html {
   font-family: 'IBM Plex Sans', 'helvetica neue', 'helvetica', 'arial', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background: #0AC;
 }
 body {
   margin: 0;
