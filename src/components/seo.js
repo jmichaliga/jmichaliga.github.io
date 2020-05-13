@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import theme from "../theme"
 
 function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
@@ -32,6 +33,13 @@ function SEO({ description, lang, meta, keywords, title }) {
       htmlAttributes={{
         lang,
       }}
+      link={[
+        { href: "/apple-touch-icon.png", rel: "apple-touch-icon", sizes: "180x180" },
+        { href: "/favicon-32x32.png", rel: "icon", sizes: "32x32" },
+        { href: "/favicon-16x16.png", rel: "icon", sizes: "16x16" },
+        { href: "/site.webmanifest", rel="manifest" },
+        { href="/safari-pinned-tab.svg", rel="mask-icon", color: theme.colors.jmRed },
+      ]}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
@@ -67,6 +75,13 @@ function SEO({ description, lang, meta, keywords, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        { name: "msapplication-TileColor",
+          content: theme.colors.jmRed,
+        },
+        {
+          name: "theme-color",
+          content: theme.colors.jmRed,
+        }
       ]
         .concat(
           keywords.length > 0
