@@ -23,7 +23,7 @@ const Icon = ({ icon, inverted, text }) => {
         return file.node.name === icon
       }).map(file => {
         return (
-          <abbr title={icon} className="hidden">
+          <abbr title={icon} key={icon} className="hidden">
             <img key={icon}
               src={file.node.publicURL} 
               height="24" width="24" alt={text}
