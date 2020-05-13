@@ -45,6 +45,7 @@ const SkillsActivate = styled.section`
   right: 8px;
   bottom: 0px;
   transition-duration: ${theme.duration.normal};
+  text-shadow: 0px 0px 4px rgba(0,0,0,0.25);
   &.close {
     transform: translate3d(0, 0, 0);
   }

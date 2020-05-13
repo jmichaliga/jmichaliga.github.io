@@ -13,8 +13,16 @@ const Container = styled('div')`
   max-width: 960px;
 `
 
+const Flex = styled('div')`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`
+
 const Main = styled('main')`
- width: 100%;
+  width: 100%;
 `
 
 const Footer = styled('footer')`
@@ -24,6 +32,7 @@ const Footer = styled('footer')`
   font-size: ${theme.fontSizes[0]}px;
   font-family: 'IBM Plex Mono';
   padding-left: ${theme.space[2]}px;
+  text-shadow: 0px 0px 4px rgba(0,0,0,0.25);
   a {
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
@@ -45,17 +54,17 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Container>
+      <Container>
+        <Flex>
+          <Header siteTitle={data.site.siteMetadata.title} />
           <Main>{children}</Main>
-          <Footer>
-            <a href="https://codepen.io/jmichaliga/full/GBNWXx" target="_blank" rel="noreferrer noopener">
-              <span role="img" aria-label="2020">👾</span>
-            </a>
-          </Footer>
-        </Container>
-      </>
+        </Flex>
+        <Footer>
+          <a href="https://codepen.io/jmichaliga/full/GBNWXx" target="_blank" rel="noreferrer noopener">
+            <span role="img" aria-label="2020">👾</span>
+          </a>
+        </Footer>
+      </Container>
     )}
   />
 )

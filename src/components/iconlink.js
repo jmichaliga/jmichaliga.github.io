@@ -12,13 +12,15 @@ const Link = styled('a')`
     color: ${theme.colors.white};
     background: ${theme.colors.jmRed};
     width: 40px; height: 40px;
-    transition-duration: ${theme.duration.slow};
+    transition-duration: ${theme.duration.normal};
     border-bottom: 2px solid transparent;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.25);
   }
   &:hover{
     text-shadow: ${theme.colors.black} 1px 1px 2px;
     border-bottom: 2px solid ${theme.colors.jmBlue};
     cursor: pointer;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0);
   }
 `
 const IconLink = ({ href, icon, text, inverted }) => {
