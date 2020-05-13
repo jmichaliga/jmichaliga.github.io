@@ -3,7 +3,7 @@ import React from "react"
 import IconLink from "../components/iconlink"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Skills from "../components/skills"
+// import Skills from "../components/skills"
 import Svg from "../components/svg"
 
 import styled from "styled-components"
