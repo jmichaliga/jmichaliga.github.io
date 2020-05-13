@@ -23,14 +23,6 @@ const Flex = styled('div')`
   height: 100%;
 `
 
-const Bar = styled('div')`
-  height: 3px;
-  width: 100%;
-  position: fixed;
-  top: 0px;
-  background: ${theme.colors.jmRed};
-`
-
 const Main = styled('main')`
   width: 100%;
 `

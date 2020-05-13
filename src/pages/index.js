@@ -1,9 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 
-import IconLink from "../components/iconlink"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import Skills from "../components/skills"
+import Icon from "../components/icon"
+import IconLink from "../components/iconlink"
 import Svg from "../components/svg"
 
 import styled from "styled-components"
@@ -17,7 +17,6 @@ const Box = styled.div`
   ${fontSize}
   ${color}
 `
-
 const Flex = styled(Box)`
   display: flex;
   flex-wrap: wrap;
@@ -88,7 +87,41 @@ const Social = styled.section`
   justify-content: space-evenly;
 `
 
+const skills = [
+  "illustrator",
+  "photoshop",
+  "css3",
+  "d3",
+  "docker",
+  "eslint",
+  "figma",
+  "firebase",
+  "gatsby",
+  "graphql",
+  "html5",
+  "javascript",
+  "jest",
+  "kubernetes",
+  "next",
+  "node",
+  "npm",
+  "nuxt-dot-js",
+  "postgresql",
+  "react",
+  "redux",
+  "rollup",
+  "sass",
+  "serverless",
+  "vue",
+  "yarn",
+]
+
 const IndexPage = () => {
+  const [showSkills, setShowSkills] = useState(false)
+  const _toggleShowSkills = () => {
+    setShowSkills(!showSkills)
+  }
+
   return (
     <>
       <Bar />
