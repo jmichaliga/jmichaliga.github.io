@@ -15,15 +15,17 @@ const Link = styled('a')`
     transition-duration: ${theme.duration.normal};
     border-bottom: 2px solid transparent;
     box-shadow: 0px 0px 4px rgba(0,0,0,0.25);
+    & svg {
+      cursor: pointer;
+    }
   }
   &:hover{
     text-shadow: ${theme.colors.black} 1px 1px 2px;
     border-bottom: 2px solid ${theme.colors.jmBlue};
-    cursor: pointer;
     box-shadow: 0px 0px 4px rgba(0,0,0,0);
   }
 `
-const IconLink = ({ href, icon, text, inverted }) => {
+const IconLink = ({ href, icon, inverted }) => {
   return (
     <Link href={href} key={`icon-${icon}`} rel="external noopener noreferrer" target="_blank">
       <Icon icon={icon} inverted={inverted} />
@@ -34,14 +36,12 @@ const IconLink = ({ href, icon, text, inverted }) => {
 IconLink.propTypes = {
   href: PropTypes.string,
   icon: PropTypes.string,
-  text: PropTypes.string,
   inverted: PropTypes.bool
 }
 
 IconLink.defaultProps = {
   href: "",
   icon: "github",
-  text: "",
   inverted: true
 }
 
