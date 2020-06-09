@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Justin W. Michaliga`,
-    description: `Justin W. Michaliga is a Creative Mobile Web Developer and Interactive Designer in NYC.`,
+    description: `Justin W. Michaliga is a Javscript Engineer and Interactive Designer in NYC.`,
     author: `@jmichaliga`,
   },
   plugins: [
