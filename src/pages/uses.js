@@ -34,6 +34,25 @@ const Center = styled(Box)`
   height: 100%;
 `
 
+const H2 = styled.h2`
+  padding-top: 1.5rem;
+`
+
+const H3 = styled.h3`
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background: ${theme.colors.jmRed};
+`
+
+const Ul = styled.ul`
+  list-style: none;
+`
+
+const Li = styled.li`
+  line-height: 1.5em;
+`
+
 const skills = [
   "illustrator",
   "photoshop",
@@ -93,42 +112,42 @@ const IndexPage = () => {
 
       <Flex>
 
-        <Box width={[1, 1 / 2]} p={3}>
+        <Box width={1} p={3}>
           <Center mt={4}>
-            <h2>What I Use</h2>
+            <H2>What I Use</H2>
 
-            <h3>Editor + Terminal</h3>
-            <ul>
-              <li>VS Code</li>
-              <li>Vi on the default Mac Terminal</li>
-            </ul>
+            <H3>🛠 Editor + Terminal</H3>
+            <Ul>
+              <Li>VS Code</Li>
+              <Li>Vi on the default Mac Terminal</Li>
+            </Ul>
 
-            <h3>Design Tools</h3>
-            <ul>
-              <li>Illustrator for Illustrations</li>
-              <li>Figma for Product</li>
-              <li>Sketch w/ Abstract for Charts</li>
-            </ul>
+            <H3>🖍 Design Tools</H3>
+            <Ul>
+              <Li>Illustrator for Illustrations</Li>
+              <Li>Figma for Product</Li>
+              <Li>Sketch w/ Abstract for Charts</Li>
+            </Ul>
 
-            <h3>Streaming</h3>
-            <ul>
-              <li>Yeti Blue Mic</li>
-              <li>MBP Webcam</li>
-            </ul>
+            <H3>🎤 Streaming</H3>
+            <Ul>
+              <Li>Yeti Blue Mic</Li>
+              <Li>MBP Webcam</Li>
+            </Ul>
 
-            <h3>Hardware</h3>
-            <ul>
-              <li>15" MBP 2018</li>
-              <li>15" MBP 2012</li>
-              <li>Custom Intel Build (2006)</li>
-            </ul>
+            <H3>💻 Hardware</H3>
+            <Ul>
+              <Li>15" MBP 2018</Li>
+              <Li>15" MBP 2012</Li>
+              <Li>Custom Intel Build (2006)</Li>
+            </Ul>
 
-            <h3>Keyboards</h3>
-            <ul>
-              <li>Drop Ctrl</li>
-              <li>Ducky One 2 Mini</li>
-              <li>KUL ES-76</li>
-            </ul>
+            <H3>⌨️ Keyboards</H3>
+            <Ul>
+              <Li>Drop Ctrl</Li>
+              <Li>Ducky One 2 Mini</Li>
+              <Li>KUL ES-76</Li>
+            </Ul>
 
           </Center>
         </Box>
