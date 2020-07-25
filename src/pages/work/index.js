@@ -7,34 +7,34 @@ import Tag from "../../components/tag"
 
 const tags = ["React", "JavaScript", "Node", "App", "Ad"];
 
-// export const query = graphql`
-//   query {
-//     allMarkdownRemark(limit: 5, sort: { fields: [frontmatter___date], order: DESC }) {
-//       totalCount
-//       edges {
-//         node {
-//           id
-//           frontmatter {
-//             title
-//             date(formatString: "MMMM Do, YYYY")
-//             thumbnail
-//             tags
-//             author {
-//               id
-//               bio
-//               name
-//               twitter
-//             }
-//           }
-//           fields {
-//             slug
-//           }
-//           excerpt
-//         }
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query {
+    allMarkdownRemark(limit: 5, sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "MMMM Do, YYYY")
+            thumbnail
+            tags
+            author {
+              id
+              bio
+              name
+              twitter
+            }
+          }
+          fields {
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`;
 
 const WorkPage = () => (
   <Layout>
