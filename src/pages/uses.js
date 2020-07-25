@@ -14,6 +14,7 @@ const Box = styled.div`
   ${fontSize}
   ${color}
 `
+
 const Flex = styled(Box)`
   display: flex;
   flex-wrap: wrap;
