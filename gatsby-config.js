@@ -12,7 +12,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-6741593-1",
+        trackingId: `UA-6741593-1`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [".md", ".mdx"],
       },
     },
     `gatsby-plugin-offline`,
@@ -22,22 +28,29 @@ module.exports = {
         fonts: [
           {
             family: `IBM Plex Sans`,
-            variants: [`100`, `400`, `700`]
+            variants: [`100`, `400`, `700`],
           },
           {
             family: `IBM Plex Mono`,
-            variants: [`400`, `700`]
+            variants: [`400`, `700`],
           },
         ],
       },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
-      resolve: "gatsby-plugin-tags",
+      resolve: `gatsby-plugin-tags`,
       options: {
-        templatePath: `${__dirname}/src/templates/tag.tsx`,
-        prefix: "blog/tags",
+        templatePath: `${__dirname}/src/templates/tag.js`,
+        prefix: `blog/tags`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
       },
     },
     {
@@ -47,7 +60,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
+      },
+    },
     `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-yaml`,
   ],
 }
