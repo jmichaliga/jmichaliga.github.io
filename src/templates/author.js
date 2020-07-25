@@ -36,7 +36,7 @@ const AuthoredFooter = styled.div`
 
 export const query = graphql`
   query ($authorId: String!){
-    allMarkdownRemark(
+    allMdx(
       limit: 1000
       filter: { frontmatter: { author: { id: { eq: $authorId } } } }
     ) {
@@ -53,9 +53,7 @@ export const query = graphql`
               name
             }
           }
-          fields {
-            slug
-          }
+          slug
           excerpt
           timeToRead
         }
@@ -66,7 +64,7 @@ export const query = graphql`
 
 const Authored = ({ pageContext, data }) => {
   const { author } = pageContext;
-  const posts = data.allMarkdownRemark.edges;
+  const posts = data.allMdx.edges;
   return (
     <Simple title={`Authored: ${author.name}`}>
       <BackLink />
@@ -82,7 +80,7 @@ const Authored = ({ pageContext, data }) => {
           <ArticleList>
             {posts.map(({ node }) => (
               <ArticleCard key={node.id}>
-                <Link to={node.fields.slug}>
+                <Link to={node.slug}>
                   <ArticleImage
                     src={node.frontmatter.thumbnail}
                     alt={node.frontmatter.title}
@@ -90,7 +88,7 @@ const Authored = ({ pageContext, data }) => {
                 </Link>
 
                 <div className="px-4">
-                  <HeaderLink to={node.fields.slug}>
+                  <HeaderLink to={node.slug}>
                     <h4 className="font-bold text-xl py-0 mt-0 mb-2">
                       {node.frontmatter.title}
                     </h4>

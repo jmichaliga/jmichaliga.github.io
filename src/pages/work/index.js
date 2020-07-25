@@ -9,28 +9,24 @@ const tags = ["React", "JavaScript", "Node", "App", "Ad"];
 
 export const query = graphql`
   query {
-    allMarkdownRemark(limit: 5) {
+    allMdx(limit: 5) {
       totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM Do, YYYY")
-            thumbnail
-            tags
-            author {
-              id
-              bio
-              name
-              twitter
-            }
+      nodes {
+        id
+        frontmatter {
+          title
+          date(formatString: "MMMM Do, YYYY")
+          thumbnail
+          tags
+          author {
+            id
+            bio
+            name
+            twitter
           }
-          fields {
-            slug
-          }
-          excerpt
         }
+        slug
+        excerpt
       }
     }
   }

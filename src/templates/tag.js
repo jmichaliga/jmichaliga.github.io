@@ -1,7 +1,7 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
-import styled from "styled-components";
-import Simple from "./simple";
+import React from "react"
+import { Link, graphql } from "gatsby"
+import styled from "styled-components"
+import Simple from "./simple"
 
 // import { MDXRenderer } from "gatsby-plugin-mdx"
 
@@ -9,14 +9,11 @@ const HeaderLink = styled(Link)`
   & :hover {
     text-decoration: underline;
   }
-`;
+`
 
-const TaggedContent = styled.div`
-
-`;
+const TaggedContent = styled.div``
 
 const TaggedHeader = styled.div`
-
   h2 {
     font-weight: 400;
     margin-bottom: 2px;
@@ -28,46 +25,36 @@ const TaggedHeader = styled.div`
       font-weight: 400;
     }
   }
-`;
+`
 
-const TaggedFooter = styled.div`
-
-`;
+const TaggedFooter = styled.div``
 
 export const query = graphql`
-  query($tag: String!) {
-    allMarkdownRemark(
-      limit: 1000
-      filter: { fields: { tags: { in: [$tag] } } }
-    ) {
+  query {
+    allMdx(limit: 1000) {
       totalCount
-      edges {
-        node {
-          fields {
-            slug
-            tags
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            date(formatString: "MMMM Do, YYYY")
-            thumbnail
-            tags
-            author {
-              id
-              name
-            }
+      nodes {
+        slug
+        excerpt
+        timeToRead
+        frontmatter {
+          title
+          date(formatString: "MMMM Do, YYYY")
+          thumbnail
+          tags
+          author {
+            id
+            name
           }
         }
       }
     }
   }
-`;
+`
 
 const Tagged = ({ pageContext, data }) => {
-  const { tag } = pageContext;
-  const posts = data.allMarkdownRemark.edges;
+  const { tag } = pageContext
+  const posts = data.allMdx.nodes
   return (
     <Simple title={`Tagged: ${tag}`}>
       <BackLink />
@@ -83,7 +70,7 @@ const Tagged = ({ pageContext, data }) => {
           <ArticleList>
             {posts.map(({ node }) => (
               <ArticleCard key={node.id}>
-                <Link to={node.fields.slug}>
+                <Link to={node.slug}>
                   <ArticleImage
                     src={node.frontmatter.thumbnail}
                     alt={node.frontmatter.title}
@@ -91,7 +78,7 @@ const Tagged = ({ pageContext, data }) => {
                 </Link>
 
                 <div className="px-4">
-                  <HeaderLink to={node.fields.slug}>
+                  <HeaderLink to={node.slug}>
                     <h4 className="font-bold text-xl py-0 mt-0 mb-2">
                       {node.frontmatter.title}
                     </h4>
@@ -124,10 +111,9 @@ const Tagged = ({ pageContext, data }) => {
 
           <BackLink />
         </TaggedFooter>
-        {/* <MDXRenderer>{post.rawMarkdownBody}</MDXRenderer> */}
       </TaggedContent>
     </Simple>
-  );
-};
+  )
+}
 
-export default Tagged;
+export default Tagged

@@ -5,7 +5,6 @@ module.exports = {
     author: `@jmichaliga`,
   },
   mapping: {
-    "MarkdownRemark.frontmatter.author": `AuthorYaml`,
     "Mdx.frontmatter.author": `AuthorYaml`,
   },
   plugins: [
@@ -67,7 +66,6 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-yaml`,
   ],

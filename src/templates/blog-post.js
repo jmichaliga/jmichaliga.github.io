@@ -7,7 +7,7 @@ import Tag from "../components/community/tag";
 import BackLink from "../components/community/back-link";
 
 import colors from "../colors";
-// import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import { ArticlePosted, AuthorCard } from "../components/community/articles";
 
@@ -43,10 +43,9 @@ const BlogFooter = styled.div`
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(slug: { eq: $slug } ) {
       html
       excerpt
-      rawMarkdownBody
       frontmatter {
         title
         date(formatString: "MMMM Do, YYYY")
@@ -59,12 +58,13 @@ export const query = graphql`
         headerImage
         tags
       }
+      rawBody
     }
   }
 `;
 
 const BlogPost = ({ data }) => {
-  const post = data.markdownRemark;
+  const post = data.mdx;
   return (
     <Simple title={post.frontmatter.title} description={post.excerpt}>
       <BackLink />
@@ -86,7 +86,9 @@ const BlogPost = ({ data }) => {
             ))}
           </div>
         </BlogHeader>
-        <BlogBody dangerouslySetInnerHTML={{ __html: post.html }} />
+        <BlogBody>
+          <MDXRenderer>{post.rawBody}</MDXRenderer>
+        </BlogBody>
         <BlogFooter>
           <div
             style={{
@@ -102,7 +104,7 @@ const BlogPost = ({ data }) => {
           </div>
           <BackLink />
         </BlogFooter>
-        {/* <MDXRenderer>{post.rawMarkdownBody}</MDXRenderer> */}
+
       </BlogContent>
     </Simple>
   );
