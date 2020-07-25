@@ -117,36 +117,36 @@ const IndexPage = () => {
           <Center mt={4}>
             <H2>What I Use</H2>
 
-            <H3>🛠 Editor + Terminal</H3>
+            <H3><span role="img" aria-label="Tools">🛠</span> Editor + Terminal</H3>
             <Ul>
               <Li>VS Code</Li>
               <Li>Vi on the default Mac Terminal</Li>
             </Ul>
 
-            <H3>🖍 Design Tools</H3>
+            <H3><span role="img" aria-label="Crayon">🖍</span> Design Tools</H3>
             <Ul>
               <Li>Illustrator for Illustrations</Li>
               <Li>Figma for Product</Li>
               <Li>Sketch w/ Abstract for Charts</Li>
             </Ul>
 
-            <H3>🎤 Streaming</H3>
+            <H3><span role="img" aria-label="Microphone">🎤</span> Streaming</H3>
             <Ul>
               <Li>Yeti Blue Mic</Li>
               <Li>MBP Webcam</Li>
             </Ul>
 
-            <H3>💻 Hardware</H3>
+            <H3><span role="img" aria-label="Laptop">💻</span> Hardware</H3>
             <Ul>
               <Li>15" MBP 2018</Li>
               <Li>15" MBP 2012</Li>
               <Li>Custom Intel Build (2006)</Li>
             </Ul>
 
-            <H3>⌨️ Keyboards</H3>
+            <H3><span role="img" aria-label="Keyboard">⌨️</span> Keyboards</H3>
             <Ul>
-              <Li>Drop Ctrl</Li>
-              <Li>Ducky One 2 Mini</Li>
+              <Li>Drop Ctrl - 76 Keys</Li>
+              <Li>Ducky One 2 Mini - 64 Keys</Li>
               <Li>KUL ES-76</Li>
             </Ul>
 

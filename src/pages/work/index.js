@@ -9,7 +9,7 @@ const tags = ["React", "JavaScript", "Node", "App", "Ad"];
 
 export const query = graphql`
   query {
-    allMarkdownRemark(limit: 5, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(limit: 5) {
       totalCount
       edges {
         node {

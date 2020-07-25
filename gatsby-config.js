@@ -15,6 +15,7 @@ module.exports = {
         trackingId: "UA-6741593-1",
       },
     },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -47,9 +48,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-transformer-sharp`
   ],
 }
