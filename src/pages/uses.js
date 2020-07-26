@@ -3,55 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import styled from "styled-components"
-import { space, width, fontSize, color } from "styled-system"
-
-import theme from "../theme"
-
-const Box = styled.div`
-  ${space}
-  ${width}
-  ${fontSize}
-  ${color}
-`
-const Flex = styled(Box)`
-  display: flex;
-  flex-wrap: wrap;
-`
-
-const Bar = styled.div`
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 2px;
-  background: ${theme.colors.jmRed};
-`
-
-const Center = styled(Box)`
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-`
-
-const H2 = styled.h2`
-  padding-top: 1.5rem;
-`
-
-const H3 = styled.h3`
-  padding: 1rem;
-  text-transform: uppercase;
-  font-size: 1rem;
-  background: ${theme.colors.jmRed};
-`
-
-const Ul = styled.ul`
-  list-style: none;
-`
-
-const Li = styled.li`
-  line-height: 1.5em;
-`
+import { Box, Flex, Bar, Center, H2, H3, Ul, Li } from '../components/elements'
 
 const skills = [
   "illustrator",

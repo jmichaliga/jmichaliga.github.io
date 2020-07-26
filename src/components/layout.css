@@ -42,8 +42,8 @@ template {
   display: none;
 }
 a {
-  -webkit-text-decoration-skip: objects;
   text-decoration: none;
+  color: white;
 }
 a:active,
 a:hover {
@@ -192,7 +192,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em 'IBM Plex Sans', 'helvetica neue', 'helvetica', 'arial', sans-serif;
+  font: 112.5%/1.45em 'IBM Plex Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -207,7 +207,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 100%, 0.8);
-  font: 112.5%/1.45em 'IBM Plex Sans', 'helvetica neue', 'helvetica', 'arial', sans-serif;
+  font: 112.5%/1.45em 'IBM Plex Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -242,6 +242,7 @@ h1 {
   line-height: 1.1;
 }
 h2 {
+  font-family: 'Vault';
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -257,6 +258,7 @@ h2 {
   line-height: 1.1;
 }
 h3 {
+  font-family: 'Vault';
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -268,7 +270,7 @@ h3 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  font-size: 1.5rem;
   line-height: 1.1;
 }
 h4 {

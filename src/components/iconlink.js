@@ -25,6 +25,7 @@ const Link = styled('a')`
     box-shadow: 0px 0px 4px rgba(0,0,0,0);
   }
 `
+
 const IconLink = ({ href, icon, inverted }) => {
   return (
     <Link href={href} key={`icon-${icon}`} rel="external noopener noreferrer" target="_blank">
