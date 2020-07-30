@@ -6,7 +6,7 @@ import { Box, H3, Ul, Li } from "./elements"
 import useClickSound from "../hooks/useClickSound"
 
 const Nav = styled(Box)`
-  position: absolute;
+  position: fixed;
   transition-duration: ${theme.duration.normal};
   top: 0;
   right: 0;
