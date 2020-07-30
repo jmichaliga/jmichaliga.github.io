@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
+import { Box, H2, H3, Flex } from "../../components/elements"
 
 const names = [
   "Rachel",
@@ -16,7 +17,7 @@ const names = [
   "Oui",
   "Justin",
   "Joey",
-  "Heidi"
+  "Heidi",
 ]
 
 const secretSanta = (people) => {
@@ -24,12 +25,16 @@ const secretSanta = (people) => {
   let result = []
 
   people.forEach((gifter) => {
-    let rand = Math.floor(Math.random() * assignments.length)
-    while (assignments[rand] === gifter) {
-      rand = Math.floor(Math.random * assignments.length)
+    let personIdx = assignments.indexOf(gifter)
+    if (personIdx > -1) {
+      assignments.splice(personIdx, 1)
     }
+    let rand = Math.floor(Math.random() * assignments.length)
     result.push([gifter, assignments[rand]])
     assignments.splice(rand, 1)
+    if (personIdx > -1) {
+      assignments.push(gifter)
+    }
   })
 
   return result
@@ -61,15 +66,31 @@ const sideSanta = (people) => {
 const SecretSanta = () => {
   return (
     <Layout>
-      <SEO title="Work: Not found" />
-      <h1>Secret Santa</h1>
-      <ul>
-        {sideSanta(names).map((result, idx) => (
-          <li key={idx}>
-            {result[0]} &rarr; {result[1]}
-          </li>
-        ))}
-      </ul>
+      <SEO title="Work: Secret Santa Algorithm" />
+
+      <H2>Secret Santa</H2>
+      <Flex style={{justifyContent: 'space-between'}}>
+        <Box>
+          <H3>Algo 1</H3>
+          <ul>
+            {secretSanta(names).map((result, idx) => (
+              <li key={idx}>
+                {result[0]} &rarr; {result[1]}
+              </li>
+            ))}
+          </ul>
+        </Box>
+        <Box>
+          <H3>Algo 2</H3>
+          <ul>
+            {sideSanta(names).map((result, idx) => (
+              <li key={idx}>
+                {result[0]} &rarr; {result[1]}
+              </li>
+            ))}
+          </ul>
+        </Box>
+      </Flex>
     </Layout>
   )
 }
