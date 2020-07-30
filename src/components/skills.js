@@ -2,44 +2,38 @@ import React, { useState } from "react"
 
 import Icon from "./icon"
 import styled from "styled-components"
-import { space, width, fontSize, color } from "styled-system"
 
 import theme from "../theme"
 
-const Box = styled.div`
-  ${space}
-  ${width}
-  ${fontSize}
-  ${color}
-`
+import { Box } from './elements'
 
 const SkillsActivate = styled.section`
   position: fixed;
   cursor: pointer;
-  right: 8px;
+  left: 8px;
   bottom: 0px;
   transition-duration: ${theme.duration.normal};
+  text-shadow: 0px 0px 4px rgba(0,0,0,0.25);
   &.close {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0px, 0, 0);
   }
   &.open {
-    transform: translate3d(150%, 0, 0);
+    transform: translate3d(-50px, 0, 0);
   }
 `
 
 const Skills = styled.section`
   position: fixed;
   cursor: pointer;
-  right: 8px;
+  left: 0px;
   bottom: 0px;
 `
 
-// transition-duration: ${theme.duration.fast};
 const SkillBox = styled(({ showSkills, ...props }) => <Box {...props} />)`
   opacity: 0;
   transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99),
     opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transform: translate3d(50px,0,0);
+  transform: scale(0.5) translate3d(-50px,0,0);
   transition-delay: ${props => props.index * 20}ms;
   ${({ showSkills }) =>
     showSkills &&
@@ -49,40 +43,40 @@ const SkillBox = styled(({ showSkills, ...props }) => <Box {...props} />)`
   `}
 `
 
+export const skills = [
+  "illustrator",
+  "photoshop",
+  "css3",
+  "d3",
+  "docker",
+  "eslint",
+  "figma",
+  "firebase",
+  "gatsby",
+  "graphql",
+  "html5",
+  "javascript",
+  "jest",
+  "kubernetes",
+  "next",
+  "node",
+  "npm",
+  "nuxt-dot-js",
+  "postgresql",
+  "react",
+  "redux",
+  "rollup",
+  "sass",
+  "serverless",
+  "vue",
+  "yarn",
+]
+
 const SkillsComponent = () => {
   const [showSkills, setShowSkills] = useState(false)
   const _toggleShowSkills = () => {
     setShowSkills(!showSkills)
   }
-
-  const skills = [
-    "illustrator",
-    "photoshop",
-    "css3",
-    "d3",
-    "docker",
-    "eslint",
-    "figma",
-    "firebase",
-    "gatsby",
-    "graphql",
-    "html5",
-    "javascript",
-    "jest",
-    "kubernetes",
-    "next",
-    "node",
-    "npm",
-    "nuxt-dot-js",
-    "postgresql",
-    "react",
-    "redux",
-    "rollup",
-    "sass",
-    "serverless",
-    "vue",
-    "yarn",
-  ]
 
   return (
     <>

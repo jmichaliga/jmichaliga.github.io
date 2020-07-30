@@ -1,9 +1,37 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import theme from "../theme"
 import { Box, H3, Ul, Li } from "./elements"
 
+const Nav = styled(Box)`
+  position: absolute;
+  transition-duration: ${theme.duration.normal};
+  top: 0;
+  right: 0;
+  z-index: 2;
+  &.close {
+    transform: translate3d(0, -70px, 0);
+  }
+  &.open {
+    transform: translate3d(0, 0, 0);
+    transition-delay: ${theme.duration.normal};
+  }
+`
+const NavActivate = styled.section`
+  position: fixed;
+  cursor: pointer;
+  right: 8px;
+  top: 4px;
+  transition-duration: ${theme.duration.normal};
+  &.close {
+    transform: translate3d(0, 0, 0);
+    transition-delay: ${theme.duration.normal};
+  }
+  &.open {
+    transform: translate3d(0, -50px, 0);
+  }
+`
 const NavItems = styled(Ul)`
   position: absolute;
   top: 0;
@@ -34,14 +62,36 @@ const NavItem = ({ url, title }) => (
   </Li>
 )
 
-const Nav = () => (
-  <Box width={[1, 1 / 2]} ml="auto">
-    <NavItems>
-      <NavItem url="/" title="Home" />
-      <NavItem url="/work" title="Work" />
-      <NavItem url="/blog" title="Blog" />
-    </NavItems>
-  </Box>
-)
+const NavComponent = () => {
+  const [showNav, setShowNav] = useState(false)
+  const _toggleShowNav = () => {
+    setShowNav(!showNav)
+  }
 
-export default Nav
+  return (
+    <>
+      <Nav
+        width={[1, 1 / 2]}
+        ml="auto"
+        className={showNav ? "open" : "close"}
+        onClick={_toggleShowNav}
+      >
+        <NavItems>
+          <NavItem url="/" title="Home" />
+          <NavItem url="/work" title="Work" />
+          <NavItem url="/blog" title="Blog" />
+        </NavItems>
+      </Nav>
+      <NavActivate
+        className={showNav ? "open" : "close"}
+        onClick={_toggleShowNav}
+      >
+        <span role="img" aria-label="nav">
+          🍔
+        </span>
+      </NavActivate>
+    </>
+  )
+}
+
+export default NavComponent

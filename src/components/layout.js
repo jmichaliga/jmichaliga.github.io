@@ -30,8 +30,7 @@ const Main = styled('main')`
 const Footer = styled('footer')`
   position: fixed;
   bottom: 0;
-  left: 0;
-  font-size: ${theme.fontSizes[2]}px;
+  right: 8px;
   font-family: 'IBM Plex Mono';
   padding-left: ${theme.space[2]}px;
   text-shadow: 0px 0px 4px rgba(0,0,0,0.25);

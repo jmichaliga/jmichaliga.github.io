@@ -2,11 +2,11 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import { H1 } from "./elements"
-// import Nav from "./nav"
+import Nav from "./nav"
 
 const Header = ({ children, siteTitle }) => (
   <header>
-    {/* <Nav /> */}
+    <Nav />
     <div
       style={{
         margin: `0 auto`,
