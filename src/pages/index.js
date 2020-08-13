@@ -35,7 +35,6 @@ const Social = styled.section`
 `
 
 const IndexPage = () => {
-  const [soundBloop, stopSoundBloop] = useClickSound("bloop")
   return (
     <>
       <Bar />
@@ -115,6 +114,12 @@ const IndexPage = () => {
                   href="https://twitter.com/jmichaliga"
                   icon="twitter"
                   text="Follow @jmichaliga on twitter."
+                />
+
+                <IconLink
+                  href="https://www.linkedin.com/in/justin-michaliga-6b57594"
+                  icon="linkedin"
+                  text="Follow @jmichaliga on LinkedIn."
                 />
               </Social>
             </Center>
