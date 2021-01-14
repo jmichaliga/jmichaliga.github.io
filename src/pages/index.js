@@ -37,6 +37,7 @@ const IndexPage = () => {
   return (
     <>
       <Bar />
+      <Skills />
       <Layout>
         <SEO
           title="Home"
@@ -62,8 +63,6 @@ const IndexPage = () => {
           ].concat(skills)}
         />
 
-        <Skills />
-
         <Flex>
           <Box width={[1, 1 / 2]}>
             <Center>
@@ -74,7 +73,7 @@ const IndexPage = () => {
           </Box>
 
           <Box width={[1, 1 / 2]} p={3}>
-            <Center mt={4}>
+            <Center>
               <p>
                 Full-Stack Javascript Engineer with over a decade of
                 professional experience in agency, direct service, and in-house

@@ -45,7 +45,7 @@ export const H1 = styled('h1')`
 export const H2 = styled.h2`
   padding-top: 2rem;
   font-size: 1.75rem;
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px ${theme.colors.black};
 `
 
 export const H3 = styled.h3`
@@ -53,10 +53,11 @@ export const H3 = styled.h3`
   text-transform: uppercase;
   font-size: 1.5rem;
   background: ${theme.colors.jmRed};
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px ${theme.colors.black};
 `
 
 export const Ul = styled.ul`
+  ${space}
   list-style: none;
 `
 

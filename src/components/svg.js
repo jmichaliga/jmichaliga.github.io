@@ -13,6 +13,8 @@ const Svg = ({ name, inverted }) => {
   return (
     <img 
       src={data.file.publicURL}
+      width="250"
+      height="250"
       alt={name}
       className={inverted ? 'invert': ''}
     />

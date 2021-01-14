@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import theme from "../../theme"
 import Header from "../header"
+import { Box, Flex, Ul, Li} from "../elements"
 import "./layout.css"
 
 const Container = styled("div")`
@@ -16,49 +16,27 @@ const Container = styled("div")`
   overflow: hidden;
 `
 
-const Flex = styled("div")`
-  display: flex;
+const Stack = styled(Flex)`
   flex-direction: column;
   height: 100%;
 `
 
-const Main = styled("main")`
-  display: flex;
-  width: 100%;
-  height: 100%;
+const Main = styled(Flex)`
   background: ${theme.colors.white};
   color: ${theme.colors.text};
-  border-radius: 4px;
-  padding: 8px;
-  column-gap: 8px;
-`
+  border-radius: ${theme.radii[3]}px;
 
-const Posts = styled("aside")`
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-  padding: 8px;
-  flex: 1;
-  color: ${theme.colors.white};
-`
-
-const Content = styled("div")`
-  flex: 2;
-
-  p {
-    font-family: "Helvetica Neue", sans-serif;
-    font-size: 1rem;
-  }
   a {
     text-decoration: none;
     color: ${theme.colors.text};
-    border-bottom: 0.0625rem solid ${theme.colors.jmRed};
+    border-bottom: 1px solid ${theme.colors.jmRed};
     padding-top: 0.05rem;
     padding-bottom: 0.05rem;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     background: linear-gradient(
       to bottom,
-      ${theme.colors.jmBlue} 0,
+      ${theme.colors.jmRed} 0,
       ${theme.colors.jmRed} 100%
     );
     background-position: 0 100%;
@@ -72,31 +50,44 @@ const Content = styled("div")`
   }
 `
 
+const Posts = styled("aside")`
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: ${theme.radii[3]}px;
+  padding: ${theme.space[2]}px;
+  color: ${theme.colors.text};
+`
+
 const Footer = styled("footer")`
   position: fixed;
-  font-size: 12px;
+  font-size: ${theme.fontSizes[0]}px;
+  color: ${theme.colors.text};
   bottom: 0;
-  right: 8px;
-  padding-left: ${theme.space[2]}px;
-  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  a {
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration: none;
-    &:hover {
-      text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);
-    }
-  }
+  right: ${theme.space[2]}px;
 `
 
 const BlogLayout = ({ children }) => (
   <Container>
-    <Flex>
+    <Stack>
       <Header siteTitle="Candid &amp; Left-Handed" />
-      <Main>
-        <Content>{children}</Content>
-        <Posts></Posts>
+      <Main p={1}>
+        <Flex>
+          <Box width={[1, 1 /3]} p={2}>
+            <Posts>
+              Categories to include:
+              <Ul mx={0} mt={2}>
+                <Li><a href="#">javascript</a></Li>
+                <Li><a href="#">hockey</a></Li>
+                <Li><a href="#">design</a></Li>
+                <Li><a href="#">nyc</a></Li>
+              </Ul>
+            </Posts>
+          </Box>
+          <Box width={[1, 2 / 3]} p={2}>
+            {children}
+          </Box>
+        </Flex>
       </Main>
-    </Flex>
+    </Stack>
     <Footer>&copy; 2021. Justin W. Michaliga</Footer>
   </Container>
 )

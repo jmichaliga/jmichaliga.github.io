@@ -13,8 +13,8 @@ const Blog = () => (
       </Center>
 
       <p>
-        A collection of thoughts and writings will be hosted here once I collect
-        some of the thoughts over the past decade or two. In the meantime, you
+        A collection of posts and writings will be hosted here once I collect
+        some of the thoughts over the past decade. In the meantime, you
         can find my old{" "}
         <a href="https://jmichaliga-blog-blog.tumblr.com/" target="_blank" rel="noreferrer noopener">tumblr</a>, which had
         a few ramblings &mdash; or better yet, my{" "}

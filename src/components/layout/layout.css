@@ -193,7 +193,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -208,7 +207,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 100%, 0.8);
-  font: 112.5%/1.45em 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font: 100%/1.5em 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
