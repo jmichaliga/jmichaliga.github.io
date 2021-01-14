@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{lPxD:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),o=t.n(a),l=t("Bl7J"),r=t("vrFN"),c=t("2CHS");n.default=function(){return o.a.createElement(l.a,null,o.a.createElement(r.a,{title:"Work: Not found"}),o.a.createElement(c.c,null,"Coming Soon"))}}}]);
-//# sourceMappingURL=component---src-pages-work-index-js-57620f8477ed882942cf.js.map
