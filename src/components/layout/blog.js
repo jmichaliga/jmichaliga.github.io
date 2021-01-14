@@ -93,7 +93,6 @@ const BlogLayout = ({ children }) => (
     <Flex>
       <Header siteTitle="Candid &amp; Left-Handed" />
       <Main>
-        
         <Content>{children}</Content>
         <Posts></Posts>
       </Main>

@@ -14,6 +14,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Justin Michaliga`,
+        short_name: `JMichaliga`,
+        start_url: `/`,
+        background_color: `#FA1967`,
+        theme_color: `#FA1967`,
+        display: `standalone`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-6741593-1",
