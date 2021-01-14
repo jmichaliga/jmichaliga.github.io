@@ -18,7 +18,6 @@ module.exports = {
       options: {
         name: `Justin Michaliga`,
         short_name: `JMichaliga`,
-        start_url: `/`,
         icon: `src/images/jm.svg`,
         background_color: `#FA1967`,
         theme_color: `#FA1967`,
@@ -31,9 +30,6 @@ module.exports = {
         trackingId: "UA-6741593-1",
       },
     },
-
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
