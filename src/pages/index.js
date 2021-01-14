@@ -10,7 +10,6 @@ import theme from "../theme"
 
 import { Box, Center, Flex } from "../components/elements"
 import Skills, { skills } from "../components/skills"
-import useClickSound from "../hooks/useClickSound"
 
 const Bar = styled.div`
   position: fixed;
@@ -68,9 +67,7 @@ const IndexPage = () => {
         <Flex>
           <Box width={[1, 1 / 2]}>
             <Center>
-              <HoverBulge
-
-              >
+              <HoverBulge>
                 <Svg name="jm" />
               </HoverBulge>
             </Center>

@@ -35,7 +35,7 @@ const SkillBox = styled(({ showSkills, ...props }) => <Box {...props} />)`
   transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99),
     opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transform: scale(0.5) translate3d(-50px,0,0);
-  transition-delay: ${props => props.index * 20}ms;
+  transition-delay: ${props => props.index * 15}ms;
   ${({ showSkills }) =>
     showSkills &&
     `
@@ -75,7 +75,7 @@ export const skills = [
 
 const SkillsComponent = () => {
   const [showSkills, setShowSkills] = useState(false)
-  const [click, stopClick] = useClickSound('click');
+  const [click, stopClick] = useClickSound('bloop');
   const _toggleShowSkills = () => {
     stopClick()
     click()

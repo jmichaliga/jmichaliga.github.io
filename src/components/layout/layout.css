@@ -1,5 +1,5 @@
 html {
-  font-family: 'IBM Plex Sans', 'helvetica neue', 'helvetica', 'arial', sans-serif;
+  font-family: 'helvetica neue', 'helvetica', 'arial', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background: #FA1967;
@@ -102,7 +102,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: 'IBM Plex Mono', monospace, monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 figure {
@@ -193,7 +193,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em 'IBM Plex Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font: 112.5%/1.45em 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -208,7 +208,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 100%, 0.8);
-  font: 112.5%/1.45em 'IBM Plex Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font: 112.5%/1.45em 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -592,7 +592,7 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: 'IBM Plex Mono', "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Justin W. Michaliga`,
-    description: `Justin W. Michaliga is a Javscript Engineer and Interactive Designer in NYC.`,
+    description: `Justin W. Michaliga is a Javscript Engineer and Interactive Designer in Brooklyn, NYC.`,
     author: `@jmichaliga`,
   },
   plugins: [
@@ -11,23 +11,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `IBM Plex Sans`,
-            variants: [`100`, `400`, `700`]
-          },
-          {
-            family: `IBM Plex Mono`,
-            variants: [`400`, `700`]
-          },
-        ],
       },
     },
     {

@@ -65,7 +65,7 @@ const NavItem = ({ url, title }) => (
 
 const NavComponent = () => {
   const [showNav, setShowNav] = useState(false)
-  const [click, stopClick] = useClickSound('click');
+  const [click, stopClick] = useClickSound('clickPop');
   const _toggleShowNav = () => {
     stopClick()
     click()

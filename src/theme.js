@@ -24,8 +24,8 @@ export const space = [0, 4, 8, 16, 32, 64, 128]
 export const fontSizes = [12, 14, 16, 20, 24, 32, 40, 56, 72]
 
 // color palette
-const black = '#000'
-const white = '#FFF'
+const black = '#111'
+const white = '#EEE'
 const gray = '#456'
 const text = '#123'
 
