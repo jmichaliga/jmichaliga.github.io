@@ -19,6 +19,7 @@ module.exports = {
         name: `Justin Michaliga`,
         short_name: `JMichaliga`,
         start_url: `/`,
+        icon: `src/images/jm.svg`,
         background_color: `#FA1967`,
         theme_color: `#FA1967`,
         display: `standalone`,
