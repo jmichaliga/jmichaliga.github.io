@@ -31,7 +31,6 @@ const Footer = styled('footer')`
   position: fixed;
   bottom: 0;
   right: 8px;
-  padding-left: ${theme.space[2]}px;
   text-shadow: 0px 0px 4px rgba(0,0,0,0.25);
   a {
     color: rgba(255, 255, 255, 0.9);
