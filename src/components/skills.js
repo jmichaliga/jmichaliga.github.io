@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import Icon from "./icon"
 import styled from "styled-components"
-import useClickSound from "../hooks/useClickSound"
+// import useClickSound from "../hooks/useClickSound"
 
 import theme from "../theme"
 
@@ -75,10 +75,10 @@ export const skills = [
 
 const SkillsComponent = () => {
   const [showSkills, setShowSkills] = useState(false)
-  const [click, stopClick] = useClickSound('bloop');
+  // const [click, stopClick] = useClickSound('bloop');
   const _toggleShowSkills = () => {
-    stopClick()
-    click()
+    // stopClick()
+    // click()
     setShowSkills(!showSkills)
   }
 

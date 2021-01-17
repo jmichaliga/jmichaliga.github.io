@@ -9,7 +9,7 @@ import styled from "styled-components"
 import theme from "../theme"
 
 import { Box, Center, Flex } from "../components/elements"
-import Skills, { skills } from "../components/skills"
+import { skills } from "../components/skills"
 
 const Bar = styled.div`
   position: fixed;
@@ -37,7 +37,6 @@ const IndexPage = () => {
   return (
     <>
       <Bar />
-      <Skills />
       <Layout>
         <SEO
           title="Home"

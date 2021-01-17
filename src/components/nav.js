@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import theme from "../theme"
 import { Box, H3, Ul, Li } from "./elements"
-import useClickSound from "../hooks/useClickSound"
+// import useClickSound from "../hooks/useClickSound"
 
 const Nav = styled(Box)`
   position: fixed;
@@ -65,10 +65,10 @@ const NavItem = ({ url, title }) => (
 
 const NavComponent = () => {
   const [showNav, setShowNav] = useState(false)
-  const [click, stopClick] = useClickSound('clickPop');
+  // const [click, stopClick] = useClickSound('clickPop');
   const _toggleShowNav = () => {
-    stopClick()
-    click()
+    // stopClick()
+    // click()
     setShowNav(!showNav)
   }
 
