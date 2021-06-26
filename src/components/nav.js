@@ -23,7 +23,7 @@ const NavActivate = styled.section`
   position: fixed;
   cursor: pointer;
   right: 8px;
-  top: 4px;
+  top: 8px;
   transition-duration: ${theme.duration.normal};
   &.close {
     transform: translate3d(0, 0, 0);

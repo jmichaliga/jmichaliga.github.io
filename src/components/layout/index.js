@@ -27,7 +27,7 @@ const Main = styled("main")`
 
 const Footer = styled("footer")`
   position: fixed;
-  bottom: 0;
+  bottom: 4px;
   right: 8px;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   a {
@@ -38,9 +38,6 @@ const Footer = styled("footer")`
     }
   }
 `
-// title: ``,
-// description: `Justin W. Michaliga is a Javascript Engineer and Interactive Designer in Brooklyn, NYC.`,
-// author: `@jmichaliga`,
 
 const Layout = ({ children }) => (
   <Container>

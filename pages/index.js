@@ -89,32 +89,37 @@ const IndexPage = () => {
               <Social>
                 <IconLink
                   href="https://github.com/jmichaliga"
-                  name="github"
+                  icon="github"
                   text="Follow @jmichaliga on Github."
+                  hint={false}
                 />
 
                 <IconLink
                   href="https://dribbble.com/jmichaliga"
-                  name="dribbble"
+                  icon="dribbble"
                   text="Follow @jmichaliga on Dribbble."
+                  hint={false}
                 />
 
                 <IconLink
                   href="https://codepen.com/jmichaliga"
-                  name="codepen"
+                  icon="codepen"
                   text="Follow @jmichaliga on Codepen."
+                  hint={false}
                 />
 
                 <IconLink
                   href="https://twitter.com/jmichaliga"
-                  name="twitter"
+                  icon="twitter"
                   text="Follow @jmichaliga on twitter."
+                  hint={false}
                 />
 
                 <IconLink
                   href="https://www.linkedin.com/in/justin-michaliga-6b57594"
-                  name="linkedin"
+                  icon="linkedin"
                   text="Follow @jmichaliga on LinkedIn."
+                  hint={false}
                 />
               </Social>
             </Center>
