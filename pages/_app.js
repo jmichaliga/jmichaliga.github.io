@@ -10,7 +10,7 @@ function JMichaliga({ Component, pageProps }) {
 
   useEffect(() => {
     Fathom.load('EOHOGNHG', {
-      includedDomains: ['jmichaliga.com', 'j13a.com', 'jmichaliga.github.io', 'jmichaliga.vercel.app'],
+      includedDomains: ['jmichaliga.com', 'j13a.com', 'jmichaliga.vercel.app'],
     })
 
     function onRouteChangeComplete() {
