@@ -58,7 +58,7 @@ const NavItems = styled(Ul)`
 
 const NavItem = ({ url, title }) => (
   <Li>
-    <Link href={url}>
+    <Link href={url} passHref>
       <H3>{title}</H3>
     </Link>
   </Li>

@@ -18,6 +18,8 @@
     "use-sound": "^4.0.0"
   },
   "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-next": "^11.0.1",
     "gh-pages": "^3.2.3",
     "prettier": "^2.3.2",
     "yarn-upgrade-all": "^0.5.4"

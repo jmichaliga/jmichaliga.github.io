@@ -1,5 +1,5 @@
 html {
-  font-family: "helvetica neue", "helvetica", "arial", sans-serif;
+  font-family: "Helvetica Now", "helvetica neue", "helvetica", "arial", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background: #fa1967;
@@ -212,7 +212,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 100%, 0.8);
-  font: 100%/1.5em "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font: 100%/1.5em "Helvetica Now", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

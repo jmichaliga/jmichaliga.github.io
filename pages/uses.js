@@ -117,8 +117,8 @@ const IndexPage = () => {
                 Hardware
               </H3>
               <Ul>
-                <Li>15" MBP 2018</Li>
-                <Li>15" MBP 2012</Li>
+                <Li>15&ldquo; MBP 2018</Li>
+                <Li>15&ldquo; MBP 2012</Li>
                 <Li>Custom Intel Build (2006)</Li>
               </Ul>
 
