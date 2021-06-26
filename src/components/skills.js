@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import Icon from "./icon"
-import styled from "styled-components"
+import styled from '@emotion/styled'
 import useClickSound from "../hooks/useClickSound"
 
 import theme from "../theme"
@@ -12,7 +12,7 @@ const SkillsActivate = styled.section`
   position: fixed;
   cursor: pointer;
   left: 8px;
-  bottom: 0px;
+  bottom: 4px;
   transition-duration: ${theme.duration.normal};
   text-shadow: 0px 0px 4px rgba(0,0,0,0.25);
   &.close {

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import Link from "next/link"
+import styled from '@emotion/styled'
 import theme from "../theme"
 import { Box, H3, Ul, Li } from "./elements"
 import useClickSound from "../hooks/useClickSound"
@@ -23,7 +23,7 @@ const NavActivate = styled.section`
   position: fixed;
   cursor: pointer;
   right: 8px;
-  top: 4px;
+  top: 8px;
   transition-duration: ${theme.duration.normal};
   &.close {
     transform: translate3d(0, 0, 0);
@@ -39,6 +39,7 @@ const NavItems = styled(Ul)`
   right: 0;
   & li {
     display: inline-block;
+    cursor: pointer;
     & a {
       transition-duration: ${theme.duration.normal};
       border-bottom: 2px solid transparent;
@@ -57,7 +58,7 @@ const NavItems = styled(Ul)`
 
 const NavItem = ({ url, title }) => (
   <Li>
-    <Link to={url}>
+    <Link href={url} passHref>
       <H3>{title}</H3>
     </Link>
   </Li>
@@ -65,7 +66,7 @@ const NavItem = ({ url, title }) => (
 
 const NavComponent = () => {
   const [showNav, setShowNav] = useState(false)
-  const [click, stopClick] = useClickSound('clickPop');
+  const [click, stopClick] = useClickSound("clickPop")
   const _toggleShowNav = () => {
     stopClick()
     click()

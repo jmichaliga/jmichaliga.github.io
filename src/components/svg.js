@@ -1,33 +1,29 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import Image from "next/image"
 
-const Svg = ({ name, inverted }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(name:{eq: "jm" }){
-    	  publicURL
-  	  }
-    } 
-  `)
+const Svg = ({ name, url, inverted }) => {
   return (
-    <img 
-      src={data.file.publicURL}
+    <Image
+      src={url}
       width="250"
       height="250"
       alt={name}
-      className={inverted ? 'invert': ''}
+      className={inverted ? "invert" : ""}
     />
   )
 }
+
 Svg.propTypes = {
   name: PropTypes.string,
-  inverted: PropTypes.bool
+  url: PropTypes.string,
+  inverted: PropTypes.bool,
 }
 
 Svg.defaultProps = {
-  name: '',
-  inverted: false
+  name: "",
+  url: "",
+  inverted: false,
 }
 
 export default Svg

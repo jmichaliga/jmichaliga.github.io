@@ -1,42 +1,41 @@
 {
   "name": "@smartnode/jmichaliga.com",
   "private": true,
+  "main": "index.js",
   "description": "jmichaliga.com",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Justin Michaliga <justin.michaliga@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.30.2",
-    "gatsby-image": "^2.9.0",
-    "gatsby-plugin-google-analytics": "^2.9.0",
-    "gatsby-plugin-manifest": "^2.10.0",
-    "gatsby-plugin-offline": "^3.8.0",
-    "gatsby-plugin-react-helmet": "^3.8.0",
-    "gatsby-source-filesystem": "^2.9.0",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "fathom-client": "^3.0.0",
+    "next": "^11.0.1",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.1",
     "styled-system": "^5.1.5",
-    "use-sound": "^2.0.1"
+    "use-sound": "^4.0.0"
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0",
-    "prettier": "^2.2.1",
+    "eslint": "^7.29.0",
+    "eslint-config-next": "^11.0.1",
+    "gh-pages": "^3.2.3",
+    "prettier": "^2.3.2",
     "yarn-upgrade-all": "^0.5.4"
   },
   "keywords": [
-    "gatsby"
+    "next",
+    "javascript"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "next build",
+    "dev": "next dev",
+    "develop": "next dev",
     "deploy:github": "npm run build && node ./scripts/deploy-github",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "start": "next start",
     "upgrade-all": "yarn-upgrade-all"
   },
   "repository": {

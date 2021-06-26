@@ -1,12 +1,15 @@
 import PropTypes from "prop-types"
 import React from "react"
 
-import styled from "styled-components"
+import styled from '@emotion/styled'
 import theme from "../theme"
 import Icon from "./icon"
-import { Link } from "gatsby"
+// import Link from "next/link"
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: ${theme.space[1]}px;
   padding: ${theme.space[1]}px;
   color: ${theme.colors.white};
@@ -25,17 +28,18 @@ const StyledLink = styled(Link)`
     border-bottom: 2px solid ${theme.colors.jmBlue};
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0);
   }
-`
+`;
 
-const IconLink = ({ href, icon, inverted }) => {
+
+const IconLink = ({ href, icon, inverted, hint }) => {
   return (
     <StyledLink
-      href={href}
+      href={href || '#'}
       key={`icon-${icon}`}
       rel="external noopener noreferrer"
       target="_blank"
     >
-      <Icon icon={icon} inverted={inverted} />
+      <Icon icon={icon} inverted={inverted} hint={hint} />
     </StyledLink>
   )
 }
@@ -44,12 +48,14 @@ IconLink.propTypes = {
   href: PropTypes.string,
   icon: PropTypes.string,
   inverted: PropTypes.bool,
+  hint: PropTypes.bool,
 }
 
 IconLink.defaultProps = {
   href: "",
   icon: "github",
   inverted: true,
+  hint: true,
 }
 
 export default IconLink

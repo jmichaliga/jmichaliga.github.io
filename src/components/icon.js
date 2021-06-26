@@ -1,38 +1,28 @@
 import PropTypes from "prop-types"
 import React from "react"
+import Image from "next/image"
 
-import { useStaticQuery, graphql } from "gatsby"
-
-const Icon = ({ icon, inverted, text }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { extension: { eq: "svg" } }) {
-        edges {
-          node {
-            publicURL
-            name
-          }
-        }
-      }
-    } 
-  `)
-
-  return (
-    <>
-      {data.allFile.edges.filter((file) => {
-        return file.node.name === icon
-      }).map(file => {
-        return (
-          <abbr title={icon} key={icon} className="hidden">
-            <img key={icon}
-              src={file.node.publicURL} 
-              height="24" width="24" alt={text}
-              className={inverted ? 'invert': ''}
-            />
-          </abbr>
-        )
-      })}
-    </>
+const Icon = ({ icon, inverted, text, hint }) => {
+  return hint ? (
+    <abbr title={icon} key={icon} className="hidden">
+      <Image
+        key={icon}
+        src={`/images/${icon}.svg`}
+        height="24"
+        width="24"
+        alt={text}
+        className={inverted ? "invert" : ""}
+      />
+    </abbr>
+  ) : (
+    <Image
+      key={icon}
+      src={`/images/${icon}.svg`}
+      height="24"
+      width="24"
+      alt={text}
+      className={inverted ? "invert" : ""}
+    />
   )
 }
 
@@ -40,12 +30,14 @@ Icon.propTypes = {
   icon: PropTypes.string,
   inverted: PropTypes.bool,
   text: PropTypes.string,
+  hint: PropTypes.bool,
 }
 
 Icon.defaultProps = {
   icon: "github",
   inverted: true,
-  text: ""
+  text: "",
+  hint: true,
 }
 
 export default Icon
