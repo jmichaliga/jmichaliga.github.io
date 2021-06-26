@@ -1,22 +1,29 @@
 import React from "react"
+import IconLink from "../src/components/iconlink"
+import Layout from "../src/components/layout"
+import SEO from "../src/components/seo"
+import { Box, Center, Flex } from "../src/components/elements"
+import Skills, { skills } from "../src/components/skills"
+import Image from "next/image"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import IconLink from "../components/iconlink"
-import Svg from "../components/svg"
-
-import styled from "styled-components"
-import theme from "../theme"
-
-import { Box, Center, Flex } from "../components/elements"
-import Skills, { skills } from "../components/skills"
+import styled from '@emotion/styled'
+import theme from "../src/theme"
 
 const Bar = styled.div`
   position: fixed;
   top: 0px;
   width: 100%;
-  height: 2px;
+  height: 4px;
   background: ${theme.colors.jmRed};
+`
+
+const Social = styled.section`
+  display: flex;
+  justify-content: space-evenly;
+  & svg {
+    margin-top: 4px;
+    fill: white;
+  }
 `
 
 const HoverBulge = styled(Box)`
@@ -26,11 +33,6 @@ const HoverBulge = styled(Box)`
     transform: scale(0.9) rotate(-15deg);
     filter: brightness(80%);
   }
-`
-
-const Social = styled.section`
-  display: flex;
-  justify-content: space-evenly;
 `
 
 const IndexPage = () => {
@@ -67,7 +69,7 @@ const IndexPage = () => {
           <Box width={[1, 1 / 2]}>
             <Center>
               <HoverBulge>
-                <Svg name="jm" />
+                <Image src="/thinker.png" width="250" height="250" alt="JM" />
               </HoverBulge>
             </Center>
           </Box>
@@ -79,10 +81,7 @@ const IndexPage = () => {
                 professional experience in agency, direct service, and in-house
                 brand capacities &mdash; specializing in Interactive Design,
                 Mobile/Web Development, GraphQL Adoption, Design Systems,{" "}
-                <abbr title="and" className="amp">
-                  &amp;
-                </abbr>{" "}
-                Immersive User Experiences.
+                <abbr title="and">&amp;</abbr> Immersive User Experiences.
                 <br />
                 Based in Brooklyn, NYC 🍎.
               </p>
@@ -90,31 +89,31 @@ const IndexPage = () => {
               <Social>
                 <IconLink
                   href="https://github.com/jmichaliga"
-                  icon="github"
+                  name="github"
                   text="Follow @jmichaliga on Github."
                 />
 
                 <IconLink
                   href="https://dribbble.com/jmichaliga"
-                  icon="dribbble"
+                  name="dribbble"
                   text="Follow @jmichaliga on Dribbble."
                 />
 
                 <IconLink
                   href="https://codepen.com/jmichaliga"
-                  icon="codepen"
+                  name="codepen"
                   text="Follow @jmichaliga on Codepen."
                 />
 
                 <IconLink
                   href="https://twitter.com/jmichaliga"
-                  icon="twitter"
+                  name="twitter"
                   text="Follow @jmichaliga on twitter."
                 />
 
                 <IconLink
                   href="https://www.linkedin.com/in/justin-michaliga-6b57594"
-                  icon="linkedin"
+                  name="linkedin"
                   text="Follow @jmichaliga on LinkedIn."
                 />
               </Social>

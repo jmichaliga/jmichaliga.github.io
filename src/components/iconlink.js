@@ -1,10 +1,10 @@
 import PropTypes from "prop-types"
 import React from "react"
 
-import styled from "styled-components"
+import styled from '@emotion/styled'
 import theme from "../theme"
 import Icon from "./icon"
-import { Link } from "gatsby"
+import Link from "next/link"
 
 const StyledLink = styled(Link)`
   border-radius: ${theme.space[1]}px;
@@ -30,7 +30,7 @@ const StyledLink = styled(Link)`
 const IconLink = ({ href, icon, inverted }) => {
   return (
     <StyledLink
-      href={href}
+      href={href || '#'}
       key={`icon-${icon}`}
       rel="external noopener noreferrer"
       target="_blank"

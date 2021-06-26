@@ -1,32 +1,12 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
 import theme from "../theme"
 
 function SEO({ description, lang, meta, keywords, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription =
+    description ||
+    `Justin W. Michaliga is a Javascript Engineer and Interactive Designer in Brooklyn, NYC.`
 
   return (
     <Helmet
@@ -34,14 +14,22 @@ function SEO({ description, lang, meta, keywords, title }) {
         lang,
       }}
       link={[
-        { href: "/apple-touch-icon.png", rel: "apple-touch-icon", sizes: "180x180" },
+        {
+          href: "/apple-touch-icon.png",
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+        },
         { href: "/favicon-32x32.png", rel: "icon", sizes: "32x32" },
         { href: "/favicon-16x16.png", rel: "icon", sizes: "16x16" },
-        { href: "/site.webmanifest", rel: "manifest" },
-        { href: "/safari-pinned-tab.svg", rel: "mask-icon", color: theme.colors.jmRed },
+        // { href: "/site.webmanifest", rel: "manifest" },
+        {
+          href: "/safari-pinned-tab.svg",
+          rel: "mask-icon",
+          color: theme.colors.jmRed,
+        },
       ]}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | Justin Michaliga`}
       meta={[
         {
           name: `description`,
@@ -65,7 +53,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: "@jmichaliga",
         },
         {
           name: `twitter:title`,
@@ -75,13 +63,11 @@ function SEO({ description, lang, meta, keywords, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-        { name: "msapplication-TileColor",
-          content: theme.colors.jmRed,
-        },
+        { name: "msapplication-TileColor", content: theme.colors.jmRed },
         {
           name: "theme-color",
           content: theme.colors.jmRed,
-        }
+        },
       ]
         .concat(
           keywords.length > 0

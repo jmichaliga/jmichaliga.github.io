@@ -1,8 +1,8 @@
 import React from "react"
 
-import BlogLayout from "../../components/layout/blog"
-import SEO from "../../components/seo"
-import { Center } from "../../components/elements"
+import BlogLayout from "../../src/components/layout/blog"
+import SEO from "../../src/components/seo"
+import { Center } from "../../src/components/elements"
 
 const Blog = () => (
   <BlogLayout>

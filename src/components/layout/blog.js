@@ -1,10 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled from "styled-components"
+import styled from '@emotion/styled'
 import theme from "../../theme"
 import Header from "../header"
 import { Box, Flex, Ul, Li} from "../elements"
-import "./layout.css"
 
 const Container = styled("div")`
   margin: 0 auto;

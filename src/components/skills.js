@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import Icon from "./icon"
-import styled from "styled-components"
+import styled from '@emotion/styled'
 import useClickSound from "../hooks/useClickSound"
 
 import theme from "../theme"

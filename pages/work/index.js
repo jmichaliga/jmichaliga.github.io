@@ -1,8 +1,8 @@
 import React from "react"
 
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
-import {Center} from "../../components/elements"
+import Layout from "../../src/components/layout"
+import SEO from "../../src/components/seo"
+import { Center } from "../../src/components/elements"
 
 const WorkPage = () => (
   <Layout>
