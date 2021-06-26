@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 
 import Icon from "./icon"
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 import useClickSound from "../hooks/useClickSound"
 
 import theme from "../theme"
 
-import { Box } from './elements'
+import { Box } from "./elements"
 
 const SkillsActivate = styled.section`
   position: fixed;
@@ -14,7 +14,7 @@ const SkillsActivate = styled.section`
   left: 8px;
   bottom: 4px;
   transition-duration: ${theme.duration.normal};
-  text-shadow: 0px 0px 4px rgba(0,0,0,0.25);
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   &.close {
     transform: translate3d(0px, 0, 0);
   }
@@ -34,8 +34,11 @@ const SkillBox = styled(({ showSkills, ...props }) => <Box {...props} />)`
   opacity: 0;
   transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99),
     opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transform: scale(0.5) translate3d(-50px,0,0);
-  transition-delay: ${props => props.index * 15}ms;
+  transform: scale(0.5) translate3d(-50px, 0, 0);
+  transition-delay: ${(props) => props.index * 15}ms;
+  &:hover {
+    filter: invert(50);
+  }
   ${({ showSkills }) =>
     showSkills &&
     `
@@ -45,8 +48,6 @@ const SkillBox = styled(({ showSkills, ...props }) => <Box {...props} />)`
 `
 
 export const skills = [
-  "illustrator",
-  "photoshop",
   "css3",
   "d3",
   "docker",
@@ -62,7 +63,7 @@ export const skills = [
   "next",
   "node",
   "npm",
-  "nuxt-dot-js",
+  "nuxt",
   "postgresql",
   "react",
   "redux",
@@ -75,7 +76,7 @@ export const skills = [
 
 const SkillsComponent = () => {
   const [showSkills, setShowSkills] = useState(false)
-  const [click, stopClick] = useClickSound('clickPop');
+  const [click, stopClick] = useClickSound("clickPop")
   const _toggleShowSkills = () => {
     stopClick()
     click()
@@ -89,7 +90,12 @@ const SkillsComponent = () => {
         onClick={_toggleShowSkills}
       >
         {skills.sort().map((skill, idx) => (
-          <SkillBox ml={2} showSkills={showSkills} index={skills.length - idx} key={skill}>
+          <SkillBox
+            ml={2}
+            showSkills={showSkills}
+            index={skills.length - idx}
+            key={skill}
+          >
             <Icon icon={skill} inverted={false} ml={2} />
           </SkillBox>
         ))}
@@ -99,7 +105,9 @@ const SkillsComponent = () => {
         className={showSkills ? "open" : "close"}
         onClick={_toggleShowSkills}
       >
-        <span role="img" aria-label="skills">⚡️</span>
+        <span role="img" aria-label="skills">
+          ⚡️
+        </span>
       </SkillsActivate>
     </>
   )

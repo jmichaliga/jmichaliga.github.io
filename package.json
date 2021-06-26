@@ -33,9 +33,9 @@
     "build": "next build",
     "dev": "next dev",
     "develop": "next dev",
+    "start": "next start",
     "deploy:github": "npm run build && node ./scripts/deploy-github",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "next start",
     "upgrade-all": "yarn-upgrade-all"
   },
   "repository": {
