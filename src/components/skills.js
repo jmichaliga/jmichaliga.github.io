@@ -63,7 +63,6 @@ export const skills = [
   "next",
   "node",
   "npm",
-  "nuxt",
   "postgresql",
   "react",
   "redux",
