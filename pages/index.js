@@ -78,7 +78,7 @@ const IndexPage = () => {
           <Box width={[1, 1 / 2]}>
             <Center>
               <HoverBulge>
-                <Image src="/thinker.png" width="250" height="250" alt="JM" />
+                <Image src="/thinker.png" width="300" height="300" alt="JM" />
               </HoverBulge>
             </Center>
           </Box>
