@@ -56,6 +56,14 @@ export const H3 = styled.h3`
   text-shadow: 1px 1px 1px ${theme.colors.black};
 `
 
+export const Header = styled.h5`
+  color: ${theme.colors.white};
+  text-shadow: ${theme.colors.black} 1px 1px 3px;
+  letter-spacing: -0.5px;
+  font-family: "Vault", "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: ${theme.fontSizes[3]}px;
+`
+
 export const Ul = styled.ul`
   ${space}
   list-style: none;

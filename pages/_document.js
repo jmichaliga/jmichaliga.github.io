@@ -25,6 +25,7 @@ export default class MyDocument extends Document {
           `,
             }}
           />
+          <link rel="shortcut icon" href="/jm.ico" />
         </Head>
         <body>
           <Main />

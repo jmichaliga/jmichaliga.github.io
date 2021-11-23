@@ -1,12 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 import IconLink from "../src/components/iconlink"
 import Layout from "../src/components/layout"
 import SEO from "../src/components/seo"
 import { Box, Center, Flex } from "../src/components/elements"
+import StyledLink from "../src/components/link"
 import Skills, { skills } from "../src/components/skills"
 import Image from "next/image"
+import { InlineWidget } from "react-calendly"
 
-import styled from '@emotion/styled'
+import { motion } from "framer-motion"
+import styled from "@emotion/styled"
 import theme from "../src/theme"
 
 const Bar = styled.div`
@@ -35,7 +38,13 @@ const HoverBulge = styled(Box)`
   }
 `
 
+const variants = {
+  open: { opacity: 1, x: 0, height: "100%" },
+  closed: { opacity: 0, x: "-100%", height: 0 },
+}
+
 const IndexPage = () => {
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <>
       <Bar />
@@ -69,12 +78,25 @@ const IndexPage = () => {
           <Box width={[1, 1 / 2]}>
             <Center>
               <HoverBulge>
-                <Image src="/thinker.png" width="250" height="250" alt="JM" />
+                <Image src="/thinker.png" width="300" height="300" alt="JM" />
               </HoverBulge>
             </Center>
           </Box>
 
           <Box width={[1, 1 / 2]} p={3}>
+            <motion.div
+              animate={isOpen ? "open" : "closed"}
+              variants={variants}
+            >
+              <InlineWidget
+                url="https://calendly.com/jmichaliga"
+                prefill={{
+                  customAnswers: {
+                    a1: "Hello Justin! ",
+                  },
+                }}
+              />
+            </motion.div>
             <Center>
               <p>
                 Full-Stack Javascript Engineer with over a decade of
@@ -122,6 +144,12 @@ const IndexPage = () => {
                   hint={false}
                 />
               </Social>
+
+              <Box mt="3">
+                <StyledLink onClick={() => setIsOpen((isOpen) => !isOpen)}>
+                  Schedule a Chat
+                </StyledLink>
+              </Box>
             </Center>
           </Box>
         </Flex>
