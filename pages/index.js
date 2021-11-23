@@ -88,16 +88,14 @@ const IndexPage = () => {
               animate={isOpen ? "open" : "closed"}
               variants={variants}
             >
-
-                <InlineWidget
-                  url="https://calendly.com/jmichaliga"
-                  prefill={{
-                    customAnswers: {
-                      a1: "Hello Justin! ",
-                    },
-                  }}
-                />
-
+              <InlineWidget
+                url="https://calendly.com/jmichaliga"
+                prefill={{
+                  customAnswers: {
+                    a1: "Hello Justin! ",
+                  },
+                }}
+              />
             </motion.div>
             <Center>
               <p>
@@ -147,11 +145,10 @@ const IndexPage = () => {
                 />
               </Social>
 
-                <Box mt="3">
-
-              <StyledLink onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                Schedule a Chat
-              </StyledLink>
+              <Box mt="3">
+                <StyledLink onClick={() => setIsOpen((isOpen) => !isOpen)}>
+                  Schedule a Chat
+                </StyledLink>
               </Box>
             </Center>
           </Box>
