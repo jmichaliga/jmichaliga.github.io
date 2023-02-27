@@ -87,7 +87,7 @@ const BlogLayout = ({ children }) => (
         </Flex>
       </Main>
     </Stack>
-    <Footer>&copy; 2021. Justin W. Michaliga</Footer>
+    <Footer>&copy; {new Date()}. Justin W. Michaliga</Footer>
   </Container>
 )
 
