@@ -1,61 +1,31 @@
 {
   "name": "@smartnode/jmichaliga.com",
+  "version": "0.2.2",
   "private": true,
-  "main": "index.js",
-  "description": "jmichaliga.com",
-  "version": "0.2.1",
-  "author": "Justin Michaliga <justin.michaliga@gmail.com>",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "@emotion/react": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
-    "fathom-client": "^3.0.0",
-    "framer-motion": "^5.3.1",
-    "next": "^11.0.1",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-calendly": "^2.2.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "styled-system": "^5.1.5",
-    "use-sound": "^4.0.0"
+    "@types/node": "18.14.6",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.3",
+    "fathom-client": "^3.5.0",
+    "framer-motion": "^10.0.1",
+    "next": "13.2.3",
+    "react": "18.2.0",
+    "react-calendly": "^4.1.1",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.5",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
-    "eslint": "^7.29.0",
-    "eslint-config-next": "^11.0.1",
-    "gh-pages": "^3.2.3",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.1.2",
-    "prettier": "^2.3.2",
-    "yarn-upgrade-all": "^0.5.4"
-  },
-  "keywords": [
-    "next",
-    "javascript"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "develop": "next dev",
-    "start": "next start",
-    "deploy:github": "npm run build && node ./scripts/deploy-github",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "upgrade-all": "yarn-upgrade-all",
-    "lint": "eslint ./app --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "yarn lint --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jmichaliga/jmichaliga.github.io"
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
   }
 }

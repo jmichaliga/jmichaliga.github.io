@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 import Layout from "../../src/components/layout"
 import SEO from "../../src/components/seo"
-import { Center } from "../../src/components/elements"
+import { Center } from "../../src/components"
 
 const WorkPage = () => (
   <Layout>

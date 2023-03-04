@@ -1,7 +1,7 @@
 import React from "react"
 
-import Layout from "../src/components/layout"
-import SEO from "../src/components/seo"
+import Layout from "@/components/layout"
+import SEO from "@/components/seo"
 
 import {
   Box,
@@ -12,7 +12,7 @@ import {
   H3,
   Ul,
   Li,
-} from "../src/components/elements"
+} from "@/components"
 
 const skills = [
   "illustrator",
@@ -72,8 +72,8 @@ const IndexPage = () => {
         />
 
         <Flex>
-          <Box width={1} p={3}>
-            <Center mt={4}>
+          <Box>
+            <Center>
               <H2>What I Use</H2>
 
               <H3>
