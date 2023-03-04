@@ -3,7 +3,7 @@ import { H1 } from "."
 
 const Header = ({ children, siteTitle }) => (
   <header>
-    <div className="container mx-auto text-center mt-2">
+    <div className="text-center mt-2">
       <H1>{children ? children : siteTitle}</H1>
     </div>
   </header>

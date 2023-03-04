@@ -5,10 +5,11 @@ import { Container, Footer, Main, Stack } from ".."
 
 const Layout = ({ children }) => (
   <Container>
-    <Stack>
-      <Header siteTitle="Justin W. Michaliga" />
-      <Main>{children}</Main>
-    </Stack>
+ 
+    <Main>
+    <Header siteTitle="Justin W. Michaliga" />
+      {children}</Main>
+
     <Footer>
       <a
         href="https://codepen.io/jmichaliga/full/GBNWXx"
