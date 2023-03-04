@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Helvetica Now", "sans-serif"],
+        title: ["Vault", "sans-serif"],
+      },
       colors: {
         jmRed: "#FA1967",
         jmBlue: "#0AC",

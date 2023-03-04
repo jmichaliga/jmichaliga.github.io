@@ -2,13 +2,14 @@ import React, { useState } from "react"
 import IconLink from "@/components/iconlink"
 import Layout from "@/components/layout"
 
-import { Bar, Stack } from "@/components"
+import { Bar } from "@/components"
 
 import Image from "next/image"
 import Balance from "react-wrap-balancer"
 import { InlineWidget } from "react-calendly"
 
 import { motion } from "framer-motion"
+import Icon from "@/components/icon"
 
 const variants = {
   open: { opacity: 1, x: 0 },
@@ -24,12 +25,12 @@ const IndexPage = () => {
 
         <div className="flex flex-col md:flex-row">
           <div className="min-w-fit flex items-center justify-center">
-            <Image src="/images/jm.svg" width="160" height="160" alt="JM" />
+            <Image src="/thinker.png" width="160" height="160" alt="JM" />
           </div>
           <Balance>
 
 
-            <p className="p-2">
+            <p className="p-2 text-slate-300 text-sm leading-8">
               Fractional CTO <abbr title="and">&amp;</abbr> Full-Stack Javascript Engineer with over a decade of
               professional experience in agency, direct service, and in-house
               brand capacities &mdash; specializing in Interactive Design,
@@ -61,7 +62,8 @@ const IndexPage = () => {
             variants={variants}>
 
             <span className="flex cursor-pointer bg-jmRed hover:bg-jmBlue duration-500 ease-in-out rounded-[4px] p-2 items-center gap-2 transition-colors" onClick={() => setIsOpen((isOpen) => !isOpen)}>
-              Schedule a Chat
+              <Icon icon="zeit" text="Schedule" inverted={true} hint={false} />
+              <span className="text-white/70 text-xs">Schedule a Chat</span>
             </span>
 
             <IconLink

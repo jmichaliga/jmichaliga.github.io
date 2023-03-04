@@ -9,10 +9,10 @@ const IconLink = ({ href = "#", icon = "github", inverted = true, hint = true, t
       key={`icon-${icon}`}
       rel="external noopener noreferrer"
       target="_blank"
-      className="flex bg-jmRed hover:bg-jmBlue duration-500 ease-in-out rounded-[4px] p-2 items-center gap-2 transition-colors" 
+      className="flex bg-jmRed hover:bg-jmBlue duration-500 ease-in-out rounded-[4px] p-2 items-center gap-2 transition-colors"
     >
-      <Icon icon={icon} inverted={inverted} hint={hint} />
-      {text}
+      <Icon icon={icon} inverted={inverted} hint={hint} text={text} />
+      <span className="text-xs text-white/70">{text}</span>
     </StyledLink>
   )
 }

@@ -5,10 +5,10 @@ import { Container, Footer, Main, Stack } from ".."
 
 const Layout = ({ children }) => (
   <Container>
- 
     <Main>
-    <Header siteTitle="Justin W. Michaliga" />
-      {children}</Main>
+      <Header siteTitle="Justin W. Michaliga" />
+      {children}
+    </Main>
 
     <Footer>
       <a
@@ -16,7 +16,7 @@ const Layout = ({ children }) => (
         target="_blank"
         rel="noreferrer noopener"
       >
-        <span role="img" aria-label="2021">
+        <span role="img" aria-label="2023">
           👾
         </span>
       </a>

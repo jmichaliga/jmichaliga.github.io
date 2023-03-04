@@ -5,10 +5,10 @@
 }
 
 @font-face {
-font-family: 'Helvetica Now';
-src: url('../fonts/HelveticaNowDisplayRegular.woff') format('woff');
-font-weight: 400;
-font-style: normal;
+  font-family: 'Helvetica Now';
+  src: url('../fonts/HelveticaNowDisplayRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @tailwind base;
@@ -38,7 +38,7 @@ body {
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 10, 10, 20;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
@@ -76,8 +76,8 @@ body {
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 50, 50, 70;
+    --background-end-rgb: 10, 10, 10;
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
