@@ -30,16 +30,16 @@
     "lint-staged": "^13.1.2",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
-  }, 
-    "husky": {
-      "hooks": {
-        "pre-commit": "lint-staged"
-      }
-    },
-    "lint-staged": {
-      "*.{js,jsx,ts,tsx}": [
-        "next lint",
-        "git add"
-      ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "next lint",
+      "git add"
+    ]
+  }
 }
