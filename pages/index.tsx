@@ -2,9 +2,10 @@ import React, { useState } from "react"
 import IconLink from "@/components/iconlink"
 import Layout from "@/components/layout"
 
-import { Bar, Box, Flex, HoverBulge, Social, Stack } from "@/components"
+import { Bar, Stack } from "@/components"
 
 import Image from "next/image"
+import Balance from "react-wrap-balancer"
 import { InlineWidget } from "react-calendly"
 
 import { motion } from "framer-motion"
@@ -25,6 +26,9 @@ const IndexPage = () => {
             <div className="min-w-fit flex items-center justify-center">
               <Image src="/images/jm.svg" width="160" height="160" alt="JM" />
             </div>
+            <Balance>
+
+
             <p className="p-2">
               Fractional CTO <abbr title="and">&amp;</abbr> Full-Stack Javascript Engineer with over a decade of
               professional experience in agency, direct service, and in-house
@@ -34,6 +38,7 @@ const IndexPage = () => {
               <br />
               Based in Greenpoint, Brooklyn <span className="bg-jmRed bg-clip-text text-transparent"><a href="https://gpt.nyc">🍎</a></span> - NYC.
             </p>
+            </Balance>
 
           </div>
 
