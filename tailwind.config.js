@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Helvetica Now", "sans-serif"],
-        title: ["Vault", "sans-serif"],
+        title: ["Vault Alarm", "sans-serif"],
       },
       colors: {
         jmRed: "#FA1967",

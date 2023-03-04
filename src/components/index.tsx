@@ -12,7 +12,7 @@ export const Center = ({ children }: any) => (
   <div className="flex justify-center">{children}</div>
 )
 
-export const H1 = ({ children }: any) => <h1 className="text-3xl font-bold">{children}</h1>
+export const H1 = ({ children }: any) => <h1 className="text-4xl font-title">{children}</h1>
 
 export const H2 = ({ children }: any) => <h2 className="text-2xl">{children}</h2>
 
