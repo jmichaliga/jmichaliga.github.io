@@ -28,16 +28,14 @@ const IndexPage = () => {
             <Image src="/thinker.png" width="160" height="160" alt="JM" />
           </div>
           <Balance>
-
-
-            <p className="p-2 text-slate-300 text-sm leading-8">
+            <p className="p-2 text-slate-400 text-md leading-8 tracking-wide">
               Fractional CTO <abbr title="and">&amp;</abbr> Full-Stack Javascript Engineer with over a decade of
               professional experience in agency, direct service, and in-house
               brand capacities &mdash; specializing in Interactive Design,
               Mobile/Web Development, GraphQL Adoption, Design Systems,{" "}
               <abbr title="and">&amp;</abbr> Immersive User Experiences.
               <br />
-              Based in Greenpoint, Brooklyn <span className="bg-jmRed bg-clip-text text-transparent"><a href="https://gpt.nyc">🍎</a></span> - NYC.
+              Based in Greenpoint, Brooklyn <span className="bg-jmRed hover:bg-jmBlue transition-colors bg-clip-text text-transparent"><a href="https://gpt.nyc">🍎</a></span> - NYC.
             </p>
           </Balance>
 
@@ -61,9 +59,9 @@ const IndexPage = () => {
           <motion.div className="flex flex-col gap-2 w-full md:w-1/2"
             variants={variants}>
 
-            <span className="flex cursor-pointer bg-jmRed hover:bg-jmBlue duration-500 ease-in-out rounded-[4px] p-2 items-center gap-2 transition-colors" onClick={() => setIsOpen((isOpen) => !isOpen)}>
-              <Icon icon="zeit" text="Schedule" inverted={true} hint={false} />
-              <span className="text-white/70 text-xs">Schedule a Chat</span>
+            <span className="flex cursor-pointer bg-slate-400 text-jmRed hover:text-white  hover:bg-jmRed duration-500 ease-in-out rounded-[4px] p-2 items-center gap-2 transition-colors" onClick={() => setIsOpen((isOpen) => !isOpen)}>
+              <Icon icon="jm" text="Schedule" inverted={false} hint={false} />
+              <span className="text-xs">Schedule a Chat</span>
             </span>
 
             <IconLink

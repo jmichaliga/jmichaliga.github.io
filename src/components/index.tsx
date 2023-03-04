@@ -16,15 +16,15 @@ export const H1 = ({ children }: any) => <h1 className="text-4xl font-title">{ch
 
 export const H2 = ({ children }: any) => <h2 className="text-2xl">{children}</h2>
 
-export const H3 = ({ children }: any) => <h3 className="text-xl">{children}</h3>
+export const H3 = ({ children }: any) => <h3 className="text-xl font-bold mb-2 text-slate-200">{children}</h3>
 
 export const Header = ({ children }: any) => <h5 className="text-lg">{children}</h5>
 
 export const Footer = ({ children }: any) => <footer className="fixed bottom-2 right-2 bg-jmRed hover:bg-jmBlue bg-clip-text text-transparent text-right">{children}</footer>
 
-export const Ul = ({ children }: any) => <ul className="">{children}</ul>
+export const Ul = ({ children }: any) => <ul className="flex flex-col gap-2 mb-2">{children}</ul>
 
-export const Li = ({ children }: any) => <li className="leading-3">{children}</li>
+export const Li = ({ children }: any) => <li className="leading-3 text-slate-500">{children}</li>
 
 export const Link = ({ children }: any) => <a className="text-jmBlue">{children}</a>
 
