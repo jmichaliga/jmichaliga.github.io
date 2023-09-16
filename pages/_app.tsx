@@ -1,25 +1,20 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import * as Fathom from 'fathom-client'
+import type { AppProps } from 'next/app'
 
-import "/src/styles/globals.css"
-import "/src/styles/layout.css"
+import "@/styles/globals.css"
 
-function JMichaliga({ Component, pageProps }) {
+function JMichaliga({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
   useEffect(() => {
-    Fathom.load('EOHOGNHG', {
-      includedDomains: ['jmichaliga.com', 'j13a.com', 'jmichaliga.vercel.app'],
-    })
-
+    Fathom.load('EOHOGNHG')
     function onRouteChangeComplete() {
       Fathom.trackPageview()
     }
-    // Record a pageview when route changes
-    router.events.on('routeChangeComplete', onRouteChangeComplete)
 
-    // Unassign event listener
+    router.events.on('routeChangeComplete', onRouteChangeComplete)
     return () => {
       router.events.off('routeChangeComplete', onRouteChangeComplete)
     }
@@ -29,3 +24,4 @@ function JMichaliga({ Component, pageProps }) {
 }
 
 export default JMichaliga
+

@@ -1,0 +1,110 @@
+import React, { useState } from "react"
+import IconLink from "@/components/iconlink"
+import Layout from "@/components/layout"
+
+import { Bar } from "@/components"
+
+import Image from "next/image"
+import Balance from "react-wrap-balancer"
+import { InlineWidget } from "react-calendly"
+
+import { motion } from "framer-motion"
+import Icon from "@/components/icon"
+
+const variants = {
+  open: { opacity: 1, x: 0 },
+  closed: { opacity: 0, x: "-100%"},
+}
+
+const IndexPage = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  return (
+    <>
+      <Bar />
+      <Layout>
+
+        <div className="flex flex-col md:flex-row">
+          <div className="min-w-fit flex items-center justify-center">
+            <Image src="/thinker.png" width="160" height="160" alt="JM" />
+          </div>
+          <Balance>
+            <p className="p-2 text-slate-400 text-md leading-8 tracking-wide">
+              Fractional CTO <abbr title="and">&amp;</abbr> Full-Stack Javascript Engineer with over a decade of
+              professional experience in agency, direct service, and in-house
+              brand capacities &mdash; specializing in Interactive Design,
+              Mobile/Web Development, GraphQL Adoption, Design Systems,{" "}
+              <abbr title="and">&amp;</abbr> Immersive User Experiences.
+              <br />
+              Based in Greenpoint, Brooklyn <span className="bg-jmRed hover:bg-jmBlue transition-colors bg-clip-text text-transparent"><a href="https://gpt.nyc">🍎</a></span> - NYC.
+            </p>
+          </Balance>
+
+        </div>
+
+        <div className="p-2 flex flex-col-reverse md:flex-row gap-2">
+          <motion.div
+            className="overflow-hidden rounded mb-2 h-72 w-full md:w-1/2"
+            animate={isOpen ? "open" : "closed"}
+            variants={variants}
+          >
+            <InlineWidget
+              url="https://calendly.com/jmichaliga"
+              prefill={{
+                customAnswers: {
+                  a1: "Hello Justin! ",
+                },
+              }}
+            />
+          </motion.div>
+          <motion.div className="flex flex-col gap-2 w-full md:w-1/2"
+            variants={variants}>
+
+            <span className="flex cursor-pointer bg-slate-400 text-jmRed hover:text-white  hover:bg-jmRed duration-500 ease-in-out rounded-[4px] p-2 items-center gap-2 transition-colors" onClick={() => setIsOpen((isOpen) => !isOpen)}>
+              <Icon icon="jm" text="Schedule" inverted={false} hint={false} />
+              <span className="text-xs">Schedule a Chat</span>
+            </span>
+
+            <IconLink
+              href="https://github.com/jmichaliga"
+              icon="github"
+              text="Follow @jmichaliga on Github."
+              hint={false}
+            />
+
+            <IconLink
+              href="https://dribbble.com/jmichaliga"
+              icon="dribbble"
+              text="Follow @jmichaliga on Dribbble."
+              hint={false}
+            />
+
+            <IconLink
+              href="https://codepen.com/jmichaliga"
+              icon="codepen"
+              text="Follow @jmichaliga on Codepen."
+              hint={false}
+            />
+
+            <IconLink
+              href="https://twitter.com/jmichaliga"
+              icon="twitter"
+              text="Follow @jmichaliga on twitter."
+              hint={false}
+            />
+
+            <IconLink
+              href="https://www.linkedin.com/in/justin-michaliga-6b57594"
+              icon="linkedin"
+              text="Follow @jmichaliga on LinkedIn."
+              hint={false}
+            />
+
+          </motion.div>
+        </div>
+
+      </Layout>
+    </>
+  )
+}
+
+export default IndexPage

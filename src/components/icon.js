@@ -1,5 +1,3 @@
-import PropTypes from "prop-types"
-import React from "react"
 import Image from "next/image"
 
 const Icon = ({ icon, inverted, text, hint }) => {
@@ -24,20 +22,6 @@ const Icon = ({ icon, inverted, text, hint }) => {
       className={inverted ? "invert" : ""}
     />
   )
-}
-
-Icon.propTypes = {
-  icon: PropTypes.string,
-  inverted: PropTypes.bool,
-  text: PropTypes.string,
-  hint: PropTypes.bool,
-}
-
-Icon.defaultProps = {
-  icon: "github",
-  inverted: true,
-  text: "",
-  hint: true,
 }
 
 export default Icon
