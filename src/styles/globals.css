@@ -1,10 +1,4 @@
 @font-face {
-  font-family: "Vault";
-  src: url("../fonts/Vault-Alarm/VaultAlarm-Regular.woff2") format("woff2"), 
-  url("../fonts/Vault-Alarm/VaultAlarm-Regular.woff") format("woff");
-}
-
-@font-face {
 font-family: 'Helvetica Now';
 src: url('../fonts/HelveticaNowDisplayRegular.woff') format('woff');
 font-weight: 400;
@@ -22,7 +16,6 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: radial-gradient(ellipse farthest-side at 100% 100%,#FB9 10%,#FA1967 30%,#137 110%);
   height: 100vh;
   overflow: hidden;
 }

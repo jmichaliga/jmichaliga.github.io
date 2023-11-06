@@ -34,7 +34,7 @@ export const H1 = styled("h1")`
   color: ${theme.colors.white};
   text-shadow: ${theme.colors.black} 1px 1px 3px;
   letter-spacing: -0.5px;
-  font-family: "Vault", "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: ${theme.fontSizes[7]}px;
   font-weight: 300;
   padding: 3rem 1rem;
@@ -60,7 +60,7 @@ export const Header = styled.h5`
   color: ${theme.colors.white};
   text-shadow: ${theme.colors.black} 1px 1px 3px;
   letter-spacing: -0.5px;
-  font-family: "Vault", "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: ${theme.fontSizes[3]}px;
 `
 

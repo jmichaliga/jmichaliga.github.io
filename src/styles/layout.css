@@ -4,15 +4,16 @@ html {
   -webkit-text-size-adjust: 100%;
   background: #fa1967;
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: radial-gradient(
     ellipse farthest-side at 100% 100%,
-    #fb9 10%,
-    #fa1967 30%,
-    #137 110%
+    #000 10%,
+    #333 30%,
+    #111 110%
   );
 }
 article,
@@ -247,7 +248,6 @@ h1 {
   line-height: 1.1;
 }
 h2 {
-  font-family: "Vault";
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -263,7 +263,6 @@ h2 {
   line-height: 1.1;
 }
 h3 {
-  font-family: "Vault";
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;

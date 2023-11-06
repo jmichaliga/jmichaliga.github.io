@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import theme from "../theme"
 
 const StyledLink = styled.a`
-  font-family: "Vault", "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
