@@ -1,5 +1,5 @@
-import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
 
 const About = () => {
   return (
@@ -18,14 +18,14 @@ const About = () => {
       </p>
 
       <p className="text-sm mt-4">
-        A seasoned Full-Stack JavaScript Engineer with over 15 years of
-        experience building robust web and mobile applications. Expertise in
-        delivering seamless user experiences and optimizing technical
-        architectures across diverse industries. Proven leadership in managing
-        cross-functional teams, delivering high-impact solutions for top-tier
-        clients, and driving innovation through modern technologies.
+        A seasoned Fractional CTO and Full-Stack JavaScript Engineer with over
+        15 years of experience building robust web and mobile applications.
+        Expertise in delivering seamless user experiences and optimizing
+        technical architectures across diverse industries. Proven leadership in
+        managing cross-functional teams, delivering high-impact solutions for
+        top-tier clients, and driving innovation through modern technologies.
         <br />
-        Based in Brooklyn, NYC 🍎.
+        Based in Greenpoint, Brooklyn, NYC 🍎.
       </p>
 
       <div className="flex items-center font-spaceGrotesk space-x-4 mt-4">
@@ -44,7 +44,7 @@ const About = () => {
         </Badge>
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
