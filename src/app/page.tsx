@@ -1,8 +1,8 @@
 "use client"
+
 import { useState, useEffect, useRef } from "react"
 import { motion, useScroll, useSpring } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 
 import { Mail, Moon, Sun, Calendar } from "lucide-react"
 import Image from "next/image"
@@ -199,7 +199,7 @@ export default function Portfolio() {
         <PopupButton
           url="https://calendly.com/jmichaliga"
           className="bg-accent text-white px-4 py-2 rounded-md"
-          rootElement={calenderRef?.current || document.body}
+          rootElement={calenderRef?.current || window?.document?.body}
           text="📆 Click here to schedule a chat"
         />
       </footer>
