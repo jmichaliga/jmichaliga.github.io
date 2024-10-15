@@ -126,7 +126,7 @@ export default function Portfolio() {
               </a>
             </Button>
             <Button variant="ghost" size="icon">
-              <a href="mailto:justin@jmichaliga.com" target="_blank">
+              <a href="mailto:justin@michaliga.com" target="_blank">
                 <Image
                   src="/images/gmail.svg"
                   alt="Mail"
@@ -180,7 +180,7 @@ export default function Portfolio() {
             consultation on your startup, a new project, or just want to say hi,
             feel free to get in touch.
           </p>
-          <a href="mailto:justin@jmichaliga.com" target="_blank">
+          <a href="mailto:justin@michaliga.com" target="_blank">
             <Button className="font-spaceGrotesk">
               Get In Touch <Mail className="ml-2 h-4 w-4" />
             </Button>
