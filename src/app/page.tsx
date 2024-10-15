@@ -55,6 +55,8 @@ export default function Portfolio() {
   const { theme, setTheme } = useTheme()
 
   const [currentTime, setCurrentTime] = useState("")
+  const [calRef, setCalRef] = useState<HTMLElement | null>(null)
+
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date()
@@ -67,6 +69,8 @@ export default function Portfolio() {
       }
       setCurrentTime(now.toLocaleTimeString("en-US", options) + " EST")
     }, 1000)
+
+    setCalRef(calenderRef?.current || window?.document?.body)
 
     return () => clearInterval(timer)
   }, [])
@@ -199,7 +203,7 @@ export default function Portfolio() {
         <PopupButton
           url="https://calendly.com/jmichaliga"
           className="bg-accent text-white px-4 py-2 rounded-md"
-          rootElement={calenderRef?.current || window?.document?.body}
+          rootElement={calRef as HTMLElement}
           text="📆 Click here to schedule a chat"
         />
       </footer>
