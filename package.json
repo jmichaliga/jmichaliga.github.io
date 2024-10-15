@@ -1,61 +1,43 @@
 {
-  "name": "@smartnode/jmichaliga.com",
+  "name": "jmichaliga.github.io",
+  "version": "0.2.2",
   "private": true,
-  "main": "index.js",
-  "description": "jmichaliga.com",
-  "version": "0.2.1",
-  "author": "Justin Michaliga <justin.michaliga@gmail.com>",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "@emotion/react": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
-    "fathom-client": "^3.0.0",
-    "framer-motion": "^5.3.1",
-    "next": "^11.0.1",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-calendly": "^2.2.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "styled-system": "^5.1.5",
-    "use-sound": "^4.0.0"
+    "@next/third-parties": "^14.2.15",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.9",
+    "lucide-react": "^0.453.0",
+    "next": "^14.2.15",
+    "next-themes": "^0.3.0",
+    "react": "^18",
+    "react-calendly": "^4.3.1",
+    "react-dom": "^18",
+    "react-parallax-tilt": "^1.7.246",
+    "react-scroll": "^1.9.0",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "eslint": "^7.29.0",
-    "eslint-config-next": "^11.0.1",
-    "gh-pages": "^3.2.3",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.1.2",
-    "prettier": "^2.3.2",
-    "yarn-upgrade-all": "^0.5.4"
-  },
-  "keywords": [
-    "next",
-    "javascript"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "develop": "next dev",
-    "start": "next start",
-    "deploy:github": "npm run build && node ./scripts/deploy-github",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "upgrade-all": "yarn-upgrade-all",
-    "lint": "eslint ./app --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "yarn lint --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jmichaliga/jmichaliga.github.io"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-scroll": "^1.8.10",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   }
 }
