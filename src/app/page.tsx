@@ -1,24 +1,21 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion, useScroll, useSpring } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
-import { Mail, ExternalLink, Moon, Sun } from "lucide-react"
+
+import { Mail, Moon, Sun, Calendar } from "lucide-react"
 import Image from "next/image"
-import Tilt from "react-parallax-tilt"
+
+import { PopupButton } from "react-calendly"
 import { useTheme } from "next-themes"
 
 import MobileNav from "@/components/mobile-nav"
+
+import About from "@/components/about"
 import Technologies from "@/components/technologies"
+import Projects from "@/components/projects"
+import Clients from "@/components/clients"
 
 const AnimatedBackground = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -53,52 +50,26 @@ export default function Portfolio() {
     restDelta: 0.001,
   })
 
+  const calenderRef = useRef(null)
+
   const { theme, setTheme } = useTheme()
 
-  const brands = [
-    { id: 1, name: "Gatorade" },
-    { id: 2, name: "Google" },
-    { id: 3, name: "Facebook" },
-    { id: 4, name: "Nike" },
-    { id: 5, name: "Verizon" },
-    { id: 6, name: "Pepsi" },
-    { id: 7, name: "Grey Goose" },
-    { id: 8, name: "T-Mobile" },
-  ]
+  const [currentTime, setCurrentTime] = useState("")
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const now = new Date()
+      const options: Intl.DateTimeFormatOptions = {
+        timeZone: "America/New_York",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+      }
+      setCurrentTime(now.toLocaleTimeString("en-US", options) + " EST")
+    }, 1000)
 
-  const companies = [
-    { id: 1, name: "Northwestern Mutual" },
-    { id: 2, name: "NBA" },
-    { id: 3, name: "Spotify" },
-    { id: 4, name: "Nickelodeon" },
-  ]
-
-  const agencies = [
-    { id: 1, name: "RG/A" },
-    { id: 2, name: "Ogilvy" },
-    { id: 3, name: "Smart Design" },
-  ]
-
-  const projects = [
-    {
-      title: "E-commerce Platform Migration",
-      description:
-        "Migrated a large-scale e-commerce platform from a monolithic architecture to Next.js, resulting in a 40% improvement in page load times.",
-      link: "#",
-    },
-    {
-      title: "Real-time Analytics Dashboard",
-      description:
-        "Developed a real-time analytics dashboard using Next.js and WebSockets, providing instant insights for business decisions.",
-      link: "#",
-    },
-    {
-      title: "Content Management System",
-      description:
-        "Built a headless CMS using Next.js and GraphQL, allowing for flexible content delivery across multiple platforms.",
-      link: "#",
-    },
-  ]
+    return () => clearInterval(timer)
+  }, [])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white relative overflow-hidden transition-colors duration-300">
@@ -116,10 +87,12 @@ export default function Portfolio() {
             transition={{ duration: 0.5 }}
           >
             <Image src="/images/jm.svg" alt="JM Logo" width={50} height={50} />
-            <h1 className="text-2xl font-bold">Justin Michaliga</h1>
-            <MobileNav />
+            <h1 className="text-3xl font-bold font-spaceGrotesk">
+              j13a: Justin Michaliga
+            </h1>
           </motion.div>
 
+          <MobileNav />
           <motion.div
             className="space-x-4 hidden md:flex"
             initial={{ opacity: 0, y: -20 }}
@@ -176,148 +149,59 @@ export default function Portfolio() {
       </header>
 
       <main className="container mx-auto px-4 py-12 relative z-10">
-        <motion.section
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-4xl font-bold mb-4">
-            Modern Web Development Expert
-          </h2>
-          <p className="text-xl mb-6">
-            Specializing in Next.js migrations and building high-performance web
-            applications.
-          </p>
+        <a href="#about" />
+        <About />
 
-          <p className="text-sm mt-4">
-            A seasoned Full-Stack JavaScript Engineer with over 15 years of
-            experience building robust web and mobile applications. Expertise in
-            delivering seamless user experiences and optimizing technical
-            architectures across diverse industries. Proven leadership in
-            managing cross-functional teams, delivering high-impact solutions
-            for top-tier clients, and driving innovation through modern
-            technologies.
-          </p>
-
-          <p className="text-sm mt-4">
-            Full-Stack Javascript Engineer with over a decade of professional
-            experience in agency, direct service, and in-house brand capacities
-            — specializing in Interactive Design, Mobile/Web Development,
-            GraphQL Adoption, Design Systems, & Immersive User Experiences.
-            Based in Brooklyn, NYC 🍎.
-          </p>
-
-          <div className="flex items-center space-x-4 mt-4">
-            <Badge
-              variant="outline"
-              className="text-green-400 bg-green-400/20 border-2 border-green-400/20"
-            >
-              Available for Hire
-            </Badge>
-            <Badge variant="outline" className="text-slate-400 bg-slate-400/20">
-              Remote
-            </Badge>
-            <Badge variant="outline" className="text-slate-400 bg-slate-400/20">
-              Full-time
-            </Badge>
-          </div>
-        </motion.section>
-
+        <a href="#technologies" />
         <Technologies />
 
-        <motion.section
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <h3 className="text-2xl font-semibold mb-4">Featured Projects</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <Tilt key={index}>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 h-full">
-                    <CardHeader>
-                      <CardTitle className="text-xl font-semibold text-black dark:text-white">
-                        {project.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription>{project.description}</CardDescription>
-                    </CardContent>
-                    <CardFooter>
-                      <Button variant="outline" size="sm" className="w-full">
-                        View Project <ExternalLink className="ml-2 h-4 w-4" />
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </motion.div>
-              </Tilt>
-            ))}
-          </div>
-        </motion.section>
+        <a href="#projects" />
+        <Projects />
 
+        <a href="#clients" />
+        <Clients />
+
+        <a href="#contact" />
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <h3 className="text-2xl font-semibold mb-4">Featured Clients</h3>
-          <Tabs defaultValue="brands" className="w-[400px] mb-16">
-            <TabsList>
-              <TabsTrigger value="brands">Brands</TabsTrigger>
-              <TabsTrigger value="companies">Companies</TabsTrigger>
-              <TabsTrigger value="agencies">Agencies</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="brands">
-              <div className="flex flex-wrap gap-2">
-                {brands.map((brand) => (
-                  <Badge key={brand.id}>{brand.name}</Badge>
-                ))}
-              </div>
-            </TabsContent>
-            <TabsContent value="companies">
-              <div className="flex flex-wrap gap-2">
-                {companies.map((company) => (
-                  <Badge key={company.id}>{company.name}</Badge>
-                ))}
-              </div>
-            </TabsContent>
-            <TabsContent value="agencies">
-              <div className="flex flex-wrap gap-2">
-                {agencies.map((agency) => (
-                  <Badge key={agency.id}>{agency.name}</Badge>
-                ))}
-              </div>
-            </TabsContent>
-          </Tabs>
-        </motion.section>
-
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          <h3 className="text-2xl font-semibold mb-4">
+          <h3 className="font-spaceGrotesk text-2xl font-semibold mb-4">
             Let&apos;s Work Together
           </h3>
           <p className="mb-6">
             I am always open to discussing new projects, creative ideas, or
-            opportunities to be part of your visions.
+            opportunities to be part of your visions. If you&apos;re looking for
+            consultation on your startup, a new project, or just want to say hi,
+            feel free to get in touch.
           </p>
-          <Button>
-            Get In Touch <Mail className="ml-2 h-4 w-4" />
-          </Button>
+          <a href="mailto:justin@jmichaliga.com" target="_blank">
+            <Button className="font-spaceGrotesk">
+              Get In Touch <Mail className="ml-2 h-4 w-4" />
+            </Button>
+          </a>{" "}
+          or{" "}
+          <a href="https://calendly.com/jmichaliga" target="_blank">
+            <Button className="font-spaceGrotesk">
+              Schedule a Chat <Calendar className="ml-2 h-4 w-4" />
+            </Button>
+          </a>
         </motion.section>
       </main>
 
-      <footer className="container mx-auto px-4 py-8 text-xs text-center text-gray-600 dark:text-gray-400 relative z-10">
-        <p>&copy; {new Date().getFullYear()} Justin Michaliga.</p>
+      <footer className="container mx-auto px-4 py-8 text-xs font-spaceGrotesk flex justify-between text-gray-600 dark:text-gray-400 relative z-10">
+        <p className="flex flex-col items-center text-left" ref={calenderRef}>
+          <span>&copy; {new Date().getFullYear()} Justin Michaliga.</span>
+          <span>New York City, USA 🇺🇸</span>
+          <span>{currentTime}</span>
+        </p>
+        <PopupButton
+          url="https://calendly.com/jmichaliga"
+          className="bg-accent text-white px-4 py-2 rounded-md"
+          rootElement={calenderRef?.current || document.body}
+          text="📆 Click here to schedule a chat"
+        />
       </footer>
     </div>
   )

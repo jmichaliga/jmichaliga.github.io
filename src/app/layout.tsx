@@ -1,13 +1,14 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 import { ThemeProvider } from "next-themes"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+import { inter, spaceGrotesk } from "@/lib/theme"
 
 export const metadata: Metadata = {
-  title: "j13a: Justin Michaliga",
-  description: "Justin | Staff Product Engineer from Brooklyn",
+  title: "j13a: Justin Michaliga | Product Engineer",
+  description: "Justin Michaliga | Staff Product Engineer from Brooklyn",
 }
 
 export default function RootLayout({
@@ -16,9 +17,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <ThemeProvider attribute="class">
         <body className={inter.className}>{children}</body>
+        <GoogleAnalytics gaId="UA-6741593-1" />
       </ThemeProvider>
     </html>
   )

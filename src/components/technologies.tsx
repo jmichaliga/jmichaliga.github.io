@@ -154,7 +154,7 @@ export default function Technologies() {
   ]
 
   return (
-    <section className="mb-16">
+    <section className="font-spaceGrotesk mb-16">
       <h3 className="text-2xl font-semibold mb-4">Technologies</h3>
       <div className="flex flex-wrap gap-2">
         {technologies.map((tech, index) => (

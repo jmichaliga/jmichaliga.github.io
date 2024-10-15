@@ -4,14 +4,15 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Home, GiftIcon, ShieldQuestion, Contact } from "lucide-react"
-import Link from "next/link"
+import { Menu, Home, GiftIcon, ShieldQuestion, Contact, Mail } from "lucide-react"
+import { Link } from "react-scroll"
 
 const navItems = [
   { name: "Home", href: "/", icon: <Home /> },
-  { name: "Projects", href: "/projects", icon: <GiftIcon /> },
-  { name: "About", href: "/about", icon: <ShieldQuestion /> },
-  { name: "Contact", href: "/contact", icon: <Contact /> },
+  { name: "About", href: "#about", icon: <ShieldQuestion /> },
+  { name: "Projects", href: "#projects", icon: <GiftIcon /> },
+  { name: "Clients", href: "#clients", icon: <Contact /> },
+  { name: "Contact", href: "#contact", icon: <Mail /> },
 ]
 
 const MobileNav = () => {
@@ -43,7 +44,9 @@ const MobileNav = () => {
                 )}
               </AnimatePresence>
               <Link
-                href={item.href}
+                to={item.href}
+                smooth={true}
+                duration={500}
                 className="flex items-center gap-2 py-2 px-4 text-lg font-medium relative z-10 transition-colors duration-200"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
