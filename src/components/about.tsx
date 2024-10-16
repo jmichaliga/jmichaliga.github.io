@@ -9,8 +9,10 @@ const About = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-4xl font-bold mb-4">
-        Modern Web Development Expertise, Right here in NYC
+      <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+        Modern Web Development Expertise
+        <br />
+        Right here in the 🍎
       </h2>
       <p className="text-xl mb-6 font-spaceGrotesk">
         Specializing in Next.js migrations and building high-performance web
@@ -24,9 +26,15 @@ const About = () => {
         technical architectures across diverse industries. Proven leadership in
         managing cross-functional teams, delivering high-impact solutions for
         top-tier clients, and driving innovation through modern technologies.
-        <br />
-        Based in Greenpoint, Brooklyn, NYC 🍎.
       </p>
+
+      <p className="text-sm mt-4">
+        A rare breed of developer who is equally comfortable with the front-end
+        and back-end, and has a knack for building scalable and secure
+        applications as well as designing delightful user experiences and doing
+        research for user-centric AI applications.
+      </p>
+      <p className="text-sm mt-4">📍 Based in Greenpoint, Brooklyn.</p>
 
       <div className="flex items-center font-spaceGrotesk space-x-4 mt-4">
         <Badge
@@ -37,10 +45,10 @@ const About = () => {
           Available for Hire
         </Badge>
         <Badge variant="outline" className="text-slate-400 bg-slate-400/20">
-          Remote
+          Remote / NYC
         </Badge>
         <Badge variant="outline" className="text-slate-400 bg-slate-400/20">
-          Full-time
+          Part-time / Full-time
         </Badge>
       </div>
     </motion.section>

@@ -16,6 +16,9 @@ import About from "@/components/about"
 import Technologies from "@/components/technologies"
 import Projects from "@/components/projects"
 import Clients from "@/components/clients"
+import TechFilter from "@/components/tag-filters"
+
+import { Technology } from "@/types"
 
 const AnimatedBackground = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -57,6 +60,8 @@ export default function Portfolio() {
   const [currentTime, setCurrentTime] = useState("")
   const [calRef, setCalRef] = useState<HTMLElement | null>(null)
 
+  const [selectedFilters, setSelectedFilters] = useState<Technology[]>([]);
+
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date()
@@ -91,7 +96,7 @@ export default function Portfolio() {
             transition={{ duration: 0.5 }}
           >
             <Image src="/images/jm.svg" alt="JM Logo" width={50} height={50} />
-            <h1 className="text-3xl font-bold font-spaceGrotesk">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold font-spaceGrotesk">
               j13a: Justin Michaliga
             </h1>
           </motion.div>
@@ -157,10 +162,13 @@ export default function Portfolio() {
         <About />
 
         <a href="#technologies" />
-        <Technologies />
+        <Technologies onFilterChange={setSelectedFilters} />
 
         <a href="#projects" />
-        <Projects />
+        <Projects 
+          filters={selectedFilters} 
+          clearFilters={() => setSelectedFilters([])} 
+        />
 
         <a href="#clients" />
         <Clients />
@@ -195,17 +203,11 @@ export default function Portfolio() {
       </main>
 
       <footer className="container mx-auto px-4 py-8 text-xs font-spaceGrotesk flex justify-between text-gray-600 dark:text-gray-400 relative z-10">
-        <p className="flex flex-col items-center text-left" ref={calenderRef}>
+        <p className="flex gap-2 items-center text-left" ref={calenderRef}>
           <span>&copy; {new Date().getFullYear()} Justin Michaliga.</span>
-          <span>New York City, USA 🇺🇸</span>
+          <span>Greenpoint, Brooklyn, USA</span>
           <span>{currentTime}</span>
         </p>
-        <PopupButton
-          url="https://calendly.com/jmichaliga"
-          className="bg-accent text-white px-4 py-2 rounded-md"
-          rootElement={calRef as HTMLElement}
-          text="📆 Click here to schedule a chat"
-        />
       </footer>
     </div>
   )

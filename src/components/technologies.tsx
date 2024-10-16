@@ -1,9 +1,11 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
-import Image from "next/image"
-
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
+import { Technology, technologies } from "@/types";
+import { X } from "lucide-react";
 const TechnologyIcon = ({ name }: { name: string }) => {
   const iconMap: { [key: string]: JSX.Element } = {
     "Next.js": (
@@ -30,7 +32,12 @@ const TechnologyIcon = ({ name }: { name: string }) => {
       <Image src="/images/node.svg" alt="Node.js" width={20} height={20} />
     ),
     Apollo: (
-      <Image src="/images/apollographql.svg" alt="Apollo" width={20} height={20} />
+      <Image
+        src="/images/apollographql.svg"
+        alt="Apollo"
+        width={20}
+        height={20}
+      />
     ),
     Gatsby: (
       <Image src="/images/gatsby.svg" alt="Gatsby" width={20} height={20} />
@@ -115,43 +122,62 @@ const TechnologyIcon = ({ name }: { name: string }) => {
         height={20}
       />
     ),
-  }
+    Angular: (
+      <Image src="/images/angular.svg" alt="Angular" width={20} height={20} />
+    ),
+    "React Native": (
+      <Image
+        src="/images/react.svg"
+        alt="React Native"
+        width={20}
+        height={20}
+      />
+    ),
+    Express: (
+      <Image src="/images/express.svg" alt="Express" width={20} height={20} />
+    ),
+    "Ruby on Rails": (
+      <Image src="/images/rubyonrails.svg" alt="Ruby on Rails" width={20} height={20} />
+    ),
+    "Redwood.js": (
+      <Image src="/images/redwoodjs.svg" alt="Redwood.js" width={20} height={20} />
+    ),
+    Vue: <Image src="/images/vue.svg" alt="Vue.js" width={20} height={20} />,
+    Linear: <Image src="/images/linear.svg" alt="Linear" width={20} height={20} />,
+    Svelte: (
+      <Image src="/images/svelte.svg" alt="Svelte" width={20} height={20} />
+    ),
+    Astro: <Image src="/images/astro.svg" alt="Astro" width={20} height={20} />,
+    Remix: <Image src="/images/remix.svg" alt="Remix" width={20} height={20} />,
+    PHP: <Image src="/images/php.svg" alt="PHP" width={20} height={20} />,
+    Javascript: <Image src="/images/javascript.svg" alt="Javascript" width={20} height={20} />,
+    Jira: <Image src="/images/jira.svg" alt="Jira" width={20} height={20} />,
+  };
 
   return (
     <div className="flex items-center space-x-1">
       {iconMap[name] || <div className="w-5 h-5" />}
       <span>{name}</span>
     </div>
-  )
-}
+  );
+};
 
-export default function Technologies() {
-  const technologies = [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Node.js",
-    "Apollo",
-    "Gatsby",
-    "GraphQL",
-    "PostgreSQL",
-    "AWS",
-    "Docker",
-    "Kubernetes",
-    "ThreeJS",
-    "Expo",
-    "Firebase",
-    "Figma",
-    "Supabase",
-    "TailwindCSS",
-    "Vercel",
-    "Cloudflare",
-    "npm",
-    "MongoDB",
-    "MySQL",
-    "Elasticsearch",
-    "Amplify",
-  ]
+export default function Technologies({
+  onFilterChange,
+}: {
+  onFilterChange: (filters: Technology[]) => void;
+}) {
+  const [filters, setFilters] = useState<Technology[]>([]);
+
+  const toggleTechnology = (tech: Technology) => {
+    setFilters((prevSelected) => {
+      const newFilters = prevSelected.includes(tech)
+        ? prevSelected.filter((t) => t !== tech)
+        : [...prevSelected, tech];
+      onFilterChange(newFilters);
+      return newFilters;
+    });
+  };
 
   return (
     <section className="font-spaceGrotesk mb-16">
@@ -163,12 +189,30 @@ export default function Technologies() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Badge className="flex items-center space-x-1 p-2 bg-accent text-white dark:bg-accent dark:text-white">
+            <Badge
+              onClick={() => toggleTechnology(tech)}
+              className={`flex items-center cursor-pointer space-x-1 p-2 ${
+                filters.includes(tech)
+                  ? "bg-blue-500 text-white"
+                  : "bg-accent text-white dark:bg-accent dark:text-white"
+              }`}
+            >
               <TechnologyIcon name={tech} />
             </Badge>
           </motion.div>
         ))}
+        {filters.length > 0 && (
+          <Badge
+            onClick={() => {
+              setFilters([]);
+              onFilterChange([]);
+            }}
+            className="flex items-center cursor-pointer space-x-1 p-2 text-white dark:bg-white dark:text-slate-800"
+          >
+            <X className="w-4 h-4" /> Clear
+          </Badge>
+        )}
       </div>
     </section>
-  )
+  );
 }

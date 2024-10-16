@@ -23,6 +23,12 @@ const brands = [
   { id: 18, name: "Salvatore Ferragamo" },
   { id: 19, name: "Theory" },
   { id: 20, name: "Goretex" },
+  { id: 21, name: "Self Portrait Project" },
+  { id: 22, name: "Nikon" },
+  { id: 23, name: "Nike" },
+  { id: 24, name: "Catbird" },
+  { id: 25, name: "Under Armour" },
+  { id: 26, name: "Nikola" },
 ]
 
 const companies = [
@@ -37,6 +43,11 @@ const companies = [
   { id: 9, name: "ESPN" },
   { id: 10, name: "The Wall Street Journal" },
   { id: 11, name: "Pacific Gas and Electric Company" },
+  { id: 12, name: "JP Morgan Chase" },
+  { id: 13, name: "Johns Hopkins University" },
+  { id: 14, name: "Knotel" },
+  { id: 15, name: "No.Inc" },
+  { id: 16, name: "Inside Lacrosse" },
 ]
 
 const agencies = [
@@ -46,6 +57,11 @@ const agencies = [
   { id: 4, name: "Wieden+Kennedy" },
   { id: 5, name: "Milk Studios" },
   { id: 6, name: "Alexander Interactive" },
+  { id: 7, name: "SmartNode" },
+  { id: 8, name: "Pentagram" },
+  { id: 9, name: "Layerframe" },
+  { id: 10, name: "VentureStudio" },
+  { id: 11, name: "Codeword" },
 ]
 
 const Clients = () => {
