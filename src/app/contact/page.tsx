@@ -12,13 +12,6 @@ import { useTheme } from "next-themes";
 
 import MobileNav from "@/components/mobile-nav";
 
-import About from "@/components/about";
-import Technologies from "@/components/technologies";
-import Projects from "@/components/projects";
-import Clients from "@/components/clients";
-
-import { Technology } from "@/types";
-
 import ContactForm from "@/components/contact-form";
 
 const AnimatedBackground = () => {
@@ -60,8 +53,6 @@ export default function Portfolio() {
 
   const [currentTime, setCurrentTime] = useState("");
   const [calRef, setCalRef] = useState<HTMLElement | null>(null);
-
-  const [selectedFilters, setSelectedFilters] = useState<Technology[]>([]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -159,22 +150,6 @@ export default function Portfolio() {
       </header>
 
       <main className="container mx-auto px-4 py-12 relative z-10">
-        <a href="#about" />
-        <About />
-
-        <a href="#technologies" />
-        <Technologies onFilterChange={setSelectedFilters} />
-
-        <a href="#projects" />
-        <Projects
-          filters={selectedFilters}
-          clearFilters={() => setSelectedFilters([])}
-        />
-
-        <a href="#clients" />
-        <Clients />
-
-        <a href="#contact" />
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -202,8 +177,7 @@ export default function Portfolio() {
           <p className="mt-8 text-center">Or reach out directly:</p>
           <div className="mt-4 flex gap-2 justify-center items-center">
             <a
-              href="mailto:justin@michaliga.com"
-              className="text-blue-500 hover:underline"
+              href="mailto:justin.michaliga@gmail.com"
             >
               <Button className="flex font-spaceGrotesk">
                 <Mail className="mr-2 w-4 h-4" />

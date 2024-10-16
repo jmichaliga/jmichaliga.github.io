@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { GoogleAnalytics } from '@next/third-parties/google'
-
+import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "next-themes"
 import "./globals.css"
 
@@ -20,6 +20,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <ThemeProvider attribute="class">
         <body className={inter.className}>{children}</body>
+        <Toaster />
         <GoogleAnalytics gaId="UA-6741593-1" />
       </ThemeProvider>
     </html>
