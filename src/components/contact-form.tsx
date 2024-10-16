@@ -57,14 +57,14 @@ export default function ContactForm() {
           inquiryType: "project",
           message: "",
         });
-      } else {
-        // const errorData = await response.json();
+      } else if (response.status === 429) {
         toast({
-          title: "Error",
-          description: "Failed to send your message. Please try again later.",
+          title: "Rate Limit Exceeded",
+          description: "You've reached the maximum number of messages allowed in 24 hours. Please try again later.",
           variant: "destructive",
         });
-        // throw new Error('Failed to send email');
+      } else {
+        throw new Error('Failed to send email');
       }
     } catch (error) {
       console.error('Error:', error);
