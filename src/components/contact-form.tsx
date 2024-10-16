@@ -16,6 +16,7 @@ export default function ContactForm() {
     email: "",
     mobile: "",
     inquiryType: "project",
+    budget: 0,
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -55,6 +56,7 @@ export default function ContactForm() {
           email: "",
           mobile: "",
           inquiryType: "project",
+          budget: 0,
           message: "",
         });
       } else if (response.status === 429) {
@@ -87,7 +89,7 @@ export default function ContactForm() {
     >
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <Label htmlFor="name">Name</Label>
+          <Label className="font-bold" htmlFor="name">Name</Label>
           <Input
             type="text"
             id="name"
@@ -99,7 +101,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <Label htmlFor="email">Email</Label>
+          <Label className="font-bold" htmlFor="email">Email</Label>
           <Input
             type="email"
             id="email"
@@ -111,7 +113,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <Label htmlFor="mobile">Mobile (optional)</Label>
+          <Label className="font-bold" htmlFor="mobile">Mobile (optional)</Label>
           <Input
             type="tel"
             id="mobile"
@@ -122,7 +124,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <Label>Inquiry Type</Label>
+          <Label className="font-bold">Inquiry Type</Label>
           <RadioGroup
             defaultValue="project"
             onValueChange={handleRadioChange}
@@ -139,7 +141,18 @@ export default function ContactForm() {
           </RadioGroup>
         </div>
         <div>
-          <Label htmlFor="message">Message</Label>
+            <Label className="font-bold" htmlFor="budget">Estimated Budget</Label>
+            <Slider
+                id="budget"
+                name="budget"
+                value={formData.budget}
+                onChange={handleChange}
+                required
+                className="mt-1"
+            />
+        </div>
+        <div>
+          <Label className="font-bold" htmlFor="message">Message</Label>
           <Textarea
             id="message"
             name="message"

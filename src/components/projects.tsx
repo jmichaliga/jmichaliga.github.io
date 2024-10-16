@@ -13,16 +13,21 @@ import {
 } from "@/components/ui/card";
 import {
   AtomIcon,
+  BadgePoundSterlingIcon,
+  BandageIcon,
   BatteryFull,
   BuildingIcon,
   ChefHatIcon,
   DogIcon,
   DollarSignIcon,
+  DumbbellIcon,
   ExternalLink,
   GraduationCap,
+  HeartHandshake,
   HeartPulse,
   MailCheckIcon,
   MinusCircleIcon,
+  PillBottleIcon,
   Star,
   TrophyIcon,
 } from "lucide-react";
@@ -50,10 +55,11 @@ export default function Projects({
       icon: <BatteryFull className="w-12 h-12" />,
       title: "Dashboard Platform Migration",
       description:
-        "Migrated a large-scale e-commerce platform from a Redwood.js to Next.js, resulting in a 40% improvement in page load times. Updates allow for developer productivity and a better user experience transitioning into a design system better suited for the dashboard.",
+        "Migrated a dashboard platform from a Redwood.js instance and modernized the tech stack. This included the use of Next.js, TypeScript, and TailwindCSS to create a more maintainable codebase.",
       link: "#",
       tags: [
         "Next.js",
+        "TypeScript",
         "Redwood.js",
         "AWS",
         "Elasticsearch",
@@ -61,6 +67,7 @@ export default function Projects({
         "GraphQL",
         "Kubernetes",
         "Docker",
+        "Prisma",
       ],
     },
     {
@@ -69,13 +76,21 @@ export default function Projects({
       description:
         "Joined an existing codebase that was built in Gatsby and utilized GraphQL endpoints to fetch data. Debugged and fixed critical bugs in the codebase. This included the use of React hooks, React context, and GraphQL codegen to ensure a maintainable codebase. Helped migrate the codebase to Next.js and modernize the tech stack.",
       link: "#",
-      tags: ["Gatsby", "React", "GraphQL", "AWS"],
+      tags: [
+        "Gatsby",
+        "React",
+        "GraphQL",
+        "TypeScript",
+        "AWS",
+        "Firebase",
+        "Elasticsearch",
+      ],
     },
     {
       icon: <Star className="w-12 h-12" />,
-      title: "National Basketball Association Stats Dashboard",
+      title: "Major League Stats Dashboard",
       description:
-        "Converted an Angular instance to a Next.js project, resulting in a 30% improvement in page load times and large increase in developer experience. Led the migration of the codebase to TypeScript and modernized the tech stack.",
+        "Converted an Angular instance to a Next.js project, resulting in a 30% improvement in page load times and large increase in developer experience. Led the migration of the codebase to TypeScript in order to modernize the tech stack.",
       link: "#",
       tags: ["Next.js", "Angular", "React", "AWS", "TypeScript", "Javascript"],
     },
@@ -85,7 +100,15 @@ export default function Projects({
       description:
         "Oversaw the implementation of GraphQL Federation, for a company that wanted to unify multiple codebases under a single GraphQL API, allowing for flexible content delivery across multiple platforms utilizing a microservice architecture based on several real estate sources.",
       link: "#",
-      tags: ["Next.js", "GraphQL", "Apollo", "Kubernetes", "Docker"],
+      tags: [
+        "Next.js",
+        "GraphQL",
+        "Apollo",
+        "TypeScript",
+        "Kubernetes",
+        "Docker",
+        "PostgreSQL",
+      ],
     },
     {
       icon: <TrophyIcon className="w-12 h-12" />,
@@ -93,7 +116,17 @@ export default function Projects({
       description:
         "Built a headless CMS using Next.js and GraphQL, allowing for flexible content delivery across multiple platforms. Articles were written in Wordpress and imported using the WP-GraphQL plugin to generate a GraphQL API and static pages on buildtime.",
       link: "#",
-      tags: ["Next.js", "GraphQL", "React", "Supabase", "PHP", "TailwindCSS"],
+      tags: [
+        "Next.js",
+        "GraphQL",
+        "React",
+        "Supabase",
+        "PHP",
+        "TypeScript",
+        "TailwindCSS",
+        "Prisma",
+        "MySQL",
+      ],
     },
     {
       icon: <DollarSignIcon className="w-12 h-12" />,
@@ -109,7 +142,10 @@ export default function Projects({
         "Figma",
         "Cloudflare",
         "Supabase",
+        "TypeScript",
         "TailwindCSS",
+        "Nest.js",
+        "PostgreSQL",
       ],
     },
     {
@@ -122,10 +158,12 @@ export default function Projects({
         "React",
         "Ruby on Rails",
         "Elasticsearch",
+        "TypeScript",
         "AWS",
         "Kubernetes",
         "Docker",
         "npm",
+        "PostgreSQL",
       ],
     },
     {
@@ -137,6 +175,7 @@ export default function Projects({
       tags: [
         "React",
         "Next.js",
+        "TypeScript",
         "Expo",
         "Figma",
         "Vercel",
@@ -154,11 +193,13 @@ export default function Projects({
         "React",
         "Next.js",
         "React Native",
+        "TypeScript",
         "MongoDB",
         "Linear",
         "Cloudflare",
         "Supabase",
         "TailwindCSS",
+        "Nest.js",
       ],
     },
     {
@@ -170,12 +211,14 @@ export default function Projects({
       tags: [
         "React",
         "Next.js",
+        "TypeScript",
         "React Native",
         "MongoDB",
         "Linear",
         "Cloudflare",
         "Supabase",
         "TailwindCSS",
+        "Nest.js",
       ],
     },
     {
@@ -186,6 +229,48 @@ export default function Projects({
       link: "#",
       tags: ["Javascript", "Jira", "Node.js", "npm"],
     },
+    {
+      icon: <HeartHandshake className="w-12 h-12" />,
+      title: "Healthcare Insurance Marketplace",
+      description:
+        "Oversaw and led the development of a healthcare insurance platform which matched advisors with clients based on their needs and goals. This was built using React, Next.js, Prisma, and hosted on Vercel eventually migrating to AWS.",
+      link: "#",
+      tags: [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Prisma",
+        "Linear",
+        "AWS",
+        "Supabase",
+        "TailwindCSS",
+      ],
+    },
+    {
+      icon: <BadgePoundSterlingIcon className="w-12 h-12" />,
+      title: "C2C Marketplace and Payment Platform",
+      description:
+        "Joined a team to use existing patterns and APIs to build a Direct to Consumer marketplace within several verticals. Gatsby utilized the existing GraphQL API to fetch data and build static pages on buildtime. Higher level features included maintaining a design system for multiple variants of brands and products as well as locales.",
+      link: "#",
+      tags: ["TypeScript", "Gatsby", "AWS", "Figma", "Apollo", "GraphQL"],
+    },
+    {
+      icon: <DumbbellIcon className="w-12 h-12" />,
+      title: "Localization of Wearable Devices App",
+      description:
+        "Refactored an existing React Application to TypeScript as well as implemented a localization system for the app to support multiple languages for LATAM regions. This app supported a wearable device that would send data to the app and the user would receieve personalized recommendations and insights based on their data.",
+      link: "#",
+      tags: ["TypeScript", "React", "Firebase", "Javascript", "AWS"],
+    },
+    {
+        icon: <PillBottleIcon className="w-12 h-12" />,
+        title: "Portal for Pharmaceutical Investment",
+        description:
+          "Built an application for a pharmaceutical company to allow for the investment in clinical trials. This application was built using Angular, and hosted on Heroku. It utilized a Node.js API that used over 30 years of historical data to power the recommendations of likelihood of approval for upcoming drugs.",
+        link: "#",
+        tags: ["TypeScript", "React", "Firebase", "Javascript", "AWS"],
+      },
+    
   ];
 
   const filteredProjects = projects.filter(

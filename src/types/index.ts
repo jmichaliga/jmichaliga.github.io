@@ -8,6 +8,7 @@ export type Technology =
   | "GraphQL"
   | "PostgreSQL"
   | "PHP"
+  | "Prisma"
   | "AWS"
   | "Docker"
   | "Kubernetes"
@@ -32,7 +33,8 @@ export type Technology =
   | "React Native"
   | "Redwood.js"
   | "Javascript"
-  | "Jira";
+  | "Jira"
+  | "Nest.js";
 
 export const technologies: Technology[] = [
   "Next.js",
@@ -55,6 +57,7 @@ export const technologies: Technology[] = [
   "Vercel",
   "Cloudflare",
   "PHP",
+  "Prisma",
   "npm",
   "MongoDB",
   "MySQL",
@@ -69,4 +72,5 @@ export const technologies: Technology[] = [
   "Redwood.js",
   "Javascript",
   "Jira",
+  "Nest.js",
 ];

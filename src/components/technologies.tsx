@@ -150,8 +150,10 @@ const TechnologyIcon = ({ name }: { name: string }) => {
     Astro: <Image src="/images/astro.svg" alt="Astro" width={20} height={20} />,
     Remix: <Image src="/images/remix.svg" alt="Remix" width={20} height={20} />,
     PHP: <Image src="/images/php.svg" alt="PHP" width={20} height={20} />,
+    Prisma: <Image src="/images/prisma.svg" alt="Prisma" width={20} height={20} />,
     Javascript: <Image src="/images/javascript.svg" alt="Javascript" width={20} height={20} />,
     Jira: <Image src="/images/jira.svg" alt="Jira" width={20} height={20} />,
+    "Nest.js": <Image src="/images/nestjs.svg" alt="Nest.js" width={20} height={20} />,
   };
 
   return (
