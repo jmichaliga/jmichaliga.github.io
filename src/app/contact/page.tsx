@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Mail, Moon, Sun, Calendar } from "lucide-react";
+import { Mail, Moon, Sun } from "lucide-react";
 import Image from "next/image";
 
 import { PopupButton } from "react-calendly";
@@ -52,7 +52,7 @@ export default function Portfolio() {
   const { theme, setTheme } = useTheme();
 
   const [currentTime, setCurrentTime] = useState("");
-  const [calRef, setCalRef] = useState<HTMLElement | null>(null);
+  const [calRef, setCalRef] = useState<HTMLElement>();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -67,7 +67,7 @@ export default function Portfolio() {
       setCurrentTime(now.toLocaleTimeString("en-US", options) + " EST");
     }, 1000);
 
-    setCalRef(calenderRef?.current || window?.document?.body);
+    setCalRef(calenderRef.current || window?.document.body);
 
     return () => clearInterval(timer);
   }, []);
@@ -187,9 +187,9 @@ export default function Portfolio() {
             <span className="mx-2">|</span>
             <PopupButton
               url="https://calendly.com/jmichaliga"
-              text={"Schedule a Chat"}
+              text="Schedule a Chat"
               className="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 flex font-spaceGrotesk"
-              rootElement={calenderRef.current || window?.document.body}
+              rootElement={calRef as HTMLElement}
             />
           </div>
         </motion.section>
