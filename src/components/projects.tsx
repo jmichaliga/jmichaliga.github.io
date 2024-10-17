@@ -55,7 +55,7 @@ export default function Projects({
       icon: <BatteryFull className="w-12 h-12" />,
       title: "Dashboard Platform Migration",
       description:
-        "Migrated a dashboard platform from a Redwood.js instance and modernized the tech stack. This included the use of Next.js, TypeScript, and TailwindCSS to create a more maintainable codebase.",
+        "Migrated a dashboard from Redwood.js to a modern tech stack using Next.js, TypeScript, and TailwindCSS, enhancing code maintainability.",
       link: "#",
       tags: [
         "Next.js",
@@ -74,7 +74,7 @@ export default function Projects({
       icon: <AtomIcon className="w-12 h-12" />,
       title: "Energy Company Customer Portal",
       description:
-        "Joined an existing codebase that was built in Gatsby and utilized GraphQL endpoints to fetch data. Debugged and fixed critical bugs in the codebase. This included the use of React hooks, React context, and GraphQL codegen to ensure a maintainable codebase. Helped migrate the codebase to Next.js and modernize the tech stack.",
+        "Debugged and migrated a Gatsby-based codebase to Next.js, improving maintainability with React hooks, context, and GraphQL codegen.",
       link: "#",
       tags: [
         "Gatsby",
@@ -90,7 +90,7 @@ export default function Projects({
       icon: <Star className="w-12 h-12" />,
       title: "Major League Stats Dashboard",
       description:
-        "Converted an Angular instance to a Next.js project, resulting in a 30% improvement in page load times and large increase in developer experience. Led the migration of the codebase to TypeScript in order to modernize the tech stack.",
+        "Converted an Angular application to Next.js, achieving a 30% improvement in page load times and migrating to TypeScript.",
       link: "#",
       tags: ["Next.js", "Angular", "React", "AWS", "TypeScript", "Javascript"],
     },
@@ -98,7 +98,7 @@ export default function Projects({
       icon: <BuildingIcon className="w-12 h-12" />,
       title: "GraphQL Federation Implementation",
       description:
-        "Oversaw the implementation of GraphQL Federation, for a company that wanted to unify multiple codebases under a single GraphQL API, allowing for flexible content delivery across multiple platforms utilizing a microservice architecture based on several real estate sources.",
+        "Led the implementation of GraphQL Federation to unify multiple codebases into a single API for flexible content delivery across platforms.",
       link: "#",
       tags: [
         "Next.js",
@@ -114,7 +114,7 @@ export default function Projects({
       icon: <TrophyIcon className="w-12 h-12" />,
       title: "Sports League Management System",
       description:
-        "Built a headless CMS using Next.js and GraphQL, allowing for flexible content delivery across multiple platforms. Articles were written in Wordpress and imported using the WP-GraphQL plugin to generate a GraphQL API and static pages on buildtime.",
+        "Developed a headless CMS with Next.js and GraphQL for multi-platform content delivery, integrating WordPress for content management.",
       link: "#",
       tags: [
         "Next.js",
@@ -132,7 +132,7 @@ export default function Projects({
       icon: <DollarSignIcon className="w-12 h-12" />,
       title: "Mobile Financial Services",
       description:
-        "Built a mobile financial services app using React Native and Firebase, allowing users to manage their finances on the go and receive financial advice from models trained on millions of data points.",
+        "Created a mobile app using React Native and Firebase for financial management and personalized advice based on extensive data models.",
       link: "#",
       tags: [
         "React Native",
@@ -152,7 +152,7 @@ export default function Projects({
       icon: <MailCheckIcon className="w-12 h-12" />,
       title: "Mass Email Management",
       description:
-        "Implemented React into a Ruby on Rails application to allow for a more responsive user experience, while also allowing for an increase indeveloper experience to ship features faster. Several libraries and javascript dependencies were updated to the latest versions to ensure security and stability as well as maintainability.",
+        "Integrated React into a Ruby on Rails app to enhance responsiveness, while updating libraries for security and maintainability.",
       link: "#",
       tags: [
         "React",
@@ -168,9 +168,9 @@ export default function Projects({
     },
     {
       icon: <ChefHatIcon className="w-12 h-12" />,
-      title: "Hospitality Rewards and Recognition",
+      title: "Hospitality Rewards Platform",
       description:
-        "Designed and developed a hospitality rewards and recognition platform using Expo, a framework for building cross-platform mobile applications. The platform allows users to earn and redeem points for rewards, and to recognize each other for their contributions and providing alternative payment options.",
+        "Developed a rewards platform using Expo, enabling users to earn and redeem points while recognizing contributions with alternative payment options.",
       link: "#",
       tags: [
         "React",
@@ -185,9 +185,9 @@ export default function Projects({
     },
     {
       icon: <HeartPulse className="w-12 h-12" />,
-      title: "Health Tracking and Monitoring App",
+      title: "Health Tracking App",
       description:
-        "Oversaw the development of a health tracking and monitoring app using React Native and Firebase, allowing users to track their health metrics and receive personalized recommendations, while also subscribing to a blood testing service to receive lab results and health insights.",
+        "Directed the development of an app with React Native and Firebase for tracking health metrics and providing personalized insights.",
       link: "#",
       tags: [
         "React",
@@ -206,7 +206,7 @@ export default function Projects({
       icon: <DogIcon className="w-12 h-12" />,
       title: "Pet Insurance Platform",
       description:
-        "Oversaw the development of a pet insurance platform that accepted cryptocurrencies as payment for it's policies. This went live on the Ethereum blockchain as well as the state of Illinois. This was built using React, Next.js, MongoDB, and Solidity.",
+        "Led the development of a pet insurance platform supporting cryptocurrency payments, utilizing React, Next.js, MongoDB, and Solidity.",
       link: "#",
       tags: [
         "React",
@@ -225,7 +225,7 @@ export default function Projects({
       icon: <DollarSignIcon className="w-12 h-12" />,
       title: "Financial Services Portal",
       description:
-        "Joined an existing team to update and modernize a financial services portal that used native javascript modules to fetch and display data. No frameworks were allowed in this codebase, so vanilla javascript was utilized to build highend production features for high traffic users.",
+        "Modernized a financial services portal using vanilla JavaScript to enhance performance and scalability without external frameworks.",
       link: "#",
       tags: ["Javascript", "Jira", "Node.js", "npm"],
     },
@@ -233,7 +233,7 @@ export default function Projects({
       icon: <HeartHandshake className="w-12 h-12" />,
       title: "Healthcare Insurance Marketplace",
       description:
-        "Oversaw and led the development of a healthcare insurance platform which matched advisors with clients based on their needs and goals. This was built using React, Next.js, Prisma, and hosted on Vercel eventually migrating to AWS.",
+        "Oversaw the development of a platform that connects advisors and clients, built with React, Next.js, and Prisma, hosted on AWS.",
       link: "#",
       tags: [
         "TypeScript",
@@ -250,23 +250,23 @@ export default function Projects({
       icon: <BadgePoundSterlingIcon className="w-12 h-12" />,
       title: "C2C Marketplace and Payment Platform",
       description:
-        "Joined a team to use existing patterns and APIs to build a Direct to Consumer marketplace within several verticals. Gatsby utilized the existing GraphQL API to fetch data and build static pages on buildtime. Higher level features included maintaining a design system for multiple variants of brands and products as well as locales.",
+        "Contributed to a direct-to-consumer marketplace using Gatsby and GraphQL for data retrieval and static page generation.",
       link: "#",
       tags: ["TypeScript", "Gatsby", "AWS", "Figma", "Apollo", "GraphQL"],
     },
     {
       icon: <DumbbellIcon className="w-12 h-12" />,
-      title: "Localization of Wearable Devices App",
+      title: "Wearable Devices App Localization",
       description:
-        "Refactored an existing React Application to TypeScript as well as implemented a localization system for the app to support multiple languages for LATAM regions. This app supported a wearable device that would send data to the app and the user would receieve personalized recommendations and insights based on their data.",
+        "Refactored a React app to TypeScript, implementing localization for LATAM markets and supporting a wearable device integration.",
       link: "#",
       tags: ["TypeScript", "React", "Firebase", "Javascript", "AWS"],
     },
     {
       icon: <PillBottleIcon className="w-12 h-12" />,
-      title: "Portal for Pharmaceutical Investment",
+      title: "Pharmaceutical Investment Portal",
       description:
-        "Built an application for a pharmaceutical company to allow for the investment in clinical trials. This application was built using Angular, and hosted on Heroku. It utilized a Node.js API that used over 30 years of historical data to power the recommendations of likelihood of approval for upcoming drugs.",
+        "Developed a platform for clinical trial investments using Angular and a Node.js API, leveraging historical data for approval likelihood.",
       link: "#",
       tags: ["TypeScript", "React", "Firebase", "Javascript", "AWS"],
     },
@@ -296,7 +296,7 @@ export default function Projects({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
     >
-      <h3 className="font-spaceGrotesk text-2xl font-semibold mb-4 mb-4 border-b border-slate-200 dark:border-slate-800">
+      <h3 className="font-spaceGrotesk text-2xl font-semibold mb-4 border-b border-slate-200 dark:border-slate-800">
         {filters.length > 0
           ? filteredDisplay(filters.join(", ").toString())
           : "Featured Projects"}

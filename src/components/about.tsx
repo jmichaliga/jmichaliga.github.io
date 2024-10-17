@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+
 const About = () => {
   return (
     <motion.section
@@ -33,12 +34,21 @@ const About = () => {
           </p>
 
           <p className="text-sm mt-4 text-slate-600 dark:text-slate-400">
-            A rare breed of developer who is equally comfortable with the
+            A rare breed of a design/engineer who is equally comfortable with the
             front-end, back-end, as well as in design tooling. Having a knack
             for building scalable and secure applications as well as designing
-            delightful user experiences and doing research for user-centric AI
+            delightful user experiences and doing research for user-centric
             applications.
           </p>
+
+          <p className="text-sm mt-4 text-slate-600 dark:text-slate-400">
+            Formally educated with a degree in Computer Science and a minor
+            in Mathematics, also earned a dual degree in Arts with a
+            concentration in Graphic Design from <a className="text-blue-500" href="https://salisbury.edu/" target="_blank" rel="noopener noreferrer">Salisbury University</a>. Most
+            recently earned a Master&apos;s in User Experience Design from the
+            <a className="text-blue-500" href="https://mica.edu/" target="_blank" rel="noopener noreferrer"> Maryland Institute College of Art</a>.
+          </p>
+
           <p className="text-sm mt-4">📍 Based in Greenpoint, Brooklyn.</p>
 
           <div className="flex flex-wrap gap-2 items-center font-spaceGrotesk mt-4">
@@ -58,7 +68,13 @@ const About = () => {
           </div>
         </div>
         <div className="col-span-12 md:col-span-4 flex justify-center items-center">
-          <Image src="/images/self/angel.png" alt="Angel" width={300} height={300} />
+          <Image
+            className="rounded-full filter border-accent dark:border-white border-2 saturate-100"
+            src="/twitter-avatar.jpg"
+            alt="JM"
+            width={300}
+            height={300}
+          />
         </div>
       </div>
     </motion.section>

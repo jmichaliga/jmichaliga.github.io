@@ -19,15 +19,14 @@ const Contact = ({ calRef }: { calRef: HTMLElement }) => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         <div className="col-span-12 md:col-span-8 mb-6 mx-auto justify-center items-center">
           <p className=" text-slate-700 dark:text-slate-400">
-            I am always open to discussing new projects, creative ideas, or
-            opportunities to be part of your visions. If you&apos;re looking for
-            consultation on your startup, a new project, or just want to say hi,
-            feel free to get in touch using the form below or through my contact
-            information.
+            I&apos;m always excited to discuss new projects, creative ideas, and
+            potential collaborations. If you&apos;re looking for consultation on your
+            startup or a new initiative, or if you just want to say hello, don&apos;t
+            hesitate to reach out using the form below or through my contact
+            information. I look forward to connecting!
           </p>
 
-          <p className="mt-8 text-center">Or reach out directly:</p>
-          <div className="mt-4 flex gap-2 justify-center items-center">
+          <div className="mt-8 flex gap-2 justify-center items-center">
             <a
               href="mailto:justin.michaliga@gmail.com"
               className="cursor-pointer"
@@ -48,7 +47,7 @@ const Contact = ({ calRef }: { calRef: HTMLElement }) => {
         </div>
         <div className="col-span-12 md:col-span-4 flex justify-center items-center">
           <Image
-            src="/images/self/call-me.png"
+            src="/justin-pixar.png"
             alt="Call Me"
             width={300}
             height={300}

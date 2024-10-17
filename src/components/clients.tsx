@@ -28,7 +28,7 @@ const brands = [
   { id: 23, name: "Nike" },
   { id: 24, name: "Catbird" },
   { id: 25, name: "Under Armour" },
-  { id: 26, name: "Nikola" },
+  { id: 26, name: "Fidelity" },
 ]
 
 const companies = [
