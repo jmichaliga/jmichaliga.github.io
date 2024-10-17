@@ -263,14 +263,13 @@ export default function Projects({
       tags: ["TypeScript", "React", "Firebase", "Javascript", "AWS"],
     },
     {
-        icon: <PillBottleIcon className="w-12 h-12" />,
-        title: "Portal for Pharmaceutical Investment",
-        description:
-          "Built an application for a pharmaceutical company to allow for the investment in clinical trials. This application was built using Angular, and hosted on Heroku. It utilized a Node.js API that used over 30 years of historical data to power the recommendations of likelihood of approval for upcoming drugs.",
-        link: "#",
-        tags: ["TypeScript", "React", "Firebase", "Javascript", "AWS"],
-      },
-    
+      icon: <PillBottleIcon className="w-12 h-12" />,
+      title: "Portal for Pharmaceutical Investment",
+      description:
+        "Built an application for a pharmaceutical company to allow for the investment in clinical trials. This application was built using Angular, and hosted on Heroku. It utilized a Node.js API that used over 30 years of historical data to power the recommendations of likelihood of approval for upcoming drugs.",
+      link: "#",
+      tags: ["TypeScript", "React", "Firebase", "Javascript", "AWS"],
+    },
   ];
 
   const filteredProjects = projects.filter(
@@ -282,7 +281,10 @@ export default function Projects({
     return (
       <div>
         Filtered Projects: [
-        <span className="text-slate-600 dark:text-slate-400 text-sm">{display}</span>]
+        <span className="text-slate-600 dark:text-slate-400 text-sm relative -top-[2px]">
+          {display}
+        </span>
+        ]
       </div>
     );
   };

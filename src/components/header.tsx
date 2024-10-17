@@ -11,7 +11,92 @@ import { useTheme } from "next-themes";
 
 import MobileNav from "@/components/mobile-nav";
 
-export default function Header({ onToggleDarkMode }: { onToggleDarkMode: (dark: boolean) => void }) {
+const NavItems = ({
+  theme,
+  setTheme,
+  onToggleDarkMode,
+  isMobile,
+}: {
+  theme: string;
+  setTheme: (theme: string) => void;
+  onToggleDarkMode: (dark: boolean) => void;
+  isMobile: boolean;
+}) => {
+  return (
+    <motion.div
+      className={`space-x-4 ${isMobile ? "flex" : "hidden md:flex"}`}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+    >
+      <Button variant="ghost" size="icon">
+        <a href="https://github.com/jmichaliga" target="_blank">
+          <Image
+            src="/images/github.svg"
+            alt="GitHub"
+            width={20}
+            height={20}
+            className="dark:invert"
+          />
+        </a>
+      </Button>
+      <Button variant="ghost" size="icon">
+        <a href="https://www.linkedin.com/in/jmichaliga/" target="_blank">
+          <Image
+            src="/images/linkedin.svg"
+            alt="LinkedIn"
+            width={20}
+            height={20}
+            className="dark:invert"
+          />
+        </a>
+      </Button>
+      <Button variant="ghost" size="icon">
+        <a href="https://x.com/jmichaliga" target="_blank">
+          <Image
+            src="/images/x.svg"
+            alt="Twotter"
+            width={20}
+            height={20}
+            className="dark:invert"
+          />
+        </a>
+      </Button>
+      <Button variant="ghost" size="icon">
+        <a href="mailto:justin@michaliga.com" target="_blank">
+          <Image
+            src="/images/gmail.svg"
+            alt="Mail"
+            width={20}
+            height={20}
+            className="dark:invert"
+          />
+        </a>
+      </Button>
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={() => {
+          setTheme(theme === "dark" ? "light" : "dark");
+          onToggleDarkMode(theme === "dark");
+        }}
+        className="hover:scale-110 transition-transform"
+      >
+        {theme === "dark" ? (
+          <Sun className="h-5 w-5" />
+        ) : (
+          <Moon className="h-5 w-5" />
+        )}
+      </Button>
+    </motion.div>
+  );
+};
+
+export default function Header({
+  onToggleDarkMode,
+}: {
+  onToggleDarkMode: (dark: boolean) => void;
+}) {
   const { theme, setTheme } = useTheme();
 
   return (
@@ -31,73 +116,21 @@ export default function Header({ onToggleDarkMode }: { onToggleDarkMode: (dark: 
           </h1>
         </motion.div>
 
-        <MobileNav />
-        <motion.div
-          className="space-x-4 hidden md:flex"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <Button variant="ghost" size="icon">
-            <a href="https://github.com/jmichaliga" target="_blank">
-              <Image
-                src="/images/github.svg"
-                alt="GitHub"
-                width={20}
-                height={20}
-                className="dark:invert"
-              />
-            </a>
-          </Button>
-          <Button variant="ghost" size="icon">
-            <a href="https://www.linkedin.com/in/jmichaliga/" target="_blank">
-              <Image
-                src="/images/linkedin.svg"
-                alt="LinkedIn"
-                width={20}
-                height={20}
-                className="dark:invert"
-              />
-            </a>
-          </Button>
-          <Button variant="ghost" size="icon">
-            <a href="https://x.com/jmichaliga" target="_blank">
-              <Image
-                src="/images/x.svg"
-                alt="Twotter"
-                width={20}
-                height={20}
-                className="dark:invert"
-              />
-            </a>
-          </Button>
-          <Button variant="ghost" size="icon">
-            <a href="mailto:justin@michaliga.com" target="_blank">
-              <Image
-                src="/images/gmail.svg"
-                alt="Mail"
-                width={20}
-                height={20}
-                className="dark:invert"
-              />
-            </a>
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => {
-              setTheme(theme === "dark" ? "light" : "dark");
-              onToggleDarkMode(theme === "dark");
-            }}
-            className="hover:scale-110 transition-transform"
-          >
-            {theme === "dark" ? (
-              <Sun className="h-5 w-5" />
-            ) : (
-              <Moon className="h-5 w-5" />
-            )}
-          </Button>
-        </motion.div>
+        <MobileNav
+          externalNavItems={
+            <NavItems
+              theme={theme}
+              setTheme={setTheme}
+              onToggleDarkMode={onToggleDarkMode}
+              isMobile={true}
+            />
+          }
+        />
+        <NavItems
+          theme={theme}
+          setTheme={setTheme}
+          onToggleDarkMode={onToggleDarkMode}
+        />
       </nav>
     </header>
   );
