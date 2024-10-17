@@ -47,88 +47,94 @@ const education: Education[] = [
 
 const experience: Experience[] = [
   {
-    title: "JavaScript Engineer / Consultant",
-    company: "SmartNode, LLC",
-    location: "Brooklyn, NY",
-    timeline: "January 2015 - Present",
-    description: `Full-stack JavaScript development and project management, typically using Node APIs with Angular, React, or Vue frontends.`,
-  },
-  {
     title: "Head of Engineering / Fractional CTO",
     company: "Venture Studio",
     location: "New York, NY",
-    timeline: "June 2022 - July 2023",
-    description: `Leading software development in FinTech, InsurTech, HealthTech, web3, and the Metaverse.`,
+    timeline: "June 2022 - Present",
+    description: `Leading the Software Development processes on the front-lines of foresight building and investing in the future of
+  FinTech, InsurTech, HealthTech, web3 and the Metaverse.`,
+  },
+  {
+    title: "Javascript Engineer / Consultant",
+    company: "SmartNode, LLC",
+    location: "Brooklyn, NY",
+    timeline: "January 2015 - Present",
+    description: `Full-stack Javascript application development and project management. 
+  Typical stack consists of Node APIs on Angular / React / Vue Frontends.`,
   },
   {
     title: "Software Engineer",
     company: "Courier, Inc (YC19)",
     location: "San Francisco, CA (Remote)",
     timeline: "December 2019 - July 2020",
-    description: `Developed a notification platform with full-stack TypeScript, using Next.js for the customer app and AWS serverless resources for the backend.`,
+    description: `The smart way to design and deliver notifications. Connect and orchestrate messages through different channels to your customers with consistent messaging. Full-stack Typescript application development. Customer App developed with Next.js / SlateJS editor. Backend with AWS serverless resources on Node.`,
   },
   {
     title: "Staff Engineer, Fullstack",
     company: "Knotel",
     location: "New York, NY",
     timeline: "July 2018 - November 2019",
-    description: `Led GraphQL implementations and the development of applications and systems architecture using React, Node, Apollo, and AWS on Kubernetes.`,
+    description: `Revolutionizing the GraphQL implementations that not only push the technology forward through use in the CRE and Arch industry, but as all engineering as a whole. Lead development of several applications, systems architecture, patterns, as well as our design system. Stack is React, Node, Apollo, AWS, Github Actions, running on Kubernetes.`,
   },
   {
     title: "Lead Frontend Engineer",
     company: "Capsule8, Inc",
     location: "Brooklyn, NY",
     timeline: "June 2017 - December 2017",
-    description: `Architected the security dashboard and built UI/UX teams, mentoring junior developers and managing contract partnerships.`,
+    description: `Architected Capsule8's Security dashboard console. Helped hire developers and built both the UI and UX teams within this smart and stealthy startup. Led Junior level developers as well as oversaw contract partnerships.`,
   },
   {
     title: "Senior UI Engineer / Consultant",
     company: "Cake & Arrow (formerly Alexander Interactive)",
     location: "New York, NY",
     timeline: "October 2013 - January 2015",
-    description: `Developed proprietary software for a Fortune 50 client using AngularJS within an agile team, fostering collaboration across development and design.`,
+    description: `Developed proprietary software for a Fortune 50 client utilizing AngularJS with a team under the agile methodology. Similiarly sharing knowledge throughout the company crossing between the development and design teams.`,
   },
   {
     title: "UX / UI Development Consultant",
     company: "Celtra, Milk Studios, Layerframe",
     location: "New York, NY",
     timeline: "October 2012 - December 2013",
-    description: `Led mobile advertising campaigns for brands like McDonald's and Burberry, overseeing development on high-profile projects.`,
+    description: `Created custom mobile advertising campaigns, lead development and oversaw teams on several high-end mobile/web projects including those with Budweiser, Burberry, Jeep, McDonalds, Nickelodeon, Spotify, SuperCell, Theory and several more.`,
   },
   {
     title: "Creative Technologist",
     company: "Medialets",
     location: "New York, NY",
     timeline: "October 2010 - October 2012",
-    description: `Led development in mobile advertising, collaborating with creative and technical teams to implement award-winning innovations using HTML5 and CSS.`,
+    description: `Lead Developer in the Rich Media Mobile Advertising space. Direct communication of best practices with creative, technical, and agency partners. Award Winning Innovation in the mobile space utilizing HTML5 elements, CSS animations, touch events, and js frameworks.`,
   },
   {
     title: "Interactive Developer",
     company: "Warschawski",
     location: "Baltimore, MD",
     timeline: "August 2009 - October 2010",
-    description: `Created interactive branding solutions, including a custom CMS to empower clients with custom solutions for their unique brands.`,
+    description:
+      "Created interactive solutions for clients in need of online branding. A custom content management system was created in order to give customers control of their content without need to be onboarded into a complex system. Logo creation, wireframing, and branding solutions were also part of this creative role.",
   },
   {
     title: "Front-End Developer",
     company: "Inside Lacrosse",
     location: "Baltimore, MD",
     timeline: "December 2008 - August 2009",
-    description: `Redeveloped InsideLacrosse.com on Drupal 6 and developed applications for polls and archival projects.`,
+    description:
+      "Redeveloped InsideLacrosse.com onto the Drupal6 Platform while creating smaller applications for custom polls, magazine revenue, and archival projects.",
   },
   {
     title: "Web Applications Developer",
     company: "no|inc",
     location: "Baltimore, MD",
     timeline: "August 2008 - December 2008",
-    description: `Developed interactive software solutions with PHP backends for various clients in an agency setting.`,
+    description:
+      "Developed Software for various companies in an agency capacity. Specialized in interactive interfaces with PHP backends.",
   },
   {
     title: "Web Applications Developer",
     company: "CSD Architects",
     location: "Baltimore, MD",
     timeline: "June 2007 - August 2008",
-    description: `Designed and built an internal intranet to enhance marketing efforts and improve website presence.`,
+    description:
+      "Designed and developed an internal intranet which powered content for Marketing purposes including a new website presence.",
   },
 ];
 
