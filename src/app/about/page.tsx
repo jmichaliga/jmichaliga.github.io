@@ -8,7 +8,9 @@ import { Badge } from "@/components/ui/badge";
 
 import AnimatedBackground from "@/components/animated-bg";
 
-const education = [
+import { Education, Experience, Award } from "@/types";
+
+const education: Education[] = [
   {
     university: {
       name: "Maryland Institute College of Art",
@@ -43,7 +45,7 @@ const education = [
   },
 ];
 
-const experience = [
+const experience: Experience[] = [
   {
     title: "Head of Engineering / Fractional CTO",
     company: "Venture Studio",
@@ -137,7 +139,7 @@ Typical stack consists of Node APIs on Angular / React / Vue Frontends.`,
   },
 ];
 
-const awards = [
+const awards: Award[] = [
   {
     title: "Proposed Speaker, ReactDay NYC",
     date: "October 2020",
@@ -172,7 +174,7 @@ const awards = [
   },
 ];
 
-const skillset = [
+const skillset: string[] = [
   "AngularJS",
   "Vue",
   "React",
@@ -211,7 +213,7 @@ const skillset = [
   "Agile Methodologies",
 ];
 
-const tools = [
+const tools: string[] = [
   "Git",
   "Github",
   "Heroku",
@@ -246,32 +248,50 @@ export default function AboutPage() {
         <About />
 
         <div className="grid grid-cols-2 md:grid-cols-12 gap-4">
-          <div className="col-span-4">
+          <div className="col-span-8 md:col-span-4 ">
             <aside className=" bg-white dark:bg-slate-900 p-4 rounded-lg shadow-md">
-              <h2 className="text-xl font-semibold mb-4">Education</h2>
+              <h2 className="text-xl font-semibold mb-4 border-b border-slate-200 dark:border-slate-800">Education</h2>
 
               {education.map((instance) => (
-                <div key={instance.university.name} className="flex flex-col mb-4">
+                <div
+                  key={instance.university.name}
+                  className="flex flex-col mb-4"
+                >
                   <strong>{instance.university.name}</strong>
-                  
-                  <small className="text-xs uppercase text-slate-500">{instance.university.date}</small>
-                  
-                  <address className="text-xs italic">{instance.university.location}</address>
-                
+
+                  <small className="text-xs uppercase text-slate-500">
+                    {instance.university.date}
+                  </small>
+
+                  <address className="text-xs italic">
+                    {instance.university.location}
+                  </address>
+
                   {instance.degrees.map((degree) => (
                     <div key={degree.type} className="flex flex-col">
-                      <h4 className="text-sm font-semibold mt-2">{degree.type}</h4>
+                      <h4 className="text-sm font-semibold mt-2">
+                        {degree.type}
+                      </h4>
                       <span className="text-xs flex">
-                      <label className="uppercase text-slate-500 mr-1">Major:</label> {degree.major}
+                        <label className="uppercase text-slate-500 mr-1">
+                          Major:
+                        </label>{" "}
+                        {degree.major}
                       </span>
                       {degree.minor && (
                         <span className="text-xs flex">
-                          <label className="uppercase text-slate-500 mr-1">Minor:</label> {degree.minor}
+                          <label className="uppercase text-slate-500 mr-1">
+                            Minor:
+                          </label>{" "}
+                          {degree.minor}
                         </span>
                       )}
                       {degree.concentration && (
                         <span className="text-xs">
-                          <label className="uppercase text-slate-500">Concentration:</label> {degree.concentration}
+                          <label className="uppercase text-slate-500">
+                            Concentration:
+                          </label>{" "}
+                          {degree.concentration}
                         </span>
                       )}
                     </div>
@@ -281,24 +301,26 @@ export default function AboutPage() {
             </aside>
 
             <aside className=" bg-white dark:bg-slate-900 p-4 rounded-lg shadow-md">
-              <h2 className="text-xl font-semibold mb-4">Awards</h2>
+              <h2 className="text-xl font-semibold mb-4 border-b border-slate-200 dark:border-slate-800">Awards</h2>
               {awards.map((award) => (
                 <div key={award.title} className="mb-4">
                   <h4 className="text-sm font-semibold">{award.title}</h4>
-                  <small className="text-xs uppercase text-slate-500">{award.date}</small>
+                  <small className="text-xs uppercase text-slate-500">
+                    {award.date}
+                  </small>
                 </div>
               ))}
             </aside>
 
             <aside className=" bg-white dark:bg-slate-900 p-4 rounded-lg shadow-md">
-              <h2 className="text-xl font-semibold mb-4">Skillset</h2>
+              <h2 className="text-xl font-semibold mb-4 border-b border-slate-200 dark:border-slate-800">Skillset</h2>
               <div className="mb-4 flex flex-wrap gap-2">
                 {skillset.map((skill) => (
                   <Badge key={skill}>{skill}</Badge>
                 ))}
               </div>
 
-              <h2 className="text-xl font-semibold mb-4">Tools</h2>
+              <h2 className="text-xl font-semibold mb-4 border-b border-slate-200 dark:border-slate-800">Tools</h2>
               <div className="mb-4 flex flex-wrap gap-2">
                 {tools.map((tool) => (
                   <Badge key={tool}>{tool}</Badge>
@@ -307,8 +329,8 @@ export default function AboutPage() {
             </aside>
           </div>
 
-          <section className="col-span-8 bg-white dark:bg-slate-900 p-4 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-4">Experience</h3>
+          <section className="col-span-8 bg-white dark:bg-slate-900  p-4 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4 border-b border-slate-200 dark:border-slate-800">Experience</h3>
             {experience.map((pos) => (
               <article key={pos.title} className="mb-4">
                 <div className="flex justify-between">
@@ -318,7 +340,9 @@ export default function AboutPage() {
                   </div>
 
                   <div className="float-right">
-                    <small className="text-xs uppercase text-slate-500">{pos.timeline}</small>
+                    <small className="text-xs uppercase text-slate-500">
+                      {pos.timeline}
+                    </small>
                     <address className="text-xs italic text-right">
                       {pos.location}
                     </address>

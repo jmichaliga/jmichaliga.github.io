@@ -74,3 +74,30 @@ export const technologies: Technology[] = [
   "Jira",
   "Nest.js",
 ];
+
+export interface Education {
+  university: {
+    name: string;
+    date: string;
+    location: string;
+  };
+  degrees: {
+    type: string;
+    major: string;
+    minor?: string;
+    concentration?: string;
+  }[];
+}
+
+export interface Experience {
+  title: string;
+  company: string;
+  location: string;
+  timeline: string;
+  description: string;
+}
+
+export interface Award {
+  title: string;
+  date: string;
+}

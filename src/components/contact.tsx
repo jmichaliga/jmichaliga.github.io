@@ -4,6 +4,7 @@ import { PopupButton } from "react-calendly";
 import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ContactForm from "./contact-form";
+import Image from "next/image";
 
 const Contact = ({ calRef }: { calRef: HTMLElement }) => {
   return (
@@ -15,13 +16,23 @@ const Contact = ({ calRef }: { calRef: HTMLElement }) => {
       <h3 className="font-spaceGrotesk text-2xl font-semibold mb-4">
         Let&apos;s Work Together
       </h3>
-      <p className="mb-6 text-slate-700 dark:text-slate-400">
-        I am always open to discussing new projects, creative ideas, or
-        opportunities to be part of your visions. If you&apos;re looking for
-        consultation on your startup, a new project, or just want to say hi,
-        feel free to get in touch using the form below or through my contact
-        information.
-      </p>
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <p className="col-span-8 mb-6 text-slate-700 dark:text-slate-400">
+          I am always open to discussing new projects, creative ideas, or
+          opportunities to be part of your visions. If you&apos;re looking for
+          consultation on your startup, a new project, or just want to say hi,
+          feel free to get in touch using the form below or through my contact
+          information.
+        </p>
+        <div className="col-span-4 flex justify-center items-center">
+          <Image
+            src="/images/self/call-me.png"
+            alt="Call Me"
+            width={300}
+            height={300}
+          />
+        </div>
+      </div>
       <Card className="bg-white dark:bg-black bg-opacity-10 dark:bg-opacity-10">
         <CardHeader>
           <CardTitle>Contact Form</CardTitle>
