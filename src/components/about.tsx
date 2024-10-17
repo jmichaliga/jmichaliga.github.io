@@ -9,7 +9,7 @@ const About = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-4xl lg:text-5xl font-bold mb-4 inline-block h-32 md:h-28 text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-blue-500 to-[#FA1979] dark:from-slate-100 dark:via-[#FA1979] dark:to-blue-500">
+      <h2 className="text-4xl lg:text-5xl font-bold mb-4 inline-block h-50 md:h-28 text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-blue-500 to-[#FA1979] dark:from-slate-100 dark:via-[#FA1979] dark:to-blue-500">
         Modern Web Development Expertise.
         <br />
         Right here in the big 🍎.
