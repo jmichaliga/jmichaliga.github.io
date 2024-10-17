@@ -183,7 +183,7 @@ export default function Technologies({
 
   return (
     <section className="font-spaceGrotesk mb-16">
-      <h3 className="text-2xl font-semibold mb-4">Technologies</h3>
+      <h3 className="text-2xl font-semibold mb-4 border-b border-slate-200 dark:border-slate-800">Technologies</h3>
       <div className="flex flex-wrap gap-2">
         {technologies.map((tech, index) => (
           <motion.div

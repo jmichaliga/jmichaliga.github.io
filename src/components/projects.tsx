@@ -296,7 +296,7 @@ export default function Projects({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
     >
-      <h3 className="font-spaceGrotesk text-2xl font-semibold mb-4">
+      <h3 className="font-spaceGrotesk text-2xl font-semibold mb-4 mb-4 border-b border-slate-200 dark:border-slate-800">
         {filters.length > 0
           ? filteredDisplay(filters.join(", ").toString())
           : "Featured Projects"}

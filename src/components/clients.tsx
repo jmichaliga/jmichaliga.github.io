@@ -71,7 +71,7 @@ const Clients = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.6 }}
     >
-      <h3 className="font-spaceGrotesk text-2xl font-semibold mb-4">
+      <h3 className="font-spaceGrotesk text-2xl font-semibold mb-4 border-b border-slate-200 dark:border-slate-800">
         Featured Clients
       </h3>
       <Tabs defaultValue="brands" className="w-[400px] mb-16">

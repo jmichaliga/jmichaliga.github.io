@@ -4,7 +4,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <motion.section
-      className="mb-16"
+      className="mt-4 md:mb-16"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -16,7 +16,7 @@ const About = () => {
       </h2>
 
       <div className="grid grid-cols-12">
-        <div className="col-span-8">
+        <div className="col-span-12 md:col-span-8">
           <p className="text-xl mb-6 font-spaceGrotesk">
             Specializing in Next.js migrations and building high-performance web
             applications, design systems, and immersive user experiences.
@@ -41,7 +41,7 @@ const About = () => {
           </p>
           <p className="text-sm mt-4">📍 Based in Greenpoint, Brooklyn.</p>
 
-          <div className="flex items-center font-spaceGrotesk space-x-4 mt-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 items-center font-spaceGrotesk space-x-4 mt-4">
             <Badge
               variant="outline"
               className="text-green-600 bg-green-600/20 dark:text-green-400 dark:bg-green-400/20 border-2 border-green-400/20"
@@ -61,7 +61,7 @@ const About = () => {
             </Badge>
           </div>
         </div>
-        <div className="col-span-4">
+        <div className="col-span-12 md:col-span-4 flex justify-center items-center">
           <Image src="/images/self/angel.png" alt="Angel" width={300} height={300} />
         </div>
       </div>
