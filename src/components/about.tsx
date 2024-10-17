@@ -41,7 +41,7 @@ const About = () => {
           </p>
           <p className="text-sm mt-4">📍 Based in Greenpoint, Brooklyn.</p>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 items-center font-spaceGrotesk space-x-4 mt-4">
+          <div className="flex flex-wrap gap-2 items-center font-spaceGrotesk mt-4">
             <Badge
               variant="outline"
               className="text-green-600 bg-green-600/20 dark:text-green-400 dark:bg-green-400/20 border-2 border-green-400/20"
@@ -50,15 +50,12 @@ const About = () => {
               Available for Hire
             </Badge>
             <Badge variant="outline" className="text-slate-400 bg-slate-400/20">
-              Remote / NYC
+              NYC / Remote
             </Badge>
             <Badge variant="outline" className="text-slate-400 bg-slate-400/20">
-              Part-time / Full-time
+              Full-time / Part-time
             </Badge>
 
-            <Badge variant="outline" className="text-slate-400 bg-slate-400/20">
-              Has a really nice dog
-            </Badge>
           </div>
         </div>
         <div className="col-span-12 md:col-span-4 flex justify-center items-center">

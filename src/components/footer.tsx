@@ -24,9 +24,7 @@ export default function Footer() {
   return (
     <footer className="container mx-auto px-4 py-8 text-xs font-spaceGrotesk flex justify-between text-slate-600 dark:text-slate-400 relative z-10 mb-4 border-t border-slate-200 dark:border-slate-800">
       <p className="flex gap-2 items-center text-left">
-        <span>&copy; {new Date().getFullYear()} Justin Michaliga.</span>
-        <span>Greenpoint, Brooklyn, USA</span>
-        <span>{currentTime}</span>
+        <span>&copy; {new Date().getFullYear()} - {currentTime}</span>
       </p>
     </footer>
   );
