@@ -282,7 +282,7 @@ export default function Projects({
     return (
       <div>
         Filtered Projects: [
-        <span className="text-gray-500 text-sm">{display}</span>]
+        <span className="text-slate-600 dark:text-slate-400 text-sm">{display}</span>]
       </div>
     );
   };

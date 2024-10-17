@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+// import { Slider } from "@/components/ui/slider";
 import { Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -79,6 +80,7 @@ export default function ContactForm() {
       setIsSubmitting(false);
     }
   };
+  const inputStyle = "mt-1 placeholder:text-gray-500 bg-white dark:bg-black bg-opacity-50 dark:bg-opacity-50";
 
   return (
     <motion.div
@@ -91,13 +93,14 @@ export default function ContactForm() {
         <div>
           <Label className="font-bold" htmlFor="name">Name</Label>
           <Input
+            placeholder="Your Name"
             type="text"
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
             required
-            className="mt-1"
+            className={inputStyle}
           />
         </div>
         <div>
@@ -109,7 +112,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="mt-1"
+            className={inputStyle}
           />
         </div>
         <div>
@@ -120,7 +123,7 @@ export default function ContactForm() {
             name="mobile"
             value={formData.mobile}
             onChange={handleChange}
-            className="mt-1"
+            className={inputStyle}
           />
         </div>
         <div>
@@ -128,7 +131,7 @@ export default function ContactForm() {
           <RadioGroup
             defaultValue="project"
             onValueChange={handleRadioChange}
-            className="flex space-x-4 mt-1"
+            className="flex space-x-4 mt-1 text-slate-600 dark:text-slate-400"
           >
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="project" id="project" />
@@ -138,19 +141,26 @@ export default function ContactForm() {
               <RadioGroupItem value="client" id="client" />
               <Label htmlFor="client">Client Work</Label>
             </div>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="consult" id="consult" />
+              <Label htmlFor="consult">Consultation</Label>
+            </div>
           </RadioGroup>
         </div>
-        <div>
+        {/* <div>
             <Label className="font-bold" htmlFor="budget">Estimated Budget</Label>
             <Slider
                 id="budget"
                 name="budget"
-                value={formData.budget}
-                onChange={handleChange}
-                required
-                className="mt-1"
+                defaultValue={[10000, 50000]}
+                min={0}
+                max={100000}
+                step={2500}
+                value={[formData.budget]}
+                onValueChange={(value) => setFormData((prevData) => ({ ...prevData, budget: value[0] }))}
             />
-        </div>
+            <span className="text-sm text-gray-500">${formData.budget}</span>
+        </div> */}
         <div>
           <Label className="font-bold" htmlFor="message">Message</Label>
           <Textarea
@@ -159,7 +169,7 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             required
-            className="mt-1"
+            className={inputStyle}
             rows={4}
           />
         </div>
