@@ -59,8 +59,6 @@ const MobileNav = ({
               </AnimatePresence>
               <Link
                 href={item.href}
-                smooth={true}
-                duration={500}
                 className="flex items-center gap-2 py-2 px-4 text-lg font-medium relative z-10 transition-colors duration-200"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}

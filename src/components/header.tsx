@@ -97,7 +97,7 @@ export default function Header({
 }: {
   onToggleDarkMode: (dark: boolean) => void;
 }) {
-  const { theme, setTheme } = useTheme();
+  const { theme = "light", setTheme } = useTheme();
 
   return (
     <header className="container mx-auto px-4 py-8 relative z-10">
@@ -130,6 +130,7 @@ export default function Header({
           theme={theme}
           setTheme={setTheme}
           onToggleDarkMode={onToggleDarkMode}
+          isMobile={false}
         />
       </nav>
     </header>

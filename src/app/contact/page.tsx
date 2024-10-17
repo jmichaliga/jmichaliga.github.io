@@ -22,7 +22,7 @@ export default function ContactPage() {
       <AnimatedBackground />
       <ProgressHeader />
 
-      <Header onToggleDarkMode={() => {}} />
+      <Header onToggleDarkMode={() => {console.log("toggle dark mode")}} />
       <main className="container mx-auto px-4 py-8">
         <Contact calRef={calRef as HTMLElement} />
       </main>
