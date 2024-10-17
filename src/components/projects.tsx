@@ -305,7 +305,7 @@ export default function Projects({
         {filteredProjects.map((project, index) => (
           <Tilt key={index}>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 h-full">
+              <Card className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 h-full">
                 <CardHeader>
                   <CardTitle className="font-spaceGrotesk text-xl font-semibold text-black dark:text-white">
                     <span className="float-left mr-2">{project.icon}</span>{" "}
@@ -321,7 +321,7 @@ export default function Projects({
                         className={`text-xs font-semibold px-2 py-1 rounded-full ${
                           filters.includes(tag)
                             ? "bg-blue-500 text-white"
-                            : "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100"
+                            : "bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100"
                         }`}
                       >
                         {tag}
@@ -346,7 +346,7 @@ export default function Projects({
       <div className="col-span-3">
         {filteredProjects.length === 0 && (
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 h-full">
+            <Card className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 h-full">
               <CardHeader>
                 <CardTitle className="font-spaceGrotesk text-xl font-semibold text-black dark:text-white">
                   <span className="float-left mr-2">

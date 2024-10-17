@@ -19,11 +19,11 @@ import PulseBg from "@/components/pulse-bg";
 import { Technology } from "@/types";
 
 export default function Portfolio() {
-  const calenderRef = useRef(null);
-  const [calRef, setCalRef] = useState<HTMLElement>();
-
   const [selectedFilters, setSelectedFilters] = useState<Technology[]>([]);
   const [darkMode, setDarkMode] = useState(false);
+
+  const calenderRef = useRef(null);
+  const [calRef, setCalRef] = useState<HTMLElement>();
   useEffect(() => {
     setCalRef(calenderRef?.current || window?.document?.body);
   }, []);
@@ -33,7 +33,7 @@ export default function Portfolio() {
       <PulseBg dark={darkMode} />
       <div
         ref={calenderRef}
-        className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white relative overflow-hidden transition-colors duration-300"
+        className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300"
       >
         <AnimatedBackground />
         <ProgressHeader />
