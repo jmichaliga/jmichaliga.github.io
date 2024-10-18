@@ -49,7 +49,7 @@ const About = () => {
             <a className="text-blue-500" href="https://mica.edu/" target="_blank" rel="noopener noreferrer"> Maryland Institute College of Art</a>.
           </p>
 
-          <p className="text-sm mt-4">📍 Based in Greenpoint, Brooklyn.</p>
+          <p className="text-md mt-4 font-spaceGrotesk">📍 Currently based in Greenpoint, Brooklyn.</p>
 
           <div className="flex flex-wrap gap-2 items-center font-spaceGrotesk mt-4">
             <Badge
@@ -69,8 +69,8 @@ const About = () => {
         </div>
         <div className="col-span-12 md:col-span-4 flex justify-center items-center">
           <Image
-            className="rounded-full filter border-accent dark:border-white border-2 saturate-100"
-            src="/twitter-avatar.jpg"
+            className="filter hue-rotate-90 saturate-100"
+            src="/react-native-illustration.webp"
             alt="JM"
             width={300}
             height={300}

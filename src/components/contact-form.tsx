@@ -80,7 +80,7 @@ export default function ContactForm() {
       setIsSubmitting(false);
     }
   };
-  const inputStyle = "mt-1 placeholder:text-slate-500 bg-white dark:bg-black bg-opacity-50 dark:bg-opacity-50";
+  const inputStyle = "mt-1 placeholder:text-slate-600 bg-white dark:bg-black bg-opacity-50 dark:bg-opacity-50";
 
   return (
     <motion.div
@@ -159,7 +159,7 @@ export default function ContactForm() {
                 value={[formData.budget]}
                 onValueChange={(value) => setFormData((prevData) => ({ ...prevData, budget: value[0] }))}
             />
-            <span className="text-sm text-slate-500">${formData.budget}</span>
+            <span className="text-sm text-slate-600">${formData.budget}</span>
         </div> */}
         <div>
           <Label className="font-bold" htmlFor="message">Message</Label>

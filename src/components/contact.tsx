@@ -18,7 +18,7 @@ const Contact = ({ calRef }: { calRef: HTMLElement }) => {
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         <div className="col-span-12 md:col-span-8 mb-6 mx-auto justify-center items-center">
-          <p className=" text-slate-700 dark:text-slate-400">
+          <p className=" text-slate-600 dark:text-slate-400">
             I&apos;m always excited to discuss new projects, creative ideas, and
             potential collaborations. If you&apos;re looking for consultation on your
             startup or a new initiative, or if you just want to say hello, don&apos;t

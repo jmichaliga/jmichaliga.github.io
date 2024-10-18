@@ -307,7 +307,7 @@ export default function Projects({
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Card className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 h-full">
                 <CardHeader>
-                  <CardTitle className="font-spaceGrotesk text-xl font-semibold text-black dark:text-white">
+                  <CardTitle className="font-spaceGrotesk text-xl font-semibold text-slate-800 dark:text-slate-200">
                     <span className="float-left mr-2">{project.icon}</span>{" "}
                     {project.title}
                   </CardTitle>
@@ -320,7 +320,7 @@ export default function Projects({
                         key={index}
                         className={`text-xs font-semibold px-2 py-1 rounded-full ${
                           filters.includes(tag)
-                            ? "bg-blue-500 text-white"
+                            ? "bg-blue-500 text-slate-200"
                             : "bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100"
                         }`}
                       >
@@ -348,7 +348,7 @@ export default function Projects({
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Card className="bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 h-full">
               <CardHeader>
-                <CardTitle className="font-spaceGrotesk text-xl font-semibold text-black dark:text-white">
+                <CardTitle className="font-spaceGrotesk text-xl font-semibold text-slate-800 dark:text-slate-200">
                   <span className="float-left mr-2">
                     <MinusCircleIcon className="w-12 h-12" />
                   </span>{" "}

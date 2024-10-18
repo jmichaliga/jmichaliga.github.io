@@ -195,8 +195,8 @@ export default function Technologies({
               onClick={() => toggleTechnology(tech)}
               className={`flex items-center cursor-pointer space-x-1 p-2 ${
                 filters.includes(tech)
-                  ? "bg-blue-500 text-white"
-                  : "bg-accent text-white dark:bg-accent dark:text-white"
+                  ? "bg-blue-500 text-slate-200"
+                  : "bg-accent text-slate-200 dark:bg-accent dark:text-slate-200"
               }`}
             >
               <TechnologyIcon name={tech} />
@@ -209,7 +209,7 @@ export default function Technologies({
               setFilters([]);
               onFilterChange([]);
             }}
-            className="flex items-center cursor-pointer space-x-1 p-2 text-white dark:bg-white dark:text-slate-800"
+            className="flex items-center cursor-pointer space-x-1 p-2 text-slate-200 dark:bg-white dark:text-slate-800"
           >
             <X className="w-4 h-4" /> Clear
           </Badge>

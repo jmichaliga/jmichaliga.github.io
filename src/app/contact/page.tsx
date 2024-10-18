@@ -18,7 +18,7 @@ export default function ContactPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-200 relative overflow-hidden transition-colors duration-300">
       <AnimatedBackground />
       <ProgressHeader />
 

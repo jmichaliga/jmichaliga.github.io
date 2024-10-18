@@ -236,7 +236,7 @@ const tools: string[] = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-200 relative overflow-hidden transition-colors duration-300">
       <AnimatedBackground />
       <Header
         onToggleDarkMode={() => {
@@ -260,7 +260,7 @@ export default function AboutPage() {
                 >
                   <strong>{instance.university.name}</strong>
 
-                  <small className="text-xs uppercase text-slate-500">
+                  <small className="text-xs uppercase text-slate-600">
                     {instance.university.date}
                   </small>
 
@@ -274,14 +274,14 @@ export default function AboutPage() {
                         {degree.type}
                       </h4>
                       <span className="text-xs flex">
-                        <label className="uppercase text-slate-500 mr-1">
+                        <label className="uppercase text-slate-600 mr-1">
                           Major:
                         </label>{" "}
                         {degree.major}
                       </span>
                       {degree.minor && (
                         <span className="text-xs flex">
-                          <label className="uppercase text-slate-500 mr-1">
+                          <label className="uppercase text-slate-600 mr-1">
                             Minor:
                           </label>{" "}
                           {degree.minor}
@@ -289,7 +289,7 @@ export default function AboutPage() {
                       )}
                       {degree.concentration && (
                         <span className="text-xs">
-                          <label className="uppercase text-slate-500">
+                          <label className="uppercase text-slate-600">
                             Concentration:
                           </label>{" "}
                           {degree.concentration}
@@ -308,7 +308,7 @@ export default function AboutPage() {
               {awards.map((award) => (
                 <div key={award.title} className="mb-4">
                   <h4 className="text-sm font-semibold">{award.title}</h4>
-                  <small className="text-xs uppercase text-slate-500">
+                  <small className="text-xs uppercase text-slate-600">
                     {award.date}
                   </small>
                 </div>
@@ -345,11 +345,11 @@ export default function AboutPage() {
                 <div className="flex justify-between">
                   <div className="float-left">
                     <h4 className="text-lg font-semibold">{pos.title}</h4>
-                    <h5 className="text-sm text-slate-500">{pos.company}</h5>
+                    <h5 className="text-sm text-slate-600">{pos.company}</h5>
                   </div>
 
                   <div className="float-right">
-                    <small className="text-xs uppercase text-slate-500">
+                    <small className="text-xs uppercase text-slate-600">
                       {pos.timeline}
                     </small>
                     <address className="text-xs italic text-right">
