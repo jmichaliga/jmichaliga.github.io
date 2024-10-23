@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
 
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -9,7 +8,7 @@ import Footer from "@/components/footer";
 import About from "@/components/about";
 import Technologies from "@/components/technologies";
 import Projects from "@/components/projects";
-import Clients from "@/components/clients";
+// import Clients from "@/components/clients";
 import Contact from "@/components/contact";
 
 import AnimatedBackground from "@/components/animated-bg";
@@ -53,8 +52,10 @@ export default function Portfolio() {
             clearFilters={() => setSelectedFilters([])}
           />
 
+          {/* 
           <a href="#clients" />
-          <Clients />
+          <Clients /> 
+          */}
 
           <a href="#contact" />
           <Contact calRef={calRef as HTMLElement} />

@@ -9,7 +9,7 @@ import {
   Home,
   GiftIcon,
   ShieldQuestion,
-  Contact,
+  //Contact,
   Mail,
 } from "lucide-react";
 import Link from "next/link";
@@ -18,7 +18,7 @@ const navItems = [
   { name: "Home", href: "/", icon: <Home /> },
   { name: "About", href: "/about", icon: <ShieldQuestion /> },
   { name: "Projects", href: "/projects", icon: <GiftIcon /> },
-  { name: "Clients", href: "/clients", icon: <Contact /> },
+  // { name: "Clients", href: "/clients", icon: <Contact /> },
   { name: "Contact", href: "/contact", icon: <Mail /> },
 ];
 

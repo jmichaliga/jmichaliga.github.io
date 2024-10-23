@@ -60,7 +60,7 @@ const agencies = [
   { id: 7, name: "SmartNode" },
   { id: 8, name: "Pentagram" },
   { id: 9, name: "Layerframe" },
-  { id: 10, name: "VentureStudio" },
+  { id: 10, name: "Venture Studio" },
   { id: 11, name: "Codeword" },
 ]
 
